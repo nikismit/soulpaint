@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a19bc6da9077664da6481d28299393d, type: 3}
+  m_Name: FemaleAvatar
+  m_EditorClassIdentifier: 
+  headPosition: {x: 0, y: 0, z: 0}
+  headRotation: {x: 0, y: 0, z: 0}
+  leftHandPosition: {x: 0, y: 0, z: 0}
+  leftHandRotation: {x: -84, y: 133, z: -12.93}
+  rightHandPosition: {x: 0, y: 0, z: 0}
+  rightHandRotation: {x: -103.6, y: -13.16, z: -88.99}

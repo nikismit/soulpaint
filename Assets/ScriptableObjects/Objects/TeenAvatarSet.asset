@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5519af22b2de81e4897cb0a16a02e8a4, type: 3}
+  m_Name: TeenAvatarSet
+  m_EditorClassIdentifier: 
+  invincibleShader: {fileID: 4800000, guid: 031351bdb93b4274485989c7674081bc, type: 3}
+  regularShader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  hiderInvincibilityIndicator: {fileID: 1846562031474202, guid: 9f14e1e3deb3d9e4e98eb29006e2965a,
+    type: 2}
+  listOfMiniatures:
+  - {fileID: 1723519069436634, guid: c5f05d796c110f244a991f3840652aea, type: 2}
+  - {fileID: 1336060756656416, guid: 4de0f510ff53e7a479657e4ef26481da, type: 2}
+  - {fileID: 1829819368942092, guid: 597627a6410d3104fa204d357826d339, type: 2}
+  - {fileID: 1987578253510270, guid: ccc7172619ce29846b2237dfbc380c15, type: 2}
+  - {fileID: 1996282306700574, guid: 4ca465b37b54a7f429e6faaa4ada9ee8, type: 2}
+  - {fileID: 1069674667031756, guid: df1bdb79cf90fc9488c5f23052bc2832, type: 2}
+  listOfAvatars:
+  - {fileID: 114698125593900660, guid: ad39bd5242c81654882d25991d731c9f, type: 2}
+  - {fileID: 114466878054143246, guid: f4344bcd869e9794683b5b79189fb1cc, type: 2}
+  - {fileID: 114601643488240728, guid: 831317944e615b646bde1a495778f8cb, type: 2}
+  - {fileID: 114082127161690936, guid: 4fa5b62a10c01eb45b785d2dac9d0d28, type: 2}
+  - {fileID: 114288028147875014, guid: ca2fa6417284f1140b2cf93d29823e2f, type: 2}
+  - {fileID: 114731780741256446, guid: a98ab07682b094d409afb1fe3c31cd14, type: 2}
+  listOfOutfits:
+  - {fileID: 11400000, guid: 859b9f3114b410746b5ba7d0d9643857, type: 2}
+  - {fileID: 11400000, guid: 174a0e17e69d0ac47b9cf1de5c50e56a, type: 2}
+  - {fileID: 11400000, guid: f72ef4eb06181014b898c5ba437f35ee, type: 2}
+  - {fileID: 11400000, guid: 23476ebbdbef130429a66fc5c7740087, type: 2}
+  - {fileID: 11400000, guid: 23b1cf80cf58fc148b3010548ae71044, type: 2}
+  - {fileID: 11400000, guid: f4539851f5939bd4c8f4a413812e08bb, type: 2}
+  CharacterFaces:
+  - {fileID: 21300000, guid: d58f27929ced6da4388e25c6b6bcf086, type: 3}
+  - {fileID: 21300000, guid: e371882360cea7247a6c7d1c0a2dec4d, type: 3}
+  - {fileID: 21300000, guid: e4283f07b85e1a54284f04a21fd33c52, type: 3}
+  - {fileID: 21300000, guid: 700346f91f72c5b41bb51974b9316c53, type: 3}
+  - {fileID: 21300000, guid: aa82ef47b104a1c4f9bfff3caa7a24d2, type: 3}
+  - {fileID: 21300000, guid: f0436d1822c14a046ac3dfb3b3ac146c, type: 3}
+  CharacterFacesFrozen:
+  - {fileID: 21300000, guid: 37ba815b999126745941745f731eb87e, type: 3}
+  - {fileID: 21300002, guid: 37ba815b999126745941745f731eb87e, type: 3}
+  - {fileID: 21300004, guid: 37ba815b999126745941745f731eb87e, type: 3}
+  - {fileID: 21300008, guid: 37ba815b999126745941745f731eb87e, type: 3}
+  - {fileID: 21300010, guid: 37ba815b999126745941745f731eb87e, type: 3}
+  - {fileID: 21300012, guid: 37ba815b999126745941745f731eb87e, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5519af22b2de81e4897cb0a16a02e8a4, type: 3}
+  m_Name: Teens
+  m_EditorClassIdentifier: 
+  invincibleShader: {fileID: 0}
+  regularShader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  listOfMiniatures: []
+  listOfAvatars:
+  - {fileID: 114698125593900660, guid: ad39bd5242c81654882d25991d731c9f, type: 2}
+  - {fileID: 114466878054143246, guid: f4344bcd869e9794683b5b79189fb1cc, type: 2}
+  - {fileID: 114601643488240728, guid: 831317944e615b646bde1a495778f8cb, type: 2}
+  - {fileID: 114082127161690936, guid: 4fa5b62a10c01eb45b785d2dac9d0d28, type: 2}
+  - {fileID: 114288028147875014, guid: ca2fa6417284f1140b2cf93d29823e2f, type: 2}
+  - {fileID: 114698125593900660, guid: ad39bd5242c81654882d25991d731c9f, type: 2}
+  listOfOutfits: []
+  CharacterFaces: []

@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1055011991498458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4034005052219714}
+  - component: {fileID: 114415712708852714}
+  - component: {fileID: 114925936746277922}
+  m_Layer: 0
+  m_Name: VRSetup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4034005052219714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055011991498458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.2, z: -2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114415712708852714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055011991498458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae0070eff71d5049a65e0512af097aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setupOnStart: 1
+  showControllers: 0
+  enableButtonSelecting: 1
+  VRControllerPrefab: {fileID: 1153520610727894, guid: c4d3a85c5a80fb64aaed02db8d5b4e3f,
+    type: 3}
+  VRRigPrefab: {fileID: 1852644349040656, guid: 0e10e3aa06707ee46a195277c8037770,
+    type: 3}
+  enableAvatar: 1
+  avatarOffsets:
+  - {fileID: 11400000, guid: e35185bce9ce75c4c9bd015a092e691e, type: 2}
+  - {fileID: 11400000, guid: d513337a6b8b5cf47862f3ceb162d674, type: 2}
+  avatars:
+  - {fileID: 114698125593900660, guid: ad39bd5242c81654882d25991d731c9f, type: 3}
+  - {fileID: 114466878054143246, guid: f4344bcd869e9794683b5b79189fb1cc, type: 3}
+  - {fileID: 114601643488240728, guid: 831317944e615b646bde1a495778f8cb, type: 3}
+  - {fileID: 114082127161690936, guid: 4fa5b62a10c01eb45b785d2dac9d0d28, type: 3}
+  - {fileID: 114288028147875014, guid: ca2fa6417284f1140b2cf93d29823e2f, type: 3}
+  - {fileID: 114731780741256446, guid: a98ab07682b094d409afb1fe3c31cd14, type: 3}
+  outfits:
+  - {fileID: 11400000, guid: 43ad2916a3a8c2249bbf8fb51ba2f942, type: 2}
+  - {fileID: 11400000, guid: 80edb7ef9901d2e41b7144501f1efebd, type: 2}
+  - {fileID: 11400000, guid: af5f1bd58ecc22a478d0ae4bec460b96, type: 2}
+  - {fileID: 11400000, guid: 9e9ec30aed7091f438e438595a74a419, type: 2}
+  - {fileID: 11400000, guid: 66e6a39e0b283d24c8208fc1d878f230, type: 2}
+  - {fileID: 11400000, guid: d5f9acdad99f8ef4f834efd30246ffe2, type: 2}
+  miniatures:
+  - {fileID: 1723519069436634, guid: c5f05d796c110f244a991f3840652aea, type: 3}
+  - {fileID: 1336060756656416, guid: 4de0f510ff53e7a479657e4ef26481da, type: 3}
+  - {fileID: 1829819368942092, guid: 597627a6410d3104fa204d357826d339, type: 3}
+  - {fileID: 1987578253510270, guid: ccc7172619ce29846b2237dfbc380c15, type: 3}
+  - {fileID: 1996282306700574, guid: 4ca465b37b54a7f429e6faaa4ada9ee8, type: 3}
+  - {fileID: 1069674667031756, guid: df1bdb79cf90fc9488c5f23052bc2832, type: 3}
+  avatarChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114925936746277922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055011991498458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10620414474ab79448b3088d046e5a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 2
+  _rotationPerStep: 45
+  _thumbstickThreshold: 0.75
+  _thumbstickCooldown: 0.5
+  allowRotate: 1
