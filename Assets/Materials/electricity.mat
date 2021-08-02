@@ -99,7 +99,7 @@ Material:
     - _Translucency: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 1
+    - __dirty: 0
     - _frequency: 1
     - _speed: 1.86
     m_Colors:
