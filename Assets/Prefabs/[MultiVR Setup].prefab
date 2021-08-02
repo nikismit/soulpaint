@@ -470,7 +470,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 4725724448068200}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 4294967295
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -538,13 +538,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097698282657742}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: 0.54640156, y: -0.43299484, z: 0.5618771, w: -0.44525838}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4282432084927776}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 270}
+  m_LocalEulerAnglesHint: {x: 0, y: 88.4, z: 256.79}
 --- !u!1 &1110403263484582
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +853,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 4725724448068200}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 4294967295
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -2402,6 +2402,7 @@ Transform:
   - {fileID: 7328843220763190152}
   - {fileID: 7325999871206890620}
   - {fileID: 7325892239602200450}
+  - {fileID: 7508291983155137028}
   m_Father: {fileID: 4837896901932654}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2582,7 +2583,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 4926549112751910}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 7988
+    m_Bits: 4294967295
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -3223,7 +3224,7 @@ Transform:
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 4282432084927776}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1613389713515444
 GameObject:
@@ -3397,7 +3398,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4282432084927776}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114241213188381474
 MonoBehaviour:
@@ -3444,6 +3445,7 @@ Transform:
   - {fileID: 7325972785762566380}
   - {fileID: 7328767462813016482}
   - {fileID: 7328506393190284908}
+  - {fileID: 7097454487248899691}
   m_Father: {fileID: 4837896901932654}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3678,7 +3680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4282432084927776}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114912677692667892
 MonoBehaviour:
@@ -4631,6 +4633,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4008769819988468}
+  - {fileID: 9171548605372116601}
   - {fileID: 4104527047669308}
   - {fileID: 8296175677742751139}
   - {fileID: 4641214564738108}
@@ -4836,6 +4839,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playArea: {fileID: 0}
+--- !u!1 &1992312797073421705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7097454487248899691}
+  m_Layer: 0
+  m_Name: '[Avatar Offset] (TSOU'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7097454487248899691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992312797073421705}
+  m_LocalRotation: {x: 0.81673187, y: -0.086677745, z: -0.4469833, w: 0.35446015}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4905079921888134}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 30.1, y: -113.8, z: -148}
 --- !u!1 &2370406518798037074
 GameObject:
   m_ObjectHideFlags: 0
@@ -4943,7 +4976,7 @@ RectTransform:
   m_Children:
   - {fileID: 5587475994252818138}
   m_Father: {fileID: 4282432084927776}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5156,13 +5189,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7322982303012077398}
-  m_LocalRotation: {x: 0.81673187, y: -0.086677745, z: -0.4469833, w: 0.35446015}
+  m_LocalRotation: {x: 0.506619, y: 0.32612857, z: 0.75817287, w: 0.24930167}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4593652083959532}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 30.1, y: -113.8, z: -148}
+  m_LocalEulerAnglesHint: {x: -14, y: 73.6, z: 133.1}
 --- !u!1 &7322983138100460202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5186,13 +5219,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7322983138100460202}
-  m_LocalRotation: {x: 0.81673187, y: -0.086677745, z: -0.4469833, w: 0.35446015}
+  m_LocalRotation: {x: -0.12708661, y: 0.70651007, z: 0.13132656, w: 0.6837001}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4905079921888134}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 30.1, y: -113.8, z: -148}
+  m_LocalEulerAnglesHint: {x: -21.06, y: 91.88, z: 0}
 --- !u!1 &7323151603471165774
 GameObject:
   m_ObjectHideFlags: 0
@@ -5810,3 +5843,63 @@ Transform:
   m_Father: {fileID: 4905079921888134}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8245143114222166387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9171548605372116601}
+  m_Layer: 0
+  m_Name: '[Avatar Offset] TSOU'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9171548605372116601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245143114222166387}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4282432084927776}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 270}
+--- !u!1 &8248192758663379950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7508291983155137028}
+  m_Layer: 0
+  m_Name: '[Avatar Offset] TSOU'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7508291983155137028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8248192758663379950}
+  m_LocalRotation: {x: 0.81673187, y: -0.086677745, z: -0.4469833, w: 0.35446015}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593652083959532}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 30.1, y: -113.8, z: -148}

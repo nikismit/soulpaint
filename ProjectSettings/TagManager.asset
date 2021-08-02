@@ -15,6 +15,7 @@ TagManager:
   - Palette
   - StartMimic
   - Hands
+  - Breathable
   layers:
   - Default
   - TransparentFX

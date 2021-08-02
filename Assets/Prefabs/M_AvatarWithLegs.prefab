@@ -2101,6 +2101,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _boneStructure: 1
+  originPoints:
+  - {fileID: 6763167345100868654}
+  - {fileID: 1461743001793150170}
+  - {fileID: 9172891680849994593}
+  - {fileID: 8133761080870891088}
+  - {fileID: 2258005493521761264}
+  - {fileID: 7107629880183523142}
+  - {fileID: 2681910416092588009}
+  - {fileID: 8636552900278635998}
+  - {fileID: 972936837775846379}
+  - {fileID: 2536767357212902708}
+  - {fileID: 7406510050275867400}
+  - {fileID: 2395694617953742441}
 --- !u!114 &6869474142442765322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2137,7 +2150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6593281702160794606}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b677a2bb6b813418f12174173da64f, type: 3}
   m_Name: 
