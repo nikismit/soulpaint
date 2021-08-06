@@ -41,7 +41,14 @@ public class MirrorReflection : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(setSDK());
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            oculusOrSteam = true;
+        }
+        else
+        {
+            StartCoroutine(setSDK());
+        }
     }
 
     private IEnumerator setSDK()

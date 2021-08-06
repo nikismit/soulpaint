@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/SceneTestDance.unity
+    guid: db9321ef262e50d40a2bf5768ae9c10b
   m_configObjects: {}

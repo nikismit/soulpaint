@@ -206,6 +206,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114723171479727530, guid: 18c4c76c8a4d2f444ac36fbcce334b8a,
+        type: 3}
+      propertyPath: avatarController
+      value: 
+      objectReference: {fileID: 1646375733}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18c4c76c8a4d2f444ac36fbcce334b8a, type: 3}
 --- !u!1 &794951612
@@ -621,6 +626,7 @@ MonoBehaviour:
   scaleAvatar: 0
   scalePlayer: 0
   resetScale: 0
+  danceScene: 0
 --- !u!82 &2093115478
 AudioSource:
   m_ObjectHideFlags: 0
