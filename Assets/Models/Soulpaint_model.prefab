@@ -959,8 +959,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.01, z: 0.01}
-  m_Center: {x: 0.01, y: 0, z: 0}
+  m_Size: {x: 0.006822913, y: 0.008468872, z: 0.010497962}
+  m_Center: {x: -0.0012077269, y: 0.00008478374, z: 0.019712865}
 --- !u!114 &3360899776963847779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2366,7 +2366,7 @@ MonoBehaviour:
     IKPositionWeight: 1
     root: {fileID: 0}
     LOD: 0
-    plantFeet: 0
+    plantFeet: 1
     spine:
       bones: []
       headTarget: {fileID: 0}
@@ -2589,7 +2589,9 @@ MonoBehaviour:
   initialPaint: 0
   paintingState: 0
   StartButton: {fileID: 3345105042437880987}
+  startPaint: {fileID: 2100000, guid: 794f9dbee71cb874689087564d1337c4, type: 2}
   timeToDrawButton: 2
+  paintBrush: {fileID: 2603947365002300982}
 --- !u!1 &6201724612910886805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,7 +2986,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 749d2ab9fcebc6f4a9d58244c74b2b12, type: 2}
+  - {fileID: 2100000, guid: f6428bca70a494a4da9407654bf7a520, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3770,6 +3772,12 @@ GameObject:
 --- !u!4 &3416196893543666828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6563355535131618259, guid: de671633e0cce6d4e95caf54cac69bdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 8394003734470573919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2603947365002300982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5791182415689773417, guid: de671633e0cce6d4e95caf54cac69bdd,
     type: 3}
   m_PrefabInstance: {fileID: 8394003734470573919}
   m_PrefabAsset: {fileID: 0}

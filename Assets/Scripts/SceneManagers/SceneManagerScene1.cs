@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RootMotion.FinalIK;
+using UnityEngine.SceneManagement;
 
 
 public class SceneManagerScene1 : MonoBehaviour
@@ -12,7 +14,10 @@ public class SceneManagerScene1 : MonoBehaviour
     [SerializeField] AudioClip[] audioClips;
     [SerializeField] BodyScan bodyScan;
     [SerializeField] VRAvatarController avatarController;
-    [SerializeField] GameObject palette, startCircle;
+    [SerializeField] GameObject palette, paintBucket,startCircle, timerObject;
+    [SerializeField] private float paintingTime = 180;
+    [SerializeField] GameObject finalPuppet;
+
    // [SerializeField] HandSelector handSelector;
     int clip;
     float fadeDuration = 2;
@@ -20,7 +25,11 @@ public class SceneManagerScene1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+     //   StartCoroutine(StartPaintingTime());
         palette.SetActive(false);
+       timerObject.SetActive(false);
+
+ 
     }
 
     
@@ -41,7 +50,10 @@ public class SceneManagerScene1 : MonoBehaviour
                 tutorialAudioSource.PlayOneShot(audioClips[0]);
                 break;
             case Gamestate.Meditation:
+
+                tutorialAudioSource.gameObject.GetComponent<ReachToDestination>().goToDestination = true;
                 startCircle.SetActive(false);
+                paintBucket.SetActive(false);
                 if (!tutorialAudioSource.isPlaying)
                 {
 
@@ -60,10 +72,13 @@ public class SceneManagerScene1 : MonoBehaviour
                 break;
             case Gamestate.Painting:
                 palette.SetActive(true);
+                timerObject.SetActive(true);
+             StartCoroutine(StartPaintingTime());
 
                 break;
             case Gamestate.Embody:
-
+                SetupAvatar();
+                
                 break;
             case Gamestate.Dance:
                 break;
@@ -76,8 +91,44 @@ public class SceneManagerScene1 : MonoBehaviour
 
 
     }
+   private void  SetupAvatar()
+    {
+        EyeBlinder.Instance.FadeIn();
+        Collider[] colliders = finalPuppet.GetComponentsInChildren<Collider>();
+        foreach (Collider cl in colliders)
+        {
+            cl.enabled = false;
+        }
+        VRIK vrik = finalPuppet.AddComponent<VRIK>();
+        VRIKApplier vRIKApplier = finalPuppet.AddComponent<VRIKApplier>();
+        vRIKApplier._boneStructure = VRIKApplier.BoneStructure.soulPaint;
+        vRIKApplier.applyVRIKComponents();
+        DontDestroyOnLoad(finalPuppet);
+      //  finalPuppet.AddComponent<MimicSender>();
+        GameManager.Instance.finalPuppet = finalPuppet;
+ 
+        Invoke("ChangeScene", 2f);
 
+    }
 
+    private void ChangeScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+    IEnumerator StartPaintingTime()
+    {
+        var timePassed = 0f;
+        while (timePassed <= paintingTime)
+        {
+           
+            var factor = (180/ paintingTime) * Time.deltaTime;
+            timePassed += Time.deltaTime;
+            timerObject.transform.Rotate(-Vector3.right * factor);
+            yield return null;
+        }
+        GameManager.Instance.SetNewGamestate(Gamestate.Embody);
+ 
+    }
 
     IEnumerator StartFogFade()
     {

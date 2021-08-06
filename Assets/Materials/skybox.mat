@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: electricity
-  m_Shader: {fileID: 4800000, guid: d71443c8a4e262f408ba0d106d2b4197, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 0
+  m_Name: skybox
+  m_Shader: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _SUNDISK_HIGH_QUALITY
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -55,35 +55,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Tex:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample4:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample5:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample6:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AtmosphereThickness: 0.73
     - _BumpScale: 1
-    - _Cutoff: 0.11
+    - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Exposure: 0.12
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -91,23 +69,16 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Size: 0.45
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TransAmbient: 0.2
-    - _TransDirect: 1
-    - _TransNormalDistortion: 0.1
-    - _TransScattering: 2
-    - _TransShadow: 0.9
-    - _Translucency: 1
+    - _SunDisk: 2
+    - _SunSize: 0.04
+    - _SunSizeConvergence: 4.7
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 0
-    - _frequency: 1
-    - _speed: 1.86
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 36.290806, g: 7.4101644, b: 9.862954, a: 0.54509807}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _color: {r: 95.87451, g: 95.87451, b: 95.87451, a: 0.54509807}
+    - _GroundColor: {r: 0.103773594, g: 0.0296496, b: 0, a: 1}
+    - _SkyTint: {r: 0.4339623, g: 0.20580551, b: 0, a: 1}

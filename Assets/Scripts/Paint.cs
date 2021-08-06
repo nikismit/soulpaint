@@ -42,6 +42,7 @@ public class Paint : MonoBehaviour
     //  public bool seedBrushIsOn;
     private int particleCounter;
     public GameObject StartButton;
+    [SerializeField] Material startPaint;
     float time = 0;
     [SerializeField] private float timeToDrawButton;
     [SerializeField] private GameObject paintBrush;
@@ -120,7 +121,7 @@ public class Paint : MonoBehaviour
 
                     else
                     {
-                        if (right >= .5f && canvas != null)
+                        if (right >= .3f && canvas != null)
                         {
                             particleCounter++;
                             if (particleCounter % 20 == 0)
@@ -146,6 +147,7 @@ public class Paint : MonoBehaviour
                 // left = leftControllerAlias.GetTriggerAxis();
                 if (right >= .1f)
                 {
+                materialToPaint = Instantiate(startPaint);
                     time += Time.deltaTime;
                     if (time < timeToDrawButton)
                     {
@@ -176,8 +178,8 @@ public class Paint : MonoBehaviour
                     {
                         initialPaint = false;
                         meshDrawer = null;
-                        Destroy(StartButton);
-                        GameManager.Instance.SetNewGamestate(Gamestate.Meditation);
+                    Invoke("GiveTimeToDestroy", 2f);
+    
 
                     }
 
@@ -185,7 +187,11 @@ public class Paint : MonoBehaviour
                 }
             }
         }
-    
+   private void GiveTimeToDestroy()
+    {
+        Destroy(StartButton);
+        GameManager.Instance.SetNewGamestate(Gamestate.Meditation);
+    }
     //called by bonecanvassetup to change the current canvas
     public void SetAnotherCanvas(GameObject canvasToSet)
     {

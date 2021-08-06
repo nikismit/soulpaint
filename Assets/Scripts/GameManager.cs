@@ -14,9 +14,10 @@ public enum Gamestate
 }
 public class GameManager : MonoBehaviour
 {
-
+    public GameObject finalPuppet;
     public static GameManager Instance;
  private  Gamestate currentGameState;
+    public float savedScale;
     private void Awake()
     {
         Instance = this;
@@ -40,11 +41,6 @@ public class GameManager : MonoBehaviour
     public Gamestate getCurrentGameState()
     {
         return currentGameState;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void SetNewGamestate(Gamestate newGameState)

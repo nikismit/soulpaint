@@ -17,7 +17,7 @@ public class MeshLineRenderer : MonoBehaviour
 	private float lineSize = .03f;
 
 	private bool firstQuad = true;
-	 float width =.05f;
+	 float width =.025f;
 
 	void Start()
 	{

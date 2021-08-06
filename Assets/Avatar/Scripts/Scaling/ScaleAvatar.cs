@@ -27,6 +27,8 @@ public class ScaleAvatar : MonoBehaviour
     [Tooltip("Change scaling method")]
     public bool scaleTypeisAvatar;
     [SerializeField]
+    GameObject[] puppets;
+    [SerializeField]
   
 
 
@@ -38,7 +40,7 @@ public class ScaleAvatar : MonoBehaviour
     public float scaleVar;
 
 
-    private float teenScaleModifier = 1.04138321517f;
+    private float teenScaleModifier = 1.0362f;
     public float AVATAR_EYE_HEIGHT;
     private bool scaled;
 
@@ -54,7 +56,8 @@ public class ScaleAvatar : MonoBehaviour
     public bool scalePlayer = false;
     public float resetScale;
     private bool pressed;
-
+    [SerializeField]
+    bool danceScene;
 
     private void Start()
     {
@@ -93,7 +96,7 @@ public class ScaleAvatar : MonoBehaviour
 
     private IEnumerator WaitForScale()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
         SetupQuiet();
        // print("Scaling initiated");
     }
@@ -162,6 +165,20 @@ public class ScaleAvatar : MonoBehaviour
     {
         try
         {
+            if (danceScene)
+            {
+                if (avatarController != null)
+                {
+
+                    //  ResetPlayerRigScale();
+                    scaling = true;
+                    avatar = avatarController.actualAvatarVRIK.gameObject;
+                    float s = GameManager.Instance.savedScale;
+                    avatar.transform.localScale = new Vector3(s, s, s);
+
+                }
+
+            }
             if (!scaling)
             {
                 quietScale = true;
@@ -296,7 +313,14 @@ public class ScaleAvatar : MonoBehaviour
             scale = minimumHeight;
         }
         avatar.transform.localScale = new Vector3(scale, scale, scale);
-
+        GameManager.Instance.savedScale = scale;
+        if (puppets.Length > 0)
+        {
+            foreach (GameObject go in puppets)
+            {
+                go.transform.localScale = new Vector3(scale, scale, scale);
+            }
+        }
     //  AvatarManager.Instance.ScaleChanged(scale);
       
         scaling = false;

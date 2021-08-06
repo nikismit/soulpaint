@@ -68,6 +68,8 @@ public class VRAvatarController : MonoBehaviour
 
     [SerializeField]
     Transform rotationPoint;
+    [SerializeField]
+    bool isDanceScene;
     /// <summary>
     /// Check if running as arcade.
     /// Also checks if playing locally.
@@ -75,6 +77,11 @@ public class VRAvatarController : MonoBehaviour
     /// </summary>
     private void Start()
     {
+        if (isDanceScene)
+        {
+            avatars[0] = GameManager.Instance.finalPuppet.GetComponent<VRIK>();
+        }
+
       //  PlayersData.Instance.PlayerData.Scale = 1;
         if (setupOnStart)
         {

@@ -7,7 +7,8 @@ public class ReachToDestination : MonoBehaviour
     public bool goToDestination;
     public Transform destination;
     float speed = .5f;
-
+    [SerializeField]
+    bool toNotDestroy;
 
 
     // Update is called once per frame
@@ -18,7 +19,7 @@ public class ReachToDestination : MonoBehaviour
             float step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, destination.position, step);
         }
-        if (Vector3.Distance(transform.position, destination.position) < .01f) 
+        if (Vector3.Distance(transform.position, destination.position) < .001f && !toNotDestroy) 
         {
             Destroy(this.gameObject);
         
