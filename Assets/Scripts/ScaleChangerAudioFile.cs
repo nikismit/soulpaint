@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ScaleChangerAudioFile : MonoBehaviour
 {
+    [SerializeField]
+    VRAvatarController avatarController;
+    Transform head;
     public bool ScaleMe;
     public float audioMinVol = 0, audioMaxVol = 1, minScaleTLocal = .5f, maxScaleTLocal = 1.5f;
    public AudioVol audioVol;
@@ -39,15 +42,26 @@ public class ScaleChangerAudioFile : MonoBehaviour
 
         old_min = audioMinVol;
         old_max = audioMaxVol;
+
+        Invoke("FindHead", .2f);
     }
 
+    private void FindHead()
+    {
+        if (avatarController.actualAvatarVRIK != null)
+        {
+            head = avatarController.multiVR.headAlias.transform;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
         ScaleMe = audioVol.isPlaying;
-
-    
-
+       
+    //   if (head != null)
+  //     {
+   //         transform.LookAt(head);
+   //    }
         if (ScaleMe)
         {
             speed = 0;

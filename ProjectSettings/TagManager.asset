@@ -16,6 +16,7 @@ TagManager:
   - StartMimic
   - Hands
   - Breathable
+  - PaintBrush
   layers:
   - Default
   - TransparentFX

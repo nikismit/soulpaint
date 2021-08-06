@@ -6,8 +6,8 @@ using UnityEngine;
 public class BoneCanvasSetup : MonoBehaviour
 {
 
-    GameObject currentCanvas;
-    Paint paint;
+    private GameObject currentCanvas;
+   private  Paint paint;
     private void Start()
     {
         paint = transform.root.GetComponentInChildren<Paint>();
@@ -19,16 +19,22 @@ public class BoneCanvasSetup : MonoBehaviour
         
         if (other.tag == "bodyPart" && currentCanvas != other.gameObject)
         {
-            if (paint.seedBrushIsOn)
-            {
-                paint.seed = true;
-            }
-            
+
+        //    Debug.Log("the body part is " + other.gameObject);
             paint.SetAnotherCanvas(other.gameObject);
             currentCanvas = other.gameObject;
         }
     }
 
- 
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.tag == "bodyPart" && currentCanvas == other.gameObject)
+        {
+
+          paint.SetAnotherCanvas(null);
+         currentCanvas = null;
+        }
+    }
 
 }

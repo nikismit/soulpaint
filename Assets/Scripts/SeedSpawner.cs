@@ -24,7 +24,7 @@ public class SeedSpawner : MonoBehaviour
         {
             seedCounter++;
             
-            if (seedCounter % 3 != 0) //this is done to skip some frames and not make
+            if (seedCounter % 3 == 0) //this is done to skip some frames and not make
                                        // make it immediately happen
             {
                 //create a bounding space in which the objects are spawned in

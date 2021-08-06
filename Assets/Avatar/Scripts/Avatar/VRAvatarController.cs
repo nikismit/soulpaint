@@ -66,6 +66,8 @@ public class VRAvatarController : MonoBehaviour
     private float localScale = 1;
     private int offsetIndex;
 
+    [SerializeField]
+    Transform rotationPoint;
     /// <summary>
     /// Check if running as arcade.
     /// Also checks if playing locally.
@@ -136,7 +138,12 @@ public class VRAvatarController : MonoBehaviour
     {
         containerObject = new GameObject("VRContainer");
         containerObject.transform.position = position;
-        containerObject.transform.rotation = rotation;
+        if (rotationPoint != null)
+        {
+            containerObject.transform.rotation = rotationPoint.rotation;
+        }
+        else
+        { containerObject.transform.rotation = rotation; }
 
         transform.SetParent(containerObject.transform, true);
 

@@ -63,24 +63,46 @@ public class ScaleChanger : MonoBehaviour
         switch (select)
         {
             case orientation.x:
-                transform.localScale = new Vector3(transform.localScale.x + (Mathf.Sin(Time.time)* Time.deltaTime *changeVal), transform.localScale.y, transform.localScale.z);
-             //   Debug.Log("what is my scale cal" + transform.localScale.x +( Mathf.Sin(Time.time) * changeVal));
-                break;
-            case orientation.y:
-                float y = transform.localScale.y + (Mathf.Sin(Time.time) * Time.deltaTime * changeVal);
-                transform.localScale = new Vector3(transform.localScale.x ,y, transform.localScale.z);
                 if (humanBreathing && breathing)
                 {
+                    float y = transform.localScale.y + (Mathf.Sin(Time.time) * Time.deltaTime * changeVal);
+                    transform.localScale = new Vector3(y, transform.localScale.y, transform.localScale.z);
                     for (int i = 0; i < inversedScaleBodyParts.Count; i++)
                     {
-                      
+
                         Transform t = inversedScaleBodyParts[1].transform;
-                        t.localScale = new Vector3(transform.localScale.x, 1/y, transform.localScale.z);
+                        t.localScale = new Vector3(1 / y, transform.localScale.y, transform.localScale.z);
+                    }
+                }
+
+                break;
+            case orientation.y:
+
+                if (humanBreathing && breathing)
+                {
+                    float y = transform.localScale.y + (Mathf.Sin(Time.time) * Time.deltaTime * changeVal);
+                    transform.localScale = new Vector3(transform.localScale.x, y, transform.localScale.z);
+                    for (int i = 0; i < inversedScaleBodyParts.Count; i++)
+                    {
+
+                        Transform t = inversedScaleBodyParts[1].transform;
+                        t.localScale = new Vector3(transform.localScale.x, 1 / y, transform.localScale.z);
                     }
                 }
                 break;
             case orientation.z:
-                transform.localScale = new Vector3(transform.localScale.x , transform.localScale.y, transform.localScale.z +  (Mathf.Sin(Time.time) *Time.deltaTime *changeVal));
+                if (humanBreathing && breathing)
+                {
+                    float y = transform.localScale.y + (Mathf.Sin(Time.time) * Time.deltaTime * changeVal);
+                    transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, y);
+                    for (int i = 0; i < inversedScaleBodyParts.Count; i++)
+                    {
+
+                        Transform t = inversedScaleBodyParts[1].transform;
+                        t.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 1 / y);
+                    }
+                }
+
                 break;
             default:
                 break;

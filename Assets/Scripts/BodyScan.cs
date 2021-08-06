@@ -16,21 +16,24 @@ public class BodyScan : MonoBehaviour
     [SerializeField] public Transform[] bonesForBodyScan;
     Transform currentOriginPoint;
     Transform currentDestinationPoint;
+    bool scanning;
+    [SerializeField] SkinnedMeshRenderer scanMaterial, scanHeadMaterial;
+    float scanVal =0;
+    [SerializeField]
+    float scanStep, scanValHead;
+    bool scanHead;
+    
   
-    // Start is called before the first frame update
-    void Start()
+
+    public void StartScan()
     {
-     //   audioSource.Play();
+    
         StartCoroutine(ScanNext());
     }
-
     IEnumerator ScanNext()
     {
         yield return new WaitForSeconds(delaysInBetween[currentBone]);
-        if(currentBone == 5)
-        {
-            bonesForBodyScan[currentBone].GetComponent<ScaleChanger>().breathing = true;
-        }
+      
         currentOriginPoint = vrSetUp.actualAvatarVRIK.GetComponent<VRIKApplier>().originPoints[currentBone];
         currentDestinationPoint = bonesForBodyScan[currentBone];
         GameObject go = GameObject.Instantiate(particlePrefab, currentOriginPoint);
@@ -39,14 +42,43 @@ public class BodyScan : MonoBehaviour
         rtd.destination = currentDestinationPoint;
         rtd.goToDestination = true;
         currentBone++;
+        scanning = true;
+        if (currentBone == 6)
+        {
+            scanStep = 0.008f;
+        }
+        if (currentBone == 10)
+        {
+            scanHead = true;
+        }
         if (currentBone < delaysInBetween.Length)
         {
             StartCoroutine(ScanNext());
         }
         else
         {
-            bonesForBodyScan[5].GetComponent<ScaleChanger>().breathing = false;
+            scanHead = false;
+            scanning = false;
+            scanMaterial.material.SetFloat("_Progress", 1);
+            scanHeadMaterial.material.SetFloat("_Progress", 1);
+            GameManager.Instance.SetNewGamestate(Gamestate.Painting);
         }
     }
 
+
+    private void Update()
+    {
+        if (scanning && scanVal <1)
+        {    scanVal = scanVal + (scanStep * Time.deltaTime);
+        
+            scanMaterial.material.SetFloat("_Progress", scanVal);
+        }
+        if (scanHead && scanValHead <1)
+        {
+            scanValHead = scanValHead + (scanStep * Time.deltaTime);
+                {
+                scanHeadMaterial.material.SetFloat("_Progress", scanValHead);
+            }
+        }
+    }
 }
