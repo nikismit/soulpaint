@@ -16,7 +16,7 @@ public class SceneManagerScene1 : MonoBehaviour
     [SerializeField] VRAvatarController avatarController;
     [SerializeField] GameObject palette, paintBucket,startCircle, timerObject;
     [SerializeField] private float paintingTime = 180;
-    [SerializeField] GameObject finalPuppet;
+    [SerializeField] GameObject finalPuppet, refPuppet;
 
    // [SerializeField] HandSelector handSelector;
     int clip;
@@ -99,18 +99,25 @@ public class SceneManagerScene1 : MonoBehaviour
         {
             cl.enabled = false;
         }
+        ResetBones();
         VRIK vrik = finalPuppet.AddComponent<VRIK>();
         VRIKApplier vRIKApplier = finalPuppet.AddComponent<VRIKApplier>();
         vRIKApplier._boneStructure = VRIKApplier.BoneStructure.soulPaint;
         vRIKApplier.applyVRIKComponents();
         DontDestroyOnLoad(finalPuppet);
+   
       //  finalPuppet.AddComponent<MimicSender>();
         GameManager.Instance.finalPuppet = finalPuppet;
- 
+        
         Invoke("ChangeScene", 2f);
 
     }
 
+    private void ResetBones()
+    { 
+    
+    
+    }
     private void ChangeScene()
     {
         SceneManager.LoadScene(1);

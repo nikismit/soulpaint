@@ -3865,7 +3865,7 @@ PrefabInstance:
         type: 3}
       propertyPath: avatars.Array.data[0]
       value: 
-      objectReference: {fileID: 6936218521013960146, guid: 467b0b8ad7af1b6418d867b5ec57ffa6,
+      objectReference: {fileID: 7239399247759017224, guid: e2befe0681f61fa46a64f3f73c6c17e1,
         type: 3}
     - target: {fileID: 114415712708852714, guid: a43a9fed19d6f8b4c89555f983c5801e,
         type: 3}
@@ -5830,6 +5830,7 @@ MonoBehaviour:
   timerObject: {fileID: 610830313}
   paintingTime: 180
   finalPuppet: {fileID: 964679581}
+  refPuppet: {fileID: 0}
 --- !u!4 &1852395403
 Transform:
   m_ObjectHideFlags: 0
@@ -7450,6 +7451,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2988799007001190196, guid: 456418e199684b74bbae0e85439b6c0c,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2988799007272834345, guid: 456418e199684b74bbae0e85439b6c0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7459,6 +7465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988799007272834346, guid: 456418e199684b74bbae0e85439b6c0c,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8652677028229761052, guid: 456418e199684b74bbae0e85439b6c0c,
         type: 3}
@@ -8066,12 +8077,12 @@ PrefabInstance:
     - target: {fileID: 871162714650268930, guid: d932ea832404ec04d81c8cd54dd7b9c6,
         type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 0.004
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 871162714650268930, guid: d932ea832404ec04d81c8cd54dd7b9c6,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.045
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 871162714650268930, guid: d932ea832404ec04d81c8cd54dd7b9c6,
         type: 3}
@@ -8106,7 +8117,7 @@ PrefabInstance:
     - target: {fileID: 871162714650268930, guid: d932ea832404ec04d81c8cd54dd7b9c6,
         type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 80
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 871162714650268930, guid: d932ea832404ec04d81c8cd54dd7b9c6,
         type: 3}
@@ -9363,6 +9374,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: coney
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984515464797476005, guid: 12cd514ba6f44ef43835449ec2acf349,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984515464797476005, guid: 12cd514ba6f44ef43835449ec2acf349,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984515464797476005, guid: 12cd514ba6f44ef43835449ec2acf349,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984515464797476005, guid: 12cd514ba6f44ef43835449ec2acf349,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6561066643205172381, guid: 12cd514ba6f44ef43835449ec2acf349,
         type: 3}
