@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SKYDOME
-  m_Shader: {fileID: 4800000, guid: ae12b3c6a3ad902428415603a23e7060, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7deb97854542ba0408076208cf15d138, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -61,9 +61,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
+    - _CompareFunction: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _Distribution: 0.168
+    - _Distribution1: 0.793
+    - _Distribution2: 0.843
     - _DstBlend: 0
     - _Glossiness: 0.5
     - _Metallic: 0
@@ -72,6 +75,10 @@ Material:
     - _Parallax: 0.02
     - _SrcBlend: 1
     - _StartPoint: -0.55
+    - _StartPoint1: 0.662
+    - _StartPoint2: -0.064
+    - _StencilOperation: 0
+    - _StencilRef: 0
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
@@ -83,6 +90,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 1, g: 0.68167496, b: 0, a: 0}
     - _Color2: {r: 1, g: 0, b: 0.80982494, a: 0}
+    - _Color3: {r: 0.43529406, g: 1, b: 0.9529411, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _basecolor: {r: 0.251211, g: 0.2024221, b: 0.3529412, a: 1}
     - _basecolor_copy: {r: 0.5511157, g: 0, b: 0.5588235, a: 1}
