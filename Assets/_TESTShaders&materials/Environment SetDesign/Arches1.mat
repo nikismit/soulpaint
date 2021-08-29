@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Arches1
-  m_Shader: {fileID: 4800000, guid: f201ea4f46e498147a15babbb4df8273, type: 3}
+  m_Shader: {fileID: 4800000, guid: 711b4cbe3c4652c4a99f2c26bcef73d0, type: 3}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 5
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -63,14 +63,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AO_Power: 1.07
     - _BumpScale: 1
     - _CompareFunction: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Distribution1: -0.685
-    - _Distribution2: 0.045
+    - _Distribution: 0.687
+    - _Distribution1: 0.03
+    - _Distribution2: -0.01
     - _DstBlend: 0
     - _EdgeMultiplier: 3.04
     - _Glossiness: 0.5
@@ -80,8 +85,9 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SrcBlend: 1
-    - _StartPoint1: -0.902
-    - _StartPoint2: -0.041
+    - _StartPoint: -0.37
+    - _StartPoint1: -0.09
+    - _StartPoint2: -0.05
     - _StencilOperation: 0
     - _StencilRef: 0
     - _UVSec: 0
@@ -95,9 +101,9 @@ Material:
     - _Bot_XZ: {r: 0.7058823, g: 0.20242205, b: 0.20242205, a: 0}
     - _Bot_Y: {r: 0.38773626, g: 0.59558815, b: 0.18831095, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 1, g: 0.6882353, b: 0.22058818, a: 0}
-    - _Color2: {r: 1, g: 0.49411756, b: 0.945098, a: 0}
-    - _Color3: {r: 0.43529406, g: 1, b: 0.9529411, a: 0}
+    - _Color1: {r: 1, g: 0.21960774, b: 0.23505035, a: 0}
+    - _Color2: {r: 0, g: 1, b: 0.13757363, a: 0}
+    - _Color3: {r: 0.03579378, g: 0, b: 1, a: 0}
     - _EdgeColor: {r: 0.9411765, g: 0.9197947, b: 0.7474049, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Top_XZ: {r: 0.25692037, g: 0.5525265, b: 0.7279412, a: 0}

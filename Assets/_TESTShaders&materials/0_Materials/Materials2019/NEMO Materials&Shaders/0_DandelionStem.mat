@@ -101,8 +101,8 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
-    - _edgebrightness: 1
-    - _edgerange: 0.65
+    - _edgebrightness: 0.304
+    - _edgerange: 4.02
     - _exp: 0.263
     - _gradientloc2: -0.03
     - _luminositygradient: 0
@@ -115,7 +115,7 @@ Material:
     - _Tint: {r: 1, g: 1, b: 1, a: 0}
     - _Transmission: {r: 0, g: 0, b: 0, a: 0}
     - _ambientcolor: {r: 1, g: 0.48584908, b: 0.48584908, a: 1}
-    - _brightnesstexture: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+    - _brightnesstexture: {r: 0, g: 0, b: 0, a: 1}
     - _glowcolor: {r: 1, g: 0, b: 0, a: 1}
     - _gradientcolor: {r: 0, g: 1, b: 0.08965514, a: 1}
     - _node_2241: {r: 1, g: 1, b: 1, a: 1}
