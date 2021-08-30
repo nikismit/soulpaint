@@ -100,15 +100,19 @@ public class SceneManagerScene1 : MonoBehaviour
             cl.enabled = false;
         }
         ResetBones();
+        GameManager.Instance.finalMimicPuppet = finalPuppet;
+        GameManager.Instance.finalMimicPuppet.AddComponent<MimicPuppet>();
+
+
         VRIK vrik = finalPuppet.AddComponent<VRIK>();
         VRIKApplier vRIKApplier = finalPuppet.AddComponent<VRIKApplier>();
         vRIKApplier._boneStructure = VRIKApplier.BoneStructure.soulPaint;
         vRIKApplier.applyVRIKComponents();
         DontDestroyOnLoad(finalPuppet);
    
-      //  finalPuppet.AddComponent<MimicSender>();
+ 
         GameManager.Instance.finalPuppet = finalPuppet;
-        
+        GameManager.Instance.finalPuppet.AddComponent<MimicSender>();
         Invoke("ChangeScene", 2f);
 
     }

@@ -15,6 +15,7 @@ public enum Gamestate
 public class GameManager : MonoBehaviour
 {
     public GameObject finalPuppet;
+    public GameObject finalMimicPuppet;
     public static GameManager Instance;
  private  Gamestate currentGameState;
     public float savedScale;
