@@ -2585,9 +2585,9 @@ MonoBehaviour:
   customBrushShaderIsOn: 0
   prefabToSpawn: {fileID: 0}
   brushTipPoint: {fileID: 18941620609242209}
-  paintingWithMaterial: 0
+  paintingWithMaterial: 1
   initialPaint: 0
-  paintingState: 0
+  paintingState: 1
   StartButton: {fileID: 3345105042437880987}
   startPaint: {fileID: 2100000, guid: 794f9dbee71cb874689087564d1337c4, type: 2}
   timeToDrawButton: 2

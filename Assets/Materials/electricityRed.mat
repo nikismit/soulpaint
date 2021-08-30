@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: electricity
+  m_Name: electricityRed
   m_Shader: {fileID: 4800000, guid: d449f596779b7764699c335ec9b9a7ac, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
@@ -118,7 +118,7 @@ Material:
     - _speed: 1.86
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 8.031373, g: 120.47059, b: 578.25885, a: 1}
+    - _Color0: {r: 3.2490096, g: 0.02548243, b: 0.05096486, a: 1}
     - _Color1: {r: 36.290806, g: 7.4101644, b: 9.862954, a: 0.54509807}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _color: {r: 95.87451, g: 95.87451, b: 95.87451, a: 0.54509807}
