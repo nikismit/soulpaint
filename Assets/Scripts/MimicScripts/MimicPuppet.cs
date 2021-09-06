@@ -53,7 +53,7 @@ public class MimicPuppet : MonoBehaviour
     }
     void Setup()
     {
-       player = GameObject.FindGameObjectWithTag("Player");
+      // player = GameObject.FindGameObjectWithTag("Player");
         masterAvatarscript = player.GetComponent<MimicSender>();
         rotationDelta = transform.eulerAngles - player.transform.eulerAngles;
         previousAddedPosition = transform.position;

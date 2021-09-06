@@ -973,6 +973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df65d09082e6c94c87f90920bed1429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emissiveColor: {r: 7.4642644, g: 4.7359076, b: 0, a: 0}
   lastBrush: {fileID: 7227071974842079000}
 --- !u!114 &7369856786433492176
 MonoBehaviour:
@@ -2362,10 +2363,12 @@ MonoBehaviour:
     rightFoot: {fileID: 2231923760834084254}
     rightToes: {fileID: 6731236496629438064}
   solver:
+    executedInEditor: 0
     IKPosition: {x: 0, y: 0, z: 0}
     IKPositionWeight: 1
     root: {fileID: 0}
     LOD: 0
+    scale: 1
     plantFeet: 1
     spine:
       bones: []
@@ -2506,6 +2509,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+      maxBodyYOffset: 0.05
       heelHeight:
         serializedVersion: 2
         m_Curve:
@@ -2577,6 +2581,7 @@ MonoBehaviour:
   - {fileID: 1492815167921281426, guid: affd95e650cdf7b4f9526da243b6dd5a, type: 3}
   - {fileID: 589985298418514668, guid: 338e998483cffc347ad66b20b8f5a05f, type: 3}
   materialToPaint: {fileID: 2100000, guid: 8e1cbe094222af5419fb5dad2edf07d7, type: 2}
+  materialForObj: {fileID: 2100000, guid: b29d3df6863e6b241a892e51428803fd, type: 2}
   colorPicked:
     serializedVersion: 2
     rgba: 15987699
@@ -2585,9 +2590,11 @@ MonoBehaviour:
   customBrushShaderIsOn: 0
   prefabToSpawn: {fileID: 0}
   brushTipPoint: {fileID: 18941620609242209}
-  paintingWithMaterial: 1
+  paintingWithMaterial: 0
   initialPaint: 0
-  paintingState: 1
+  paintingState: 0
+  seed: 0
+  seedBrushIsOn: 0
   StartButton: {fileID: 3345105042437880987}
   startPaint: {fileID: 2100000, guid: 794f9dbee71cb874689087564d1337c4, type: 2}
   timeToDrawButton: 2
@@ -3750,6 +3757,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PaintBrush
       objectReference: {fileID: 0}
+    - target: {fileID: 6991760694215129738, guid: de671633e0cce6d4e95caf54cac69bdd,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1579241630799410176, guid: 6ea0ffb6689c00541bc83012311cdd2d,
+        type: 3}
     - target: {fileID: 8149037416471030054, guid: de671633e0cce6d4e95caf54cac69bdd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

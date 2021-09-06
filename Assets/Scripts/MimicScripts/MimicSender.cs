@@ -13,14 +13,14 @@ public class MimicSender : MonoBehaviour
    // int numOfBones = 42, numOfTransforms = 2;                          //two Variables used to determine the length of the boneTransforms Array
     int numOfBones = 52, numOfTransforms = 2;                          //two Variables used to determine the length of the boneTransforms Array
 
-    public List<Vector3>bonePositionsMimic;
-    public List<Vector3> boneRotationsMimic;
+    public List<Vector3>bonePositionsMimic = new List<Vector3>();
+    public List<Vector3> boneRotationsMimic = new List<Vector3>();
     public Vector3 rotation;
     public Vector3 position;
     public Vector3 startRotation;
     public Vector3 startPosition;
     public Vector3 movementDirection;
-   
+    bool setup; 
    
 
     Vector3 previousPosition;
@@ -51,8 +51,10 @@ public class MimicSender : MonoBehaviour
     {
         //define interaction for spawning new mimic puppets
 
-
-        SendBones();
+        if (setup)
+        {
+            SendBones();
+        }
         if (Input.GetKeyDown(KeyCode.Y))
         {
             stopMoving = !stopMoving;
@@ -208,12 +210,16 @@ public class MimicSender : MonoBehaviour
 
 
             if (bonePositionsMimic.Count <= i)
+            {
                 bonePositionsMimic.Add(bones[i].localPosition);
+            }
             else
                 bonePositionsMimic[i] = bones[i].localPosition;
 
             if (boneRotationsMimic.Count <= i)
-                boneRotationsMimic.Add(bones[i].localEulerAngles);
+            { boneRotationsMimic.Add(bones[i].localEulerAngles);
+                setup = true;
+            }
             else
                 boneRotationsMimic[i] = bones[i].localEulerAngles;
 

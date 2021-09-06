@@ -269,7 +269,7 @@ public class ScaleAvatar : MonoBehaviour
         scales.Sort();
         foreach (float item in scales)
         {
-            Debug.Log("median: " + item);
+     //       Debug.Log("median: " + item);
         }
         // Even amount of elements
         if (scales.Count % 2 == 0)

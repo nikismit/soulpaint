@@ -30,15 +30,25 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("StartAudio", 3f);
-    }
-
-    private void StartAudio()
-    {
-
         SetNewGamestate(Gamestate.WaitforStart);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+
+            SetNewGamestate(Gamestate.Embody);
+
+        }
     
-}
+
+    }
+    //    private void StartAudio()
+    //    {
+
+    //        SetNewGamestate(Gamestate.WaitforStart);
+
+    //}
     public Gamestate getCurrentGameState()
     {
         return currentGameState;

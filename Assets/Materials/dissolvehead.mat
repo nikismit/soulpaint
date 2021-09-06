@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveMap:
-        m_Texture: {fileID: 2800000, guid: 1557d7ce778c12c428019c385ead354f, type: 3}
+        m_Texture: {fileID: 2800000, guid: ef1b15b6b4cf05f4f8adc227bc02e1b1, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -96,7 +96,7 @@ Material:
     - _Opacity: 0.8
     - _Parallax: 0.02
     - _Power1: 6
-    - _Progress: 1
+    - _Progress: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

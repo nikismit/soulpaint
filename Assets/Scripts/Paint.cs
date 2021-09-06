@@ -26,6 +26,7 @@ public class Paint : MonoBehaviour
     private VRTK_ControllerEvents leftControllerAlias = null;
     private VRTK_ControllerEvents rightControllerAlias = null;
     public Material materialToPaint;
+    public Material materialForObj;
     public Color32 colorPicked;
     float left, right;
     [SerializeField]
@@ -38,14 +39,17 @@ public class Paint : MonoBehaviour
     public bool paintingWithMaterial;
     public bool initialPaint;
     [SerializeField]private bool paintingState;
-    //  public bool seed;
-    //  public bool seedBrushIsOn;
+    public bool seed;
+    public bool seedBrushIsOn;
+    private int seedCounter;
     private int particleCounter;
     public GameObject StartButton;
     [SerializeField] Material startPaint;
     float time = 0;
     [SerializeField] private float timeToDrawButton;
     [SerializeField] private GameObject paintBrush;
+
+
     void Start()
     {
         Invoke("SetControllerReferences", 1f);
@@ -121,22 +125,45 @@ public class Paint : MonoBehaviour
 
                     else
                     {
-                        if (right >= .3f && canvas != null)
+
+                    if (right >= .25f && canvas != null)
+                    {
+                        if (seedBrushIsOn)
                         {
-                            particleCounter++;
+   
+                            if (seedCounter % 60 == 0)
+                            {
+                                GameObject go = Instantiate(prefabToSpawn, brushTipPoint.transform.position, brushTipPoint.transform.rotation);
+                                go.transform.SetParent(canvas.transform);
+                                go.GetComponent<MeshRenderer>().material = materialForObj;
+                              
+                            }
+                            seedCounter++;
+
+
+                        }
+                        else
+                        {
+                          
                             if (particleCounter % 20 == 0)
                             {
                                 //instantiates objects and material is the same as object spawned
 
                                 GameObject go = Instantiate(prefabToSpawn, brushTipPoint.transform.position, brushTipPoint.transform.rotation);
                                 //     go.transform.localScale = new Vector3 (right * .01f, right * .01f, right * .01f);
-                                
-                                go.transform.SetParent(canvas.transform);
-                            go.GetComponent<MaterialChanger>().ChangeMaterial(materialToPaint);
-                                particleCounter++;
-                            }
 
+                                go.transform.SetParent(canvas.transform);
+                                go.GetComponent<MaterialChanger>().ChangeMaterial(materialForObj);
+
+                            }
+                            particleCounter++;
                         }
+                    }
+                    else
+                    {
+                        seedCounter = 0;
+                        particleCounter = 0;
+                    }
                     }
 
                 }
@@ -208,11 +235,12 @@ public class Paint : MonoBehaviour
               
                 break;
             case Gamestate.Meditation:
-             //   paintBrush.SetActive(false);
+          paintBrush.SetActive(false);
                 break;
             case Gamestate.Painting:
                 paintingState = true;
-             //   paintBrush.SetActive(true);
+              paintBrush.SetActive(true);
+                paintingWithMaterial = true;
                 break;
             case Gamestate.Embody:
                 paintingState = false;

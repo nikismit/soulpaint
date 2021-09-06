@@ -115,7 +115,7 @@ public class VRIKApplier : MonoBehaviour
             //			Debug.Log (findVRIKComponent (this.transform, "Spine01"));
             myVRIK.chest = findVRIKComponent(this.transform, "J_Dorsal2");
             //			Debug.Log (findVRIKComponent (this.transform, "Spine04"));
-            myVRIK.neck = findVRIKComponent(this.transform, "J_Neck2");
+            myVRIK.neck = findVRIKComponent(this.transform, "J_Neck1");
             myVRIK.head = findVRIKComponent(this.transform, "J_Head");
             myVRIK.leftShoulder = findVRIKComponent(this.transform, "L_Clavicle");
             myVRIK.leftUpperArm = findVRIKComponent(this.transform, "L_Arm");

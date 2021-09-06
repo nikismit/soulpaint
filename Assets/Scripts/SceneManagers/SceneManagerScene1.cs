@@ -15,21 +15,25 @@ public class SceneManagerScene1 : MonoBehaviour
     [SerializeField] BodyScan bodyScan;
     [SerializeField] VRAvatarController avatarController;
     [SerializeField] GameObject palette, paintBucket,startCircle, timerObject;
-    [SerializeField] private float paintingTime = 180;
+    [SerializeField] private float paintingTime = 180, scanStep =.02f;
     [SerializeField] GameObject finalPuppet, refPuppet;
+    [SerializeField] SkinnedMeshRenderer scanMaterial, scanHeadMaterial;
+    [SerializeField] Material NotDissolve;
+    float scanVal;
 
-   // [SerializeField] HandSelector handSelector;
+    // [SerializeField] HandSelector handSelector;
     int clip;
     float fadeDuration = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-     //   StartCoroutine(StartPaintingTime());
+        RenderSettings.fogDensity = .75f;
+        //   StartCoroutine(StartPaintingTime());
         palette.SetActive(false);
        timerObject.SetActive(false);
-
- 
+        scanMaterial.material.SetFloat("_Progress", 0);
+        scanHeadMaterial.material.SetFloat("_Progress", 0);
     }
 
     
@@ -47,33 +51,19 @@ public class SceneManagerScene1 : MonoBehaviour
         switch (newGameState)
         {
             case Gamestate.WaitforStart:
-                tutorialAudioSource.PlayOneShot(audioClips[0]);
+              
                 break;
             case Gamestate.Meditation:
-
-                tutorialAudioSource.gameObject.GetComponent<ReachToDestination>().goToDestination = true;
                 startCircle.SetActive(false);
                 paintBucket.SetActive(false);
-                if (!tutorialAudioSource.isPlaying)
-                {
-
-                    tutorialAudioSource.PlayOneShot(audioClips[2]);
-                    StartCoroutine(StartFogFade());
-                    bodyScan.StartScan();
-                    //                    RenderSettings.fog = false;
-
-                }
-                else
-                {
-                    StartCoroutine(WaitForAudio(2));
-               
-                }
+                StartCoroutine(BodyScan());
                
                 break;
             case Gamestate.Painting:
                 palette.SetActive(true);
                 timerObject.SetActive(true);
-             StartCoroutine(StartPaintingTime());
+                     StartCoroutine(StartPaintingTime());
+                StartFogFade();
 
                 break;
             case Gamestate.Embody:
@@ -93,34 +83,47 @@ public class SceneManagerScene1 : MonoBehaviour
     }
    private void  SetupAvatar()
     {
+        scanHeadMaterial.material = NotDissolve;
+        scanMaterial.material = NotDissolve;
         EyeBlinder.Instance.FadeIn();
         Collider[] colliders = finalPuppet.GetComponentsInChildren<Collider>();
         foreach (Collider cl in colliders)
         {
             cl.enabled = false;
         }
-        ResetBones();
-        GameManager.Instance.finalMimicPuppet = finalPuppet;
-        GameManager.Instance.finalMimicPuppet.AddComponent<MimicPuppet>();
+    
+        GameManager.Instance.finalMimicPuppet = Instantiate(finalPuppet);
+        DontDestroyOnLoad(GameManager.Instance.finalMimicPuppet);
+       // GameManager.Instance.finalMimicPuppet.AddComponent<MimicPuppet>();
 
 
         VRIK vrik = finalPuppet.AddComponent<VRIK>();
         VRIKApplier vRIKApplier = finalPuppet.AddComponent<VRIKApplier>();
+        
         vRIKApplier._boneStructure = VRIKApplier.BoneStructure.soulPaint;
         vRIKApplier.applyVRIKComponents();
+        ResetBones();
         DontDestroyOnLoad(finalPuppet);
    
  
         GameManager.Instance.finalPuppet = finalPuppet;
-        GameManager.Instance.finalPuppet.AddComponent<MimicSender>();
+     
+    //    GameManager.Instance.finalPuppet.AddComponent<MimicSender>();
         Invoke("ChangeScene", 2f);
 
     }
 
     private void ResetBones()
-    { 
-    
-    
+    {
+        Transform[] refPuppetTR = refPuppet.GetComponent<VRIK>().references.GetTransforms();
+        Transform[] puppetTr = finalPuppet.GetComponent<VRIK>().references.GetTransforms();
+        for (int i = 0; i < puppetTr.Length; i++)
+        {
+            puppetTr[i].localEulerAngles = refPuppetTR[i].localEulerAngles;
+            puppetTr[i].localPosition = refPuppetTR[i].localPosition;
+
+        }
+
     }
     private void ChangeScene()
     {
@@ -153,6 +156,20 @@ public class SceneManagerScene1 : MonoBehaviour
             yield return null;
         }
     }
+    IEnumerator BodyScan()
+    {
+        while (scanVal < .69f)
+        {
+            yield return null;
+            scanVal = scanVal + (scanStep * Time.deltaTime);
+            scanMaterial.material.SetFloat("_Progress", scanVal);
+
+        }
+        scanMaterial.material.SetFloat("_Progress", 1);
+        scanHeadMaterial.material.SetFloat("_Progress", 1);
+        GameManager.Instance.SetNewGamestate(Gamestate.Painting);
+        yield return null; 
+    }
 public void TriggerAudioFeedback(int i)
     {
         if (!tutorialAudioSource.isPlaying)
@@ -184,7 +201,7 @@ public void TriggerAudioFeedback(int i)
         {
             StartCoroutine(StartFogFade());
             //  RenderSettings.fog = false;
-            bodyScan.StartScan();
+           // bodyScan.StartScan();
         }
     }
 }

@@ -14,15 +14,16 @@ public class HideParts : MonoBehaviour
     [SerializeField]
     [Tooltip("Layer that will replace the current layer for the list of objects.")]
     private int layerToHideNumber;
+    public bool isEmbodying;
 
-    //private void Start()
-    //{
-    //    if (VR_PlayerNetwork.Instance.photonView.isMine)
-    //    {
-    //        Debug.Log("YUp");
-    //        ShowOrHideParts(true);
-    //    }
-    //}
+    private void Start()
+    {
+        if (isEmbodying)
+        {
+      
+            ShowOrHideParts(true);
+        }
+    }
 
     /// <summary>
     /// Recursive method that sets the layer of an object based on the boolean that has been given.

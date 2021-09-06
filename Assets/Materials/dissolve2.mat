@@ -107,7 +107,7 @@ Material:
     - _Parallax: 0.02
     - _Power1: 1.0959184
     - _Power2: 1.23
-    - _Progress: 0.336
+    - _Progress: 1
     - _Progress1: 0.558
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
