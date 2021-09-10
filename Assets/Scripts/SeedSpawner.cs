@@ -45,7 +45,7 @@ public class SeedSpawner : MonoBehaviour
                                               // Random.Range(bounds.min.y, bounds.max.y),
                                              //  Random.Range(bounds.min.z, bounds.max.z));
                 go.transform.localRotation = Random.rotation;
-                go.transform.localScale = Vector3.one * Random.Range(0.001f, .005f);
+                go.transform.localScale = Vector3.one * Random.Range(0.01f, .05f);
             }
         }
     }

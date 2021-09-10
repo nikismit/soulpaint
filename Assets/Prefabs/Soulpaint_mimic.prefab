@@ -3101,6 +3101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   notGrabbed: 0
+  debugSetup: 1
   addedPosition: {x: 0, y: 0, z: 0}
   previousAddedPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &8687336168643777987

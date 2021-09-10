@@ -12,11 +12,15 @@ public class SceneManager2 : MonoBehaviour
     VRAvatarController vrsetup;
     // Start is called before the first frame update
     void Start()
-    {
-        GameManager.Instance.finalPuppet.transform.position = underTheFloor.position;
-        GameManager.Instance.finalMimicPuppet.transform.position = underTheFloor.position;
-        GameManager.Instance.finalMimicPuppet.transform.localScale = Vector3.one;
-        StartCoroutine(WaitToDestroy());
+    {if (GameManager.Instance != null)
+        {
+            GameManager.Instance.finalPuppet.transform.position = underTheFloor.position;
+            GameManager.Instance.finalMimicPuppet.transform.position = underTheFloor.position;
+            GameManager.Instance.finalMimicPuppet.transform.localScale = Vector3.one;
+            StartCoroutine(WaitToDestroy());
+        }
+     
+
     }
 
     IEnumerator WaitToDestroy()

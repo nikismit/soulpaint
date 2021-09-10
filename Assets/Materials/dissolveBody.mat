@@ -96,7 +96,7 @@ Material:
     - _Opacity: 0.8
     - _Parallax: 0.02
     - _Power1: 1.0959184
-    - _Progress: 0.784
+    - _Progress: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
