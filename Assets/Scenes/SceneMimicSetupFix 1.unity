@@ -1357,7 +1357,7 @@ PrefabInstance:
     - target: {fileID: 114415712708852714, guid: a43a9fed19d6f8b4c89555f983c5801e,
         type: 3}
       propertyPath: isDanceScene
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114415712708852714, guid: a43a9fed19d6f8b4c89555f983c5801e,
         type: 3}

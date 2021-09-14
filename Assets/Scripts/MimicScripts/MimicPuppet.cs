@@ -86,10 +86,16 @@ public class MimicPuppet : MonoBehaviour
         {
             for (int i = 0; i < numOfBones; i++)
             {
-
-                //sets the first frame to the starting position
-                bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
-                bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+                if (masterAvatarscript.stopMoving && i == 0)
+                {
+                 //   Debug.Log("Do Not MOVE");
+                }
+                else
+                {
+                    //sets the first frame to the starting position
+                    bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
+                    bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+                }
 
             }
 
