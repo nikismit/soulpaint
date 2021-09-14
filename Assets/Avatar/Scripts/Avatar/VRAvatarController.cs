@@ -77,7 +77,7 @@ public class VRAvatarController : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        if (isDanceScene)
+        if (isDanceScene && GameManager.Instance != null)
         {
             avatars[0] = GameManager.Instance.finalPuppet.GetComponent<VRIK>();
         }

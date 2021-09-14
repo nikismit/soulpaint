@@ -298,10 +298,10 @@ public class ScaleAvatar : MonoBehaviour
             //Debug.Log("scaling is done and feedback invoked");
         }
 
-  
-            //Debug.Log("Applying teen scale modifier of " + teenScaleModifier);
-            scale *= teenScaleModifier;
-   
+
+        //Debug.Log("Applying teen scale modifier of " + teenScaleModifier);
+        scale *= teenScaleModifier;
+
         //else
         //{
         //    Debug.Log("Applying kid scale modifier of " + kidScaleModifier);
@@ -313,7 +313,10 @@ public class ScaleAvatar : MonoBehaviour
             scale = minimumHeight;
         }
         avatar.transform.localScale = new Vector3(scale, scale, scale);
-        GameManager.Instance.savedScale = scale;
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.savedScale = scale;
+        }
         if (puppets.Length > 0)
         {
             foreach (GameObject go in puppets)

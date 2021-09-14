@@ -14,10 +14,12 @@ public class MimicPuppetsCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        puppetToCreate = GameManager.Instance.finalMimicPuppet;
+        if (GameManager.Instance != null)
+        {
+            puppetToCreate = GameManager.Instance.finalMimicPuppet;
 
-        transformSetup = GetComponentsInChildren<Transform>();
-       Invoke("SetupPuppets", 3f);
+            transformSetup = GetComponentsInChildren<Transform>();
+            Invoke("SetupPuppets", 3f); }
     }
 
 

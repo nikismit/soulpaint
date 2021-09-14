@@ -86,7 +86,8 @@ public class HandSelector : MonoBehaviour
                 case BrushTypeEnum.color:
                     emissiveColor = _brushType.emmissiveColor;
                     lastCol = _brushType.brushColor;
-                    intensity = _brushType.intensityVal;   
+                    intensity = _brushType.intensityVal;
+                    paintObject.materialForObj.color = _brushType.brushColor;
                     SetColor(lastCol);
 
 

@@ -13,7 +13,8 @@ public class MimicPuppet : MonoBehaviour
 
     Transform[] bones;
     public bool notGrabbed;
-   
+    [SerializeField]
+    bool debugSetup;
     
     //Positions
     Vector3 masterRefPosition;
@@ -53,7 +54,10 @@ public class MimicPuppet : MonoBehaviour
     }
     void Setup()
     {
-      // player = GameObject.FindGameObjectWithTag("Player");
+        if (debugSetup)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         masterAvatarscript = player.GetComponent<MimicSender>();
         rotationDelta = transform.eulerAngles - player.transform.eulerAngles;
         previousAddedPosition = transform.position;
