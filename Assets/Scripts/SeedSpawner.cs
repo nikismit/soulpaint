@@ -28,7 +28,7 @@ public class SeedSpawner : MonoBehaviour
         {
             seedCounter++;
             
-            if (seedCounter % 3 == 0) //this is done to skip some frames and not make
+            if (seedCounter % 7 == 0) //this is done to skip some frames and not make
                                        // make it immediately happen
             {
                 //create a bounding space in which the objects are spawned in
@@ -45,7 +45,7 @@ public class SeedSpawner : MonoBehaviour
                                               // Random.Range(bounds.min.y, bounds.max.y),
                                              //  Random.Range(bounds.min.z, bounds.max.z));
                 go.transform.localRotation = Random.rotation;
-                go.transform.localScale = Vector3.one * Random.Range(0.01f, .05f);
+                go.transform.localScale = Vector3.one * Random.Range(0.045f, .055f);
             }
         }
     }

@@ -53,7 +53,8 @@ public class Paint : MonoBehaviour
     void Start()
     {
         Invoke("SetControllerReferences", 1f);
-
+        materialToPaint = Instantiate(materialToPaint);
+        materialForObj = Instantiate(materialForObj);
     }
 
     private void OnEnable()

@@ -55,7 +55,7 @@ public class HandSelector : MonoBehaviour
                     break;
                 case BrushTypeEnum.particles:
                     paintObject.paintingWithMaterial = false;
-
+                    paintObject.customBrushShaderIsOn = false;
                     prefabToSpawn = other.GetComponent<BrushType>().tipObj;
                     paintObject.prefabToSpawn = other.GetComponent<BrushType>().prefabToSpawn;
 
@@ -72,7 +72,7 @@ public class HandSelector : MonoBehaviour
                     break;
                 case BrushTypeEnum.seed:
                     paintObject.paintingWithMaterial = false;
-
+                    paintObject.customBrushShaderIsOn = false; 
                     paintObject.seedBrushIsOn = true;
                     isEmissive = false;
                     paintObject.prefabToSpawn = other.GetComponent<BrushType>().prefabToSpawn;
