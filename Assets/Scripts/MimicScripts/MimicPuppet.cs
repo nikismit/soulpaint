@@ -5,7 +5,7 @@ using VRTK;
 
 public class MimicPuppet : MonoBehaviour
 {
-   
+    public enum MovementType { NoRotNoPos, YesRotYesPos, NoRotYesPos, YesRotNoPos};
     public GameObject player;
     private MimicSender masterAvatarscript;
     //int numOfBones = 42, numOfTransforms = 2;
@@ -23,7 +23,8 @@ public class MimicPuppet : MonoBehaviour
     Vector3 addedPosition;
     [SerializeField]
     Vector3 previousAddedPosition;
-    
+    [SerializeField]
+    MovementType myMovType;
     //Rotations
     Vector3 masterRefRotation;
     Vector3 addedRotation;
@@ -86,10 +87,37 @@ public class MimicPuppet : MonoBehaviour
         {
             for (int i = 0; i < numOfBones; i++)
             {
+                if ( i == 0)
+                {
+                    switch (myMovType)
+                    {
+                        case MovementType.NoRotNoPos:
 
-                //sets the first frame to the starting position
-                bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
-                bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+                            break;
+                        case MovementType.YesRotYesPos:
+                            bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
+                            bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+                            break;
+                        case MovementType.NoRotYesPos:
+                            bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
+                         
+                            break;
+                        case MovementType.YesRotNoPos:
+                       
+                            bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+                            break;
+                        default:
+                            break;
+                    }
+
+                    //   Debug.Log("Do Not MOVE");
+                }
+                else
+                {
+                    //sets the first frame to the starting position
+                    bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
+                    bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+                }
 
             }
 
