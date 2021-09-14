@@ -9,9 +9,17 @@ public class ScaleChanger : MonoBehaviour
     float changeVal;
     [SerializeField]
     orientation select;
-  
+    float initScale;
+    [SerializeField]
+    float frequency = .5f;
+    float startTime;
 
-
+    private void Start()
+    {
+        initScale = transform.localScale.x;
+        startTime = Time.time;
+       
+    }
 
     // Update is called once per frame
     void Update()
@@ -44,9 +52,9 @@ public class ScaleChanger : MonoBehaviour
                 break; 
             case orientation.all:
                 {
-                    float x = transform.localScale.x + (Mathf.Sin(Time.time) * Time.deltaTime * changeVal);
+                    float a =  initScale + ((1 + Mathf.Sin(2 * Mathf.PI * (Time.time +startTime) *frequency)) * initScale * changeVal);
               
-                    transform.localScale = new Vector3(x,x, x);
+                    transform.localScale = new Vector3(a,a, a);
 
                 }
 

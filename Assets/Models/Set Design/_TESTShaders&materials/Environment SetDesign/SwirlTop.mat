@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SwirlTop
-  m_Shader: {fileID: 4800000, guid: ae12b3c6a3ad902428415603a23e7060, type: 3}
+  m_Shader: {fileID: 4800000, guid: 07e4c74ac77a351438321129f4e6fb7c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -68,6 +68,7 @@ Material:
     - _Distribution1: -0.075
     - _Distribution2: 0.244
     - _DstBlend: 0
+    - _Gloss: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -75,6 +76,8 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Power1: 2
+    - _Power2: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -86,18 +89,37 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
+    - _brightnesscolorband: -1.68
+    - _brightnesswobl: 0.0025
+    - _edgebrightness: 1
     - _edgemultiplayer: 0.252
+    - _edgerange: 1.404447
+    - _gradientamount: 28.2
+    - _gradientamountwobl: 0
     - _node_5124: 0.48
     - _node_778_copy: 0.2393162
     - _opacity: 1
+    - _speed: 30.7
+    - _speed_copy: 0
+    - _tesselation: 1
+    - _wolrdcoor: 0.041
     m_Colors:
+    - _Basecolor1: {r: 0, g: 0, b: 0, a: 0}
+    - _Basecolor2: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 0.6039216, g: 0.21568629, b: 0.5764706, a: 0}
     - _Color2: {r: 1, g: 0.68235296, b: 0, a: 0}
     - _Color3: {r: 1, g: 0.68235296, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _brightnesstexture: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Glowcolor1: {r: 0, g: 0, b: 0, a: 0}
+    - _Glowcolor2: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _brightnesstexture: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
     - _node_1468: {r: 0, g: 1, b: 0.08965514, a: 1}
-    - _node_3384: {r: 0.03448248, g: 0, b: 1, a: 1}
+    - _node_2255: {r: 0.9933062, g: 0.51470584, b: 1, a: 1}
+    - _node_2255_copy: {r: 0.9933062, g: 0.51470584, b: 1, a: 1}
+    - _node_2739: {r: 0, g: 1, b: 0.7517242, a: 1}
+    - _node_2739_copy: {r: 0, g: 1, b: 0.7517242, a: 1}
+    - _node_3384: {r: 0.58590454, g: 0.5707547, b: 1, a: 1}
     - _node_3394: {r: 1, g: 0.058823504, b: 0.058823504, a: 1}
     - _node_6561: {r: 1, g: 0, b: 0, a: 1}

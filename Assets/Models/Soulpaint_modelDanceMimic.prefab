@@ -1075,6 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df65d09082e6c94c87f90920bed1429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emissiveColor: {r: 0, g: 0, b: 0, a: 0}
   lastBrush: {fileID: 7227071974842079000}
 --- !u!114 &7369856786433492176
 MonoBehaviour:
@@ -2466,10 +2467,12 @@ MonoBehaviour:
     rightFoot: {fileID: 2231923760834084254}
     rightToes: {fileID: 6731236496629438064}
   solver:
+    executedInEditor: 0
     IKPosition: {x: 0, y: 0, z: 0}
     IKPositionWeight: 1
     root: {fileID: 0}
     LOD: 0
+    scale: 1
     plantFeet: 1
     spine:
       bones: []
@@ -2610,6 +2613,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+      maxBodyYOffset: 0.05
       heelHeight:
         serializedVersion: 2
         m_Curve:
@@ -2695,6 +2699,7 @@ MonoBehaviour:
   partsToHide:
   - {fileID: 7236856287498349233}
   layerToHideNumber: 9
+  isEmbodying: 0
 --- !u!1 &6201724612910886805
 GameObject:
   m_ObjectHideFlags: 0
