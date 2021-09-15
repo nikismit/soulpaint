@@ -8,25 +8,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 71d21a0ec647fe24e8fdef92156e7bad
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/SceneMimicSetupFix Nik.unity
+    guid: 90e3c0f8b9c55504c84040e61d063cda
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/SetDesign&Mimic.unity
     guid: 4adaf491980bbe3489e12f1a5b487b94
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SetDesign_Curtains.unity
     guid: b623758b881f57645a043889a408649c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SetDesisng_Arches.unity
     guid: 622459dba1ba161479cee14cefffc932
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SetDesisng_Esscher.unity
     guid: f4bf42c3e25a2924691273e1e503aaac
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SetDesisng_Swirl.unity
     guid: e694b41ecbdb6874eb201c7181cd3ee4
   m_configObjects: {}

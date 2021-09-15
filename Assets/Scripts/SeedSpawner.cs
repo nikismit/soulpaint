@@ -12,13 +12,28 @@ public class SeedSpawner : MonoBehaviour
     public int seedCounter;
     public bool seedBrushIsOn;
     private GameObject canvas;
+    private List<float> timeStamps = new List<float>();
+    private List<Transform> balls = new List<Transform>();
+
+    [SerializeField]
+    float changeVal;
+   List<float> initScale = new List<float>();
+    [SerializeField]
+    float frequency = .5f;
+
     // Start is called before the first frame update
     void Start()
     {
-        prefabChanged = prefabToSpawn;
-        canvas = transform.GetComponentInParent<Rigidbody>().gameObject;
-        Material mat = gameObject.GetComponent<MeshRenderer>().material;
-        prefabChanged.GetComponent<MeshRenderer>().material = Instantiate(mat);
+        if (Gamestate.Painting == GameManager.Instance.getCurrentGameState())
+        {
+            prefabChanged = prefabToSpawn;
+            canvas = transform.GetComponentInParent<Rigidbody>().gameObject;
+            Material mat = gameObject.GetComponent<MeshRenderer>().material;
+            prefabChanged.GetComponent<MeshRenderer>().material = Instantiate(mat);
+            balls.Add(transform);
+            initScale.Add(transform.localScale.x);
+            timeStamps.Add(Time.time);
+        }
     }
 
     // Update is called once per frame
@@ -46,7 +61,21 @@ public class SeedSpawner : MonoBehaviour
                                              //  Random.Range(bounds.min.z, bounds.max.z));
                 go.transform.localRotation = Random.rotation;
                 go.transform.localScale = Vector3.one * Random.Range(0.045f, .055f);
+                timeStamps.Add(Time.time);
+                balls.Add(go.transform);
+                initScale.Add(transform.localScale.x);
             }
         }
+      
+            for (int i = 0; i < balls.Count; i++)
+            {
+            float a = initScale[i] + ((1 + Mathf.Sin(2 * Mathf.PI * (Time.time + timeStamps[i]) * frequency)) * initScale[i] * changeVal);
+            balls[i].localScale = new Vector3(a, a, a);
+
+            }
+
     }
+    
+    
+
 }

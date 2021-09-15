@@ -1,0 +1,846 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3614586558445724984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3614586558445724990}
+  - component: {fileID: 8498421297520936681}
+  m_Layer: 0
+  m_Name: MIMICS_RippleScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3614586558445724990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614586558445724984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.042, y: 0.5195099, z: -0.146}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5652677069686989331}
+  - {fileID: 5652677070854699497}
+  - {fileID: 5652677071168539220}
+  - {fileID: 5652677070164294673}
+  - {fileID: 5652677070923812032}
+  - {fileID: 5652677069827741842}
+  - {fileID: 5652677070108583405}
+  - {fileID: 5652677070611396665}
+  - {fileID: 5652677071008985224}
+  - {fileID: 5652677070922748310}
+  - {fileID: 5652677070373206320}
+  - {fileID: 5652677071371968237}
+  - {fileID: 5652677070835173062}
+  - {fileID: 5652677071642532934}
+  - {fileID: 5652677070000957200}
+  - {fileID: 5652677071520815606}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8498421297520936681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614586558445724984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543a19e14181cb94c82be8d45cfa04ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vrsetup: {fileID: 0}
+--- !u!1 &4988166994632195927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677070108583405}
+  - component: {fileID: 5330272555312611844}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677070108583405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166994632195927}
+  m_LocalRotation: {x: -0, y: -0.92387867, z: -0, w: 0.38268548}
+  m_LocalPosition: {x: 1.0422778, y: -0.5195099, z: 1.205221}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
+--- !u!114 &5330272555312611844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166994632195927}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166994702575275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677070164294673}
+  - component: {fileID: 5330272555248786424}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677070164294673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166994702575275}
+  m_LocalRotation: {x: -0, y: -0.70711, z: -0, w: -0.70710367}
+  m_LocalPosition: {x: -1.557, y: -0.5195099, z: 0.12857212}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -269.999, z: 0}
+--- !u!114 &5330272555248786424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166994702575275}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166994740608426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677070000957200}
+  - component: {fileID: 5330272555420500217}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677070000957200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166994740608426}
+  m_LocalRotation: {x: 0.38268542, y: -0.0000026151538, z: -0.9238787, w: 0.0000011213124}
+  m_LocalPosition: {x: 1.0422778, y: -0.52, z: -0.9480883}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: -45.000004, z: -180.00002}
+--- !u!114 &5330272555420500217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166994740608426}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166994905023016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677069827741842}
+  - component: {fileID: 5330272555585077115}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677069827741842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166994905023016}
+  m_LocalRotation: {x: -0, y: -0.923881, z: -0, w: -0.38268006}
+  m_LocalPosition: {x: -1.0670226, y: -0.5195099, z: 1.2052249}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -225, z: 0}
+--- !u!114 &5330272555585077115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166994905023016}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166995011713193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677069686989331}
+  - component: {fileID: 5330272555692262906}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677069686989331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995011713193}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0032592416, y: -0.5195099, z: -1.3629328}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5330272555692262906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995011713193}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166995338453635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677070611396665}
+  - component: {fileID: 5330272554809876432}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677070611396665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995338453635}
+  m_LocalRotation: {x: -0, y: -0.38268825, z: -0, w: -0.92387754}
+  m_LocalPosition: {x: -1.1110392, y: -0.5195099, z: -0.9480821}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: -314.999, z: 0}
+--- !u!114 &5330272554809876432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995338453635}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166995433710474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677070373206320}
+  - component: {fileID: 5330272555039874777}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677070373206320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995433710474}
+  m_LocalRotation: {x: 0.70710796, y: -0.0000020340085, z: -0.70710564, w: 0.000002130866}
+  m_LocalPosition: {x: 1.4882405, y: -0.519995, z: 0.12856701}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: -180.00002}
+--- !u!114 &5330272555039874777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995433710474}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166995687985390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677071168539220}
+  - component: {fileID: 5330272554219367869}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677071168539220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995687985390}
+  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.7071079}
+  m_LocalPosition: {x: 1.4882405, y: -0.5195099, z: 0.12856558}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+--- !u!114 &5330272554219367869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995687985390}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166995931862650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677070923812032}
+  - component: {fileID: 5330272554463898409}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677070923812032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995931862650}
+  m_LocalRotation: {x: -0, y: -0.38268274, z: -0, w: 0.9238798}
+  m_LocalPosition: {x: 1.0422747, y: -0.5195099, z: -0.90407705}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -45.000004, z: 0}
+--- !u!114 &5330272554463898409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995931862650}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166995932924716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677070922748310}
+  - component: {fileID: 5330272554464966271}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677070922748310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995932924716}
+  m_LocalRotation: {x: 0.0000029504295, y: -0.0000029504295, z: -1, w: 8.299138e-12}
+  m_LocalPosition: {x: -0.0032592416, y: -0.5200019, z: -1.3629344}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: -180, y: -180, z: -0.000015258789}
+--- !u!114 &5330272554464966271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166995932924716}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166996014934578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677071008985224}
+  - component: {fileID: 5330272554412218209}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677071008985224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996014934578}
+  m_LocalRotation: {x: 0.92387986, y: -0.0000011324883, z: -0.3826827, w: 0.0000026226044}
+  m_LocalPosition: {x: 1.0422747, y: -0.51999044, z: 1.1612097}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: -135, z: -180.00002}
+--- !u!114 &5330272554412218209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996014934578}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166996135404371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677070854699497}
+  - component: {fileID: 5330272554533215744}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677070854699497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996135404371}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029504295}
+  m_LocalPosition: {x: -0.0032592416, y: -0.5195099, z: 1.6200672}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
+--- !u!114 &5330272554533215744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996135404371}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166996178771068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677070835173062}
+  - component: {fileID: 5330272554577633583}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677070835173062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996178771068}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0.0000029504295}
+  m_LocalPosition: {x: -0.0032592416, y: -0.51998866, z: 1.6200655}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 180, y: -0.000015258789, z: -0.000015258789}
+--- !u!114 &5330272554577633583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996178771068}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166996447184636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677071642532934}
+  - component: {fileID: 5330272553770613679}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677071642532934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996447184636}
+  m_LocalRotation: {x: -0.70710367, y: -0.00000205636, z: -0.70711, w: -0.0000020116565}
+  m_LocalPosition: {x: -1.557, y: -0.5199952, z: 0.12856042}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: -270.001, z: 180.00002}
+--- !u!114 &5330272553770613679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996447184636}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166996577092428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677071520815606}
+  - component: {fileID: 5330272553900654111}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677071520815606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996577092428}
+  m_LocalRotation: {x: -0.92387754, y: -0.0000011026859, z: -0.38268828, w: -0.0000026673079}
+  m_LocalPosition: {x: -1.1110392, y: -0.51999044, z: 1.2052147}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: -225.00099, z: 180.00002}
+--- !u!114 &5330272553900654111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996577092428}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+--- !u!1 &4988166996717683799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5652677071371968237}
+  - component: {fileID: 5330272554041112836}
+  m_Layer: 0
+  m_Name: Soulpaint_mimic (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5652677071371968237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996717683799}
+  m_LocalRotation: {x: -0.38268015, y: -0.0000027492642, z: -0.92388093, w: -0.0000011064112}
+  m_LocalPosition: {x: -1.0670226, y: -0.52, z: -0.9480921}
+  m_LocalScale: {x: 1.68, y: 1.68, z: 1.68}
+  m_Children: []
+  m_Father: {fileID: 3614586558445724990}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: -315, z: 180.00002}
+--- !u!114 &5330272554041112836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988166996717683799}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2

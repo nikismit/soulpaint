@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 5298803766859219383}
   - component: {fileID: 5298803766859219382}
   - component: {fileID: 5298803766859219381}
-  - component: {fileID: 5298803766859219380}
-  - component: {fileID: 5298803766859219379}
   - component: {fileID: 3311434538850466714}
   m_Layer: 0
   m_Name: sphereBrushSeed
@@ -82,34 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &5298803766859219380
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5298803766859219378}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5298803766859219379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5298803766859219378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edafba07fba9dd488a4cc9846baa26f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeVal: 0.6
-  select: 3
-  frequency: 0.5
 --- !u!114 &3311434538850466714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 5298803766859219378, guid: 76992223414f96343acc5684b5a031a7,
     type: 3}
-  seedMax: 70
+  seedMax: 63
   seedCounter: 0
   seedBrushIsOn: 0
+  changeVal: 0.6
+  frequency: 0.5

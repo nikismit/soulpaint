@@ -32,17 +32,7 @@ public class GameManager : MonoBehaviour
     {
         SetNewGamestate(Gamestate.WaitforStart);
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
 
-            SetNewGamestate(Gamestate.Embody);
-
-        }
-    
-
-    }
     //    private void StartAudio()
     //    {
 
