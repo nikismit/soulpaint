@@ -65,8 +65,8 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _Distribution: 0.168
-    - _Distribution1: 0.793
-    - _Distribution2: 0.843
+    - _Distribution1: 0.448
+    - _Distribution2: 1
     - _DstBlend: 0
     - _Glossiness: 0.5
     - _Metallic: 0
@@ -76,7 +76,7 @@ Material:
     - _SrcBlend: 1
     - _StartPoint: -0.55
     - _StartPoint1: 0.662
-    - _StartPoint2: -0.064
+    - _StartPoint2: 0.291
     - _StencilOperation: 0
     - _StencilRef: 0
     - _UVSec: 0
@@ -89,8 +89,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 0.18396229, g: 1, b: 0.93624705, a: 0}
-    - _Color2: {r: 0.75, g: 1, b: 0.9796233, a: 0}
-    - _Color3: {r: 0.97404873, g: 1, b: 0, a: 0}
+    - _Color2: {r: 1, g: 0, b: 0.8000001, a: 0}
+    - _Color3: {r: 1, g: 0, b: 0.8000002, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _basecolor: {r: 0.251211, g: 0.2024221, b: 0.3529412, a: 1}
     - _basecolor_copy: {r: 0.5511157, g: 0, b: 0.5588235, a: 1}
