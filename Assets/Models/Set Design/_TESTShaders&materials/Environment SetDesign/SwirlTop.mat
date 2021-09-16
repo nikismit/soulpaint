@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SwirlTop
-  m_Shader: {fileID: 4800000, guid: 5b69b51099146ab49bc7fe5ed7886649, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6ed86edbe5d3be646a103b87daaab14f, type: 3}
   m_ShaderKeywords: _ORIENTATION_Z
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -65,7 +65,7 @@ Material:
     - _CompareFunction: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Distribution: 15.8
+    - _Distribution: 0.248
     - _Distribution1: -0.075
     - _Distribution2: 0.244
     - _DstBlend: 0
@@ -88,7 +88,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StartPoint: -0.39
+    - _StartPoint: -0.413
     - _StartPoint1: -0.51
     - _StartPoint2: 0.069
     - _Startpoint: -0.01
@@ -102,6 +102,7 @@ Material:
     - _edgebrightness: 1
     - _edgemultiplayer: 0.252
     - _edgerange: 1.404447
+    - _fresnel: 0.29
     - _gradientamount: 28.2
     - _gradientamountwobl: 0
     - _metal: 0
@@ -119,7 +120,7 @@ Material:
     - _Basecolor1: {r: 0, g: 0, b: 0, a: 0}
     - _Basecolor2: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.6039216, g: 0.21568629, b: 0.5764706, a: 0}
+    - _Color1: {r: 0.6039216, g: 0.2156862, b: 0.57647055, a: 0.42745098}
     - _Color2: {r: 1, g: 0.68235296, b: 0, a: 0}
     - _Color3: {r: 1, g: 0.68235296, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

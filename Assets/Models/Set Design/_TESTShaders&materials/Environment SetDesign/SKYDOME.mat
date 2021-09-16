@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SKYDOME
-  m_Shader: {fileID: 4800000, guid: f97b6e4bce3f32047863423dc38b878b, type: 3}
+  m_Shader: {fileID: 4800000, guid: 2cb67433da974f040b65585c12f1621b, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -88,8 +88,8 @@ Material:
     - _node_778_copy: 0.37
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.18396229, g: 1, b: 0.93624705, a: 0}
-    - _Color2: {r: 1, g: 0, b: 0.8000001, a: 0}
+    - _Color1: {r: 0.1839622, g: 1, b: 0.93624705, a: 0}
+    - _Color2: {r: 0.23380202, g: 0.5131718, b: 0.6981132, a: 0}
     - _Color3: {r: 1, g: 0, b: 0.8000002, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _basecolor: {r: 0.251211, g: 0.2024221, b: 0.3529412, a: 1}
