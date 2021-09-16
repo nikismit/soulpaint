@@ -21,6 +21,7 @@ public class SceneManagerScene1 : MonoBehaviour
     [SerializeField] SkinnedMeshRenderer scanMaterial, scanHeadMaterial;
     [SerializeField] Material NotDissolve;
     float scanVal;
+    bool embodied;
 
     private VRTK_ControllerEvents rightControllerAlias = null;
     // [SerializeField] HandSelector handSelector;
@@ -91,13 +92,16 @@ public class SceneManagerScene1 : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N) ||  (rightControllerAlias.buttonOnePressed))
+        if (rightControllerAlias != null && !embodied)
         {
+            if (Input.GetKeyDown(KeyCode.N) || (rightControllerAlias.buttonOnePressed))
+            {
 
-            GameManager.Instance.SetNewGamestate(Gamestate.Embody);
+                GameManager.Instance.SetNewGamestate(Gamestate.Embody);
+                embodied = true;
 
+            }
         }
-
 
     }
     private void  SetupAvatar()
