@@ -24,7 +24,7 @@ public class MimicPuppet : MonoBehaviour
     [SerializeField]
     Vector3 previousAddedPosition;
     [SerializeField]
-    MovementType myMovType;
+    public MovementType myMovType;
     //Rotations
     Vector3 masterRefRotation;
     Vector3 addedRotation;
@@ -62,7 +62,7 @@ public class MimicPuppet : MonoBehaviour
         masterAvatarscript = player.GetComponent<MimicSender>();
         rotationDelta = transform.eulerAngles - player.transform.eulerAngles;
         previousAddedPosition = transform.position;
-        print($"Rotation delta is {rotationDelta}");
+    //    print($"Rotation delta is {rotationDelta}");
         masterRefPosition = masterAvatarscript.startPosition;
         masterRefRotation = masterAvatarscript.startRotation;
         previousPosition = masterAvatarscript.position;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.FinalIK;
 using UnityEngine.SceneManagement;
+using VRTK;
 
 
 public class SceneManagerScene1 : MonoBehaviour
@@ -20,7 +21,9 @@ public class SceneManagerScene1 : MonoBehaviour
     [SerializeField] SkinnedMeshRenderer scanMaterial, scanHeadMaterial;
     [SerializeField] Material NotDissolve;
     float scanVal;
+    bool embodied;
 
+    private VRTK_ControllerEvents rightControllerAlias = null;
     // [SerializeField] HandSelector handSelector;
     int clip;
     float fadeDuration = 2;
@@ -34,9 +37,15 @@ public class SceneManagerScene1 : MonoBehaviour
        timerObject.SetActive(false);
         scanMaterial.material.SetFloat("_Progress", 0);
         scanHeadMaterial.material.SetFloat("_Progress", 0);
+        GameManager.Instance.SetNewGamestate(Gamestate.Meditation);
+        Invoke("SetControllerReferences", 2f);
     }
 
-    
+    void SetControllerReferences()
+    {
+        rightControllerAlias = VRTK_DeviceFinder.GetControllerRightHand().GetComponent<VRTK_ControllerEvents>();
+
+    }
     private void OnEnable()
     {
         GameManager.gamestateChanged += OnGameStateChanged;
@@ -81,7 +90,21 @@ public class SceneManagerScene1 : MonoBehaviour
 
 
     }
-   private void  SetupAvatar()
+    private void Update()
+    {
+        if (rightControllerAlias != null && !embodied)
+        {
+            if (Input.GetKeyDown(KeyCode.N) || (rightControllerAlias.buttonOnePressed))
+            {
+
+                GameManager.Instance.SetNewGamestate(Gamestate.Embody);
+                embodied = true;
+
+            }
+        }
+
+    }
+    private void  SetupAvatar()
     {
         scanHeadMaterial.material = NotDissolve;
         scanMaterial.material = NotDissolve;

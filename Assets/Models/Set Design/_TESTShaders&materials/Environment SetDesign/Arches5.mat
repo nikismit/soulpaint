@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Arches4
+  m_Name: Arches5
   m_Shader: {fileID: 4800000, guid: 7ffc4b7bd4c24a84b915037ff1060ab8, type: 3}
   m_ShaderKeywords: _EMISSION _SLICEDIRECTION_FROM_CENTER
   m_LightmapFlags: 1
