@@ -65,7 +65,7 @@ Material:
     - _CompareFunction: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Distribution: 0.248
+    - _Distribution: 0.394
     - _Distribution1: -0.075
     - _Distribution2: 0.244
     - _DstBlend: 0
@@ -102,7 +102,7 @@ Material:
     - _edgebrightness: 1
     - _edgemultiplayer: 0.252
     - _edgerange: 1.404447
-    - _fresnel: 0.29
+    - _fresnel: 0.23
     - _gradientamount: 28.2
     - _gradientamountwobl: 0
     - _metal: 0
@@ -120,8 +120,8 @@ Material:
     - _Basecolor1: {r: 0, g: 0, b: 0, a: 0}
     - _Basecolor2: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.6039216, g: 0.2156862, b: 0.57647055, a: 0.42745098}
-    - _Color2: {r: 1, g: 0.68235296, b: 0, a: 0}
+    - _Color1: {r: 1, g: 0, b: 0.9292927, a: 1}
+    - _Color2: {r: 1, g: 0.68235296, b: 0, a: 1}
     - _Color3: {r: 1, g: 0.68235296, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Glowcolor1: {r: 0, g: 0, b: 0, a: 0}

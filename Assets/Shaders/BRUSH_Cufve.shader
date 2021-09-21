@@ -14,7 +14,7 @@ Shader "BRUSH_Curve"
 
 	SubShader
 	{
-		Tags{ "RenderType" = "TransparentCutout"  "Queue" = "Transparent+0" }
+		Tags{ "RenderType" = "TransparentCutout"  "Queue" = "Transparent+0" "IsEmissive" = "true"  }
 		Cull Back
 		CGPROGRAM
 		#include "UnityShaderVariables.cginc"
@@ -32,7 +32,7 @@ Shader "BRUSH_Curve"
 
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
-			o.Albedo = _color.rgb;
+			o.Emission = _color.rgb;
 			float temp_output_11_0 = _Float0;
 			o.Alpha = temp_output_11_0;
 			float2 panner2 = ( _Time.y * float2( 0,1 ) + i.uv_texcoord);
@@ -46,7 +46,7 @@ Shader "BRUSH_Curve"
 }
 /*ASEBEGIN
 Version=18912
-2114;286;1920;1007;970.7587;360.7968;1;True;False
+0;24;1920;995;970.7587;354.7968;1;True;False
 Node;AmplifyShaderEditor.Vector2Node;4;-565,-170.5;Inherit;False;Constant;_Vector0;Vector 0;1;0;Create;True;0;0;0;False;0;False;0,1;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.TextureCoordinatesNode;3;-647,-358.5;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleTimeNode;5;-608,-25.5;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
@@ -62,8 +62,8 @@ WireConnection;2;1;5;0
 WireConnection;1;1;2;0
 WireConnection;10;1;1;0
 WireConnection;10;2;11;0
-WireConnection;0;0;8;0
+WireConnection;0;2;8;0
 WireConnection;0;9;11;0
 WireConnection;0;10;10;0
 ASEEND*/
-//CHKSM=E38FDC80771F89866921CE1CC3F2A675A07BCF29
+//CHKSM=A36684BF5773397A14E0F20D5DAA2EDBCBAA6415
