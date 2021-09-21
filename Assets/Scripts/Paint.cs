@@ -31,6 +31,10 @@ public class Paint : MonoBehaviour
     float left, right;
     [SerializeField]
     bool newBrush;
+    [SerializeField]
+    int skipFramesRibbon =3;
+    [SerializeField]
+    float width = .025f;
     int counter;
     public GameObject canvas;
     public bool customBrushShaderIsOn;
@@ -90,14 +94,14 @@ public class Paint : MonoBehaviour
                         if (right >= .1f)
                         {
                             counter++;
-                            if (counter % 3 == 0)
+                            if (counter % skipFramesRibbon == 0)
 
                             {
                                 Position_Last = brushTipPoint.transform.position;
 
                                 if (meshDrawer != null)
                                 {
-                                    //      meshDrawer.setWidth(width);
+                                         meshDrawer.setWidth(width);
                                     meshDrawer.AddPoint(Position_Last, right); // calls on the MeshLineRenderer 
                                                                                //and sends the next point as info, essentially the value right is currently
                                                                                //not being used. check further on whether it would be needed in future

@@ -11,7 +11,7 @@ public class VRIKApplier : MonoBehaviour
     {
         normal = 0,
         toon_kids,
-        goddess, 
+        spNew,
         soulPaint,
     }
 
@@ -78,7 +78,7 @@ public class VRIKApplier : MonoBehaviour
             myVRIK.rightFoot = findVRIKComponent(this.transform, "R Foot");
             myVRIK.rightToes = findVRIKComponent(this.transform, "R Toe0");
         }
-        else if (_boneStructure == BoneStructure.goddess)
+        else if (_boneStructure == BoneStructure.spNew)
         {
             myVRIK = this.GetComponent<VRIK>().references;
             myVRIK.root = this.transform;
