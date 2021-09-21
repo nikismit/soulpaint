@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: static
-  m_Shader: {fileID: 4800000, guid: ec64378f9a2bc7e419c011053b357cde, type: 3}
+  m_Name: BRUSH_Curve
+  m_Shader: {fileID: 4800000, guid: 29f6a7a259e968d4a87c2991f52d2545, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,8 +40,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dd3bbb1a26d1f46e9b942d2c2f082f47, type: 3}
-        m_Scale: {x: 5, y: 5}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -56,11 +56,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: bdbe94d7623ec3940947b62544306f1c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2c536aff47a0bf244917f8b2a55c45ee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
-        m_Texture: {fileID: 2800000, guid: ff902dc5c3e264587a8bc6213e64a5e2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4e7d20c3b6abc834a8d407b9421aa04b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -69,42 +69,25 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 0.47
+    - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Float0: 0.601
     - _GlossMapScale: 1
-    - _Glossiness: 0.462
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NoiseVariable: 1
     - _OcclusionStrength: 1
-    - _Offset: 0
     - _Parallax: 0.02
-    - _RepeatCount: 5
-    - _ResX: 1000
-    - _ResY: 1000
-    - _ScaleWithZoom: 0
     - _SmoothnessTextureChannel: 0
-    - _Spacing: 0.5
     - _SpecularHighlights: 1
-    - _Speed: 1
     - _SrcBlend: 1
-    - _TransAmbient: 0.251
-    - _TransDirect: 1
-    - _TransNormalDistortion: 0.137
-    - _TransScattering: 7
-    - _TransShadow: 0.9
-    - _Translucency: 2.26
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 1
-    - _speed: 5
     m_Colors:
-    - _AltColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _Color0: {r: 1, g: 1, b: 1, a: 0}
-    - _ColorA: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorB: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _color: {r: 1, g: 1, b: 1, a: 0}
+    - _color: {r: 1, g: 1, b: 1, a: 1}
+    - _color1: {r: 1, g: 1, b: 1, a: 1}
