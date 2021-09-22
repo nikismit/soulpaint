@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: electricityBlack
-  m_Shader: {fileID: 4800000, guid: d449f596779b7764699c335ec9b9a7ac, type: 3}
+  m_Shader: {fileID: 4800000, guid: d54a58dafe55bac4d903b3ac9fb121f0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0

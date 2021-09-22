@@ -82,29 +82,29 @@ public class VRIKApplier : MonoBehaviour
         {
             myVRIK = this.GetComponent<VRIK>().references;
             myVRIK.root = this.transform;
-            myVRIK.pelvis = findVRIKComponent(this.transform, "Pelvis");
-            myVRIK.spine = findVRIKComponent(this.transform, "Spine01");
+            myVRIK.pelvis = findVRIKComponent(this.transform, "Base HumanPelvis");
+            myVRIK.spine = findVRIKComponent(this.transform, "Base HumanSpine1");
             //			Debug.Log (findVRIKComponent (this.transform, "Spine01"));
-            myVRIK.chest = findVRIKComponent(this.transform, "Spine02");
+            myVRIK.chest = findVRIKComponent(this.transform, "Base HumanSpine4");
             //			Debug.Log (findVRIKComponent (this.transform, "Spine04"));
-            myVRIK.neck = findVRIKComponent(this.transform, "Neck");
-            myVRIK.head = findVRIKComponent(this.transform, "Face");
-            myVRIK.leftShoulder = findVRIKComponent(this.transform, "L_Clavicle");
-            myVRIK.leftUpperArm = findVRIKComponent(this.transform, "L_UpperArm");
-            myVRIK.leftForearm = findVRIKComponent(this.transform, "L_LowerArm");
-            myVRIK.leftHand = findVRIKComponent(this.transform, "L_Hand");
-            myVRIK.rightShoulder = findVRIKComponent(this.transform, "R_Clavicle");
-            myVRIK.rightUpperArm = findVRIKComponent(this.transform, "R_UpperArm");
-            myVRIK.rightForearm = findVRIKComponent(this.transform, "R_LowerArm");
-            myVRIK.rightHand = findVRIKComponent(this.transform, "R_Hand");
-            myVRIK.leftThigh = findVRIKComponent(this.transform, "L_UpperLeg");
-            myVRIK.leftCalf = findVRIKComponent(this.transform, "L_Calf");
-            myVRIK.leftFoot = findVRIKComponent(this.transform, "L_Foot");
-            myVRIK.leftToes = findVRIKComponent(this.transform, "L_Toes");
-            myVRIK.rightThigh = findVRIKComponent(this.transform, "R_UpperLeg");
-            myVRIK.rightCalf = findVRIKComponent(this.transform, "R_Calf");
-            myVRIK.rightFoot = findVRIKComponent(this.transform, "R_Foot");
-            myVRIK.rightToes = findVRIKComponent(this.transform, "R_Toes");
+            myVRIK.neck = findVRIKComponent(this.transform, "Base HumanNeck2");
+            myVRIK.head = findVRIKComponent(this.transform, "Base HumanHead");
+            myVRIK.leftShoulder = findVRIKComponent(this.transform, "Base HumanLArmCollarbone");
+            myVRIK.leftUpperArm = findVRIKComponent(this.transform, "Base HumanLArmUpperarm");
+            myVRIK.leftForearm = findVRIKComponent(this.transform, "Base HumanLArmForearm");
+            myVRIK.leftHand = findVRIKComponent(this.transform, "Base HumanLArmPalm");
+            myVRIK.rightShoulder = findVRIKComponent(this.transform, "Base HumanRCollarbone");
+            myVRIK.rightUpperArm = findVRIKComponent(this.transform, "Base HumanRUpperarm");
+            myVRIK.rightForearm = findVRIKComponent(this.transform, "Base HumanRForearm");
+            myVRIK.rightHand = findVRIKComponent(this.transform, "Base HumanRPalm");
+            myVRIK.leftThigh = findVRIKComponent(this.transform, "Base HumanLLegThigh");
+            myVRIK.leftCalf = findVRIKComponent(this.transform, "Base HumanLLegCalf");
+            myVRIK.leftFoot = findVRIKComponent(this.transform, "Base HumanLLegFoot");
+            myVRIK.leftToes = findVRIKComponent(this.transform, "Base HumanFootBone001");
+            myVRIK.rightThigh = findVRIKComponent(this.transform, "Base HumanRLegThigh");
+            myVRIK.rightCalf = findVRIKComponent(this.transform, "Base HumanRLegCalf");
+            myVRIK.rightFoot = findVRIKComponent(this.transform, "Base HumanRLegFoot");
+            myVRIK.rightToes = findVRIKComponent(this.transform, "Base HumanFootBone001 1");
         }
         else if (_boneStructure == BoneStructure.soulPaint)
         {

@@ -123,7 +123,7 @@ public class SceneManagerScene1 : MonoBehaviour
         VRIK vrik = finalPuppet.AddComponent<VRIK>();
         VRIKApplier vRIKApplier = finalPuppet.AddComponent<VRIKApplier>();
         
-        vRIKApplier._boneStructure = VRIKApplier.BoneStructure.soulPaint;
+        vRIKApplier._boneStructure = VRIKApplier.BoneStructure.spNew;
         vRIKApplier.applyVRIKComponents();
         ResetBones();
         DontDestroyOnLoad(finalPuppet);
