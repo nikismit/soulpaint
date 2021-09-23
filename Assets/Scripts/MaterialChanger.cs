@@ -7,18 +7,39 @@ public class MaterialChanger : MonoBehaviour
     enum TypeOfPrefab { particles = 0, objects,}
     [SerializeField] TypeOfPrefab prefabType;
     [SerializeField]
-    ParticleSystemRenderer[] particleSystems;
+    ParticleSystemRenderer particleSystem;
+    Material typeMat;
+  //  List<Material> matParticle = new List<Material>();
+    [SerializeField]
+    bool isCustomShader, lightWrap;
+    [ColorUsage(true, true)]
+    public Color[] brushColor = new Color[7];
 
 
-    public void ChangeMaterial(Material mat)
+    public void ChangeMaterial(int x)
     {
         if (prefabType == TypeOfPrefab.particles)
         {
-            foreach (ParticleSystemRenderer pS in particleSystems)
+            particleSystem = GetComponent<ParticleSystemRenderer>();
+            typeMat = particleSystem.material;
+            particleSystem.material = Instantiate(typeMat);
+            if (isCustomShader)
             {
-                pS.material = Instantiate(mat);
-             
+                if (!lightWrap)
+                {
+                    particleSystem.material.SetColor("_color", brushColor[x]);
+                }
+                else
+                {
+
+                    particleSystem.material.SetColor("_node_3384", brushColor[x]);
+                }
             }
+            else
+            {
+                particleSystem.material.SetColor("_Color", brushColor[x]);
+            }
+            
         }
     }
 }

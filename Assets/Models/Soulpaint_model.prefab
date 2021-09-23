@@ -2897,6 +2897,7 @@ MonoBehaviour:
   width: 0.025
   canvas: {fileID: 0}
   customBrushShaderIsOn: 0
+  color: 0
   prefabToSpawn: {fileID: 0}
   brushTipPoint: {fileID: 18941620609242209}
   paintingWithMaterial: 0
@@ -2907,7 +2908,7 @@ MonoBehaviour:
   StartButton: {fileID: 3345105042437880987}
   startPaint: {fileID: 2100000, guid: 794f9dbee71cb874689087564d1337c4, type: 2}
   timeToDrawButton: 2
-  paintBrush: {fileID: 0}
+  paintBrush: {fileID: 4350110589635173029}
 --- !u!1 &6201724612910886805
 GameObject:
   m_ObjectHideFlags: 0

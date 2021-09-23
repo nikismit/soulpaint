@@ -38,6 +38,8 @@ public class Paint : MonoBehaviour
     int counter;
     public GameObject canvas;
     public bool customBrushShaderIsOn;
+  
+    public int color;
     public GameObject prefabToSpawn;
     [SerializeField] Transform brushTipPoint;
     public bool paintingWithMaterial;
@@ -158,7 +160,7 @@ public class Paint : MonoBehaviour
                                 //     go.transform.localScale = new Vector3 (right * .01f, right * .01f, right * .01f);
 
                                 go.transform.SetParent(canvas.transform);
-                                go.GetComponent<MaterialChanger>().ChangeMaterial(materialForObj);
+                                go.GetComponent<MaterialChanger>().ChangeMaterial(color);
 
                             }
                             particleCounter++;
