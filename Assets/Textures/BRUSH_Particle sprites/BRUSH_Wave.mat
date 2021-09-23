@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: electricityBlack
-  m_Shader: {fileID: 4800000, guid: d449f596779b7764699c335ec9b9a7ac, type: 3}
+  m_Name: BRUSH_Curve
+  m_Shader: {fileID: 4800000, guid: 29f6a7a259e968d4a87c2991f52d2545, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -55,32 +55,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Tex:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: 29627d1af34042841857c4f405be685b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2c536aff47a0bf244917f8b2a55c45ee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
-        m_Texture: {fileID: 2800000, guid: 29627d1af34042841857c4f405be685b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample4:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample5:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample6:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample7:
-        m_Texture: {fileID: 2800000, guid: f9efe0b8007c598499e11d26621009f7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4e7d20c3b6abc834a8d407b9421aa04b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -89,11 +69,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 0.01
+    - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DisplacementIntensity: 0.1
     - _DstBlend: 0
-    - _EmissionGain: 0.5
+    - _Float0: 0.601
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -101,26 +80,14 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Size: 0.45
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TransAmbient: 0.2
-    - _TransDirect: 1
-    - _TransNormalDistortion: 0.1
-    - _TransScattering: 2
-    - _TransShadow: 0.9
-    - _Translucency: 1
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
-    - _frequency: 1
-    - _speed: 1.86
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 18.164822, g: 0.19020757, b: 0.28531134, a: 1}
-    - _Color1: {r: 36.290806, g: 7.4101644, b: 9.862954, a: 0.54509807}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissiveColor: {r: 5.037622, g: 5.037622, b: 5.037622, a: 0.6156863}
-    - _color: {r: 8.031373, g: 8.031373, b: 8.031373, a: 1}
-    - _color1: {r: 2.5166614, g: 0.85835665, b: 0.059355214, a: 0}
+    - _color: {r: 1, g: 1, b: 1, a: 1}
+    - _color1: {r: 1, g: 1, b: 1, a: 1}
