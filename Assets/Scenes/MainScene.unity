@@ -15492,7 +15492,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127657591760083047}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.007334287
@@ -16776,7 +16776,7 @@ MonoBehaviour:
     rgba: 0
   emmissiveColor: {r: 0, g: 0, b: 0, a: 0}
   Electric: {fileID: 0}
-  customShader: 0
+  customShader: 1
   subTypeColor: 0
   tipObj: {fileID: 0}
   IsEmissive: 0
@@ -22815,7 +22815,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -27531,7 +27531,7 @@ MonoBehaviour:
   Electric: {fileID: 0}
   customShader: 0
   subTypeColor: 0
-  tipObj: {fileID: 4002757270189450848, guid: 3602edf4bd9fb1b46931a7e2684570d2, type: 3}
+  tipObj: {fileID: 4002757270189450848, guid: 540977b3f29e61a48b01d953cb6b0d5b, type: 3}
   IsEmissive: 0
   intensityVal: 0
 --- !u!4 &8853911855196796886
@@ -27644,7 +27644,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -32360,7 +32360,7 @@ MonoBehaviour:
   Electric: {fileID: 0}
   customShader: 0
   subTypeColor: 0
-  tipObj: {fileID: 8592160718233956612, guid: 4c423b2e1a0b1a84f96b15f9568d6346, type: 3}
+  tipObj: {fileID: 8592160718233956612, guid: 7555bbfe0daf89d429acab596ebbaf94, type: 3}
   IsEmissive: 0
   intensityVal: 0
 --- !u!4 &8853911855216879750
@@ -32469,7 +32469,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -37103,7 +37103,7 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 6.4, g: 0, b: 0.21960784, a: 1}
   - {r: 0.65882355, g: 0.0627451, b: 2.447059, a: 1}
-  - {r: 8, g: 1.0980393, b: 0, a: 1}
+  - {r: 1, g: 0.40392154, b: 0.015686275, a: 1}
   - {r: 7.592157, g: 3.1058824, b: 0, a: 1}
   - {r: 13.552941, g: 34.635296, b: 5.019608, a: 1}
 --- !u!199 &8853911855958449854
@@ -37220,7 +37220,7 @@ MonoBehaviour:
   Electric: {fileID: 0}
   customShader: 0
   subTypeColor: 0
-  tipObj: {fileID: 2428145257740660597, guid: 7803f211730813e4bbe4f8fdda45a657, type: 3}
+  tipObj: {fileID: 2428145257740660597, guid: a00f35e2b720f2c48892fdd52b6aad64, type: 3}
   IsEmissive: 0
   intensityVal: 0
 --- !u!4 &8853911856367737124
@@ -37333,7 +37333,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -42049,7 +42049,7 @@ MonoBehaviour:
   Electric: {fileID: 0}
   customShader: 0
   subTypeColor: 0
-  tipObj: {fileID: 4548488625518011364, guid: b91a8028e3b37e24fb1dd048a2250636, type: 3}
+  tipObj: {fileID: 4548488625518011364, guid: e7a606dc13e25ef4ab2c3875f34e5341, type: 3}
   IsEmissive: 0
   intensityVal: 0
 --- !u!4 &8853911856573868548
@@ -47077,7 +47077,7 @@ MonoBehaviour:
   customShader: 1
   subTypeColor: 0
   tipObj: {fileID: 0}
-  IsEmissive: 1
+  IsEmissive: 0
   intensityVal: 0
 --- !u!4 &8853911856711441823
 Transform:

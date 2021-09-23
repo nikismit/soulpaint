@@ -128,8 +128,8 @@ public class HandSelector : MonoBehaviour
         {
             if (!isEmissive)
             {
-                paintObject.materialToPaint.SetColor("Color", color);
-                paintHead.material.SetColor("Color", color);
+                paintObject.materialToPaint.SetColor("_Color", color);
+                paintHead.material.SetColor("_Color", color);
                 isEmissive = false;
             }
             else
