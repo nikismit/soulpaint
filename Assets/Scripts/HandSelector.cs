@@ -89,7 +89,7 @@ public class HandSelector : MonoBehaviour
                     intensity = _brushType.intensityVal;
                     paintObject.materialForObj.color = _brushType.brushColor;
                     SetColor(lastCol);
-
+                    paintObject.color = _brushType.ColorNo;
 
 
                     break;
@@ -112,9 +112,10 @@ public class HandSelector : MonoBehaviour
 
     private void SetColor(Color32 color)
     {
+    
+        paintObject.colorPicked = emissiveColor;
+     
       
-        paintObject.colorPicked = color;
-        
         if (!paintObject.customBrushShaderIsOn)
         {
             paintObject.materialToPaint.color = color;
@@ -127,8 +128,8 @@ public class HandSelector : MonoBehaviour
         {
             if (!isEmissive)
             {
-                paintObject.materialToPaint.SetColor("_color", color);
-                paintHead.material.SetColor("_color", color);
+                paintObject.materialToPaint.SetColor("Color", color);
+                paintHead.material.SetColor("Color", color);
                 isEmissive = false;
             }
             else

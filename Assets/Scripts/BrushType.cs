@@ -7,7 +7,10 @@ public class BrushType : MonoBehaviour
 {
     [SerializeField]
    public BrushTypeEnum mybrushType;
+    [SerializeField]
+    public int ColorNo;
     public GameObject prefabToSpawn;
+    [ColorUsage(true, true)]
     public Color32 brushColor;
     [ColorUsage (true, true)]
     public Color emmissiveColor;

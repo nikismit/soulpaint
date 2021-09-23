@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BRUSH_Curve
+  m_Name: BRUSH_Wave
   m_Shader: {fileID: 4800000, guid: 29f6a7a259e968d4a87c2991f52d2545, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
