@@ -60,7 +60,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Gloss: 0
+    - _Gloss: 4.98
     - _Gloss1: 2.97
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -70,7 +70,7 @@ Material:
     - _OcclusionStrength: 1
     - _Opacity1: 1
     - _Parallax: 0.02
-    - _Power1: 2
+    - _Power1: 1.29
     - _Power2: 2.05
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -80,11 +80,11 @@ Material:
     - _TransNormalDistortion: 0.1
     - _TransScattering: 2
     - _TransShadow: 0.9
-    - _Translucency: 1
+    - _Translucency: 14.2
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0.118879735, g: 0.76083034, b: 1.1887974, a: 0.043137256}
+    - _Color0: {r: 0.110918716, g: 0.68215007, b: 1.0592737, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
