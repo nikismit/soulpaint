@@ -27542,7 +27542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8853911855196796887}
   m_LocalRotation: {x: 0.062446278, y: -0.12911546, z: 0.01571647, w: 0.9895366}
-  m_LocalPosition: {x: 0.228, y: 0.03, z: 0.141}
+  m_LocalPosition: {x: 0.219, y: 0.03, z: 0.139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8853911856643515128}
@@ -32255,8 +32255,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 15d96ae2d3ede974fb4b560011e1ecc0, type: 2}
-  - {fileID: 2100000, guid: 15d96ae2d3ede974fb4b560011e1ecc0, type: 2}
+  - {fileID: 2100000, guid: 43b5e311a4e348c42bfd713a41fc7e8c, type: 2}
+  - {fileID: 2100000, guid: f311e2143f818214bb7789bba1f0bd19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32314,7 +32314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabType: 0
   particleSystem: {fileID: 0}
-  isCustomShader: 1
+  isCustomShader: 0
   lightWrap: 0
   brushColor:
   - {r: 0.2509804, g: 5.019608, b: 36.14118, a: 1}
@@ -32467,7 +32467,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
   randomSeed: 0
@@ -37178,7 +37178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8853911855958449852}
   m_LocalRotation: {x: 0.062446278, y: -0.12911546, z: 0.01571647, w: 0.9895366}
-  m_LocalPosition: {x: 0.157, y: -0.156, z: 0.104}
+  m_LocalPosition: {x: 0.183, y: -0.155, z: 0.111}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8853911856643515128}
@@ -37231,7 +37231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8853911856367737125}
   m_LocalRotation: {x: 0.062446278, y: -0.12911546, z: 0.01571647, w: 0.9895366}
-  m_LocalPosition: {x: -0.277, y: 0.014741302, z: 0.049}
+  m_LocalPosition: {x: -0.269, y: 0.015, z: 0.051}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8853911856643515128}
@@ -37331,7 +37331,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
   randomSeed: 0
