@@ -40,7 +40,7 @@ public class ScaleAvatar : MonoBehaviour
     public float scaleVar;
 
 
-    private float teenScaleModifier = 1.0362f;
+    private float teenScaleModifier = 0.759655f;
     public float AVATAR_EYE_HEIGHT;
     private bool scaled;
 
