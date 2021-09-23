@@ -2887,8 +2887,8 @@ MonoBehaviour:
   - {fileID: 6917471995830284680, guid: 96cc5c10122d3f54aaf16ecfe802002e, type: 3}
   - {fileID: 1492815167921281426, guid: affd95e650cdf7b4f9526da243b6dd5a, type: 3}
   - {fileID: 589985298418514668, guid: 338e998483cffc347ad66b20b8f5a05f, type: 3}
-  materialToPaint: {fileID: 2100000, guid: 8e1cbe094222af5419fb5dad2edf07d7, type: 2}
-  materialForObj: {fileID: 2100000, guid: b29d3df6863e6b241a892e51428803fd, type: 2}
+  materialToPaint: {fileID: 2100000, guid: d3844d8c3dd7f5647a85a006fe7df518, type: 2}
+  materialForObj: {fileID: 2100000, guid: d3844d8c3dd7f5647a85a006fe7df518, type: 2}
   colorPicked:
     serializedVersion: 2
     rgba: 15987699
