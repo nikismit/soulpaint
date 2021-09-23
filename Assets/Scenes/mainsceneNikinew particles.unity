@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -310,6 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -434,6 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -612,6 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -1359,6 +1363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -1556,6 +1561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -2235,6 +2241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -2295,6 +2302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -2626,6 +2634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -2874,6 +2883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -2931,6 +2941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 1
+  ColorNo: 0
   prefabToSpawn: {fileID: 8815939655114308677, guid: 456418e199684b74bbae0e85439b6c0c,
     type: 3}
   brushColor:
@@ -3003,6 +3014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -4454,6 +4466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -5579,6 +5592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -5748,6 +5762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -5992,6 +6007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -6060,6 +6076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -6211,6 +6228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -6427,6 +6445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -6656,6 +6675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -6792,6 +6812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -6880,6 +6901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -7130,6 +7152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 1
+  ColorNo: 0
   prefabToSpawn: {fileID: 3981787983633245347, guid: d932ea832404ec04d81c8cd54dd7b9c6,
     type: 3}
   brushColor:
@@ -7281,6 +7304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 1
+  ColorNo: 0
   prefabToSpawn: {fileID: 5298803766859219378, guid: 76992223414f96343acc5684b5a031a7,
     type: 3}
   brushColor:
@@ -7421,6 +7445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -7593,6 +7618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -7711,6 +7737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 0
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -8044,6 +8071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -8414,6 +8442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 3
+  ColorNo: 0
   prefabToSpawn: {fileID: 0}
   brushColor:
     serializedVersion: 2
@@ -9817,7 +9846,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 40384da5adf07ea4aafa22bfae2c17d3, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 990875014047411164, guid: ec39c0a0f7a76614190ecc588767987d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1753060154730448599, guid: 17d8724e50ce48049be0e547201c3507,
+        type: 3}
     - target: {fileID: 990875014862147586, guid: ec39c0a0f7a76614190ecc588767987d,
         type: 3}
       propertyPath: m_Name
@@ -13894,6 +13929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 2
+  ColorNo: 0
   prefabToSpawn: {fileID: 5298803766859219378, guid: 29dba891ea528b74091302abc4344f68,
     type: 3}
   brushColor:
@@ -15384,6 +15420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mybrushType: 2
+  ColorNo: 0
   prefabToSpawn: {fileID: 5298803766859219378, guid: 29dba891ea528b74091302abc4344f68,
     type: 3}
   brushColor:
