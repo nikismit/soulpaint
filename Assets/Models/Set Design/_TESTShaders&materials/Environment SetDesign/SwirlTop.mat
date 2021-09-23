@@ -96,7 +96,7 @@ Material:
     - _StencilRef: 0
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 0
+    - __dirty: 1
     - _brightnesscolorband: -1.68
     - _brightnesswobl: 0.0025
     - _edgebrightness: 1
