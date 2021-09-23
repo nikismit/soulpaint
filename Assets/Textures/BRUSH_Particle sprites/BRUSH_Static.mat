@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BRUSH_Wave
+  m_Name: BRUSH_Static
   m_Shader: {fileID: 4800000, guid: e7576f29e90966b42b558003bae0f342, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: bdbe94d7623ec3940947b62544306f1c, type: 3}
+        m_Texture: {fileID: 2800000, guid: a8792be15afd6f349bc63b1daeaebd84, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
