@@ -37,12 +37,12 @@ public class TestManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ParticleScaler[] AllPart = FindObjectsOfType<ParticleScaler>();
+            //ParticleScaler[] AllPart = FindObjectsOfType<ParticleScaler>();
 
-            for (int i = 0; i < AllPart.Length; i++)
-            {
-                AllPart[i].ScaleParticles(Offset);
-            }
+            //for (int i = 0; i < AllPart.Length; i++)
+            //{
+            //    AllPart[i].ScaleParticles(Offset);
+            //}
         }
     }
 }
