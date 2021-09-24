@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SKYDOME
-  m_Shader: {fileID: 4800000, guid: 2cb67433da974f040b65585c12f1621b, type: 3}
-  m_ShaderKeywords: _EMISSION
+  m_Shader: {fileID: 4800000, guid: fc67103c285a0f4488349d1bcfb3e901, type: 3}
+  m_ShaderKeywords: _EMISSION _ORIENTATION_X _RIMCOLOR1ONLY_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -60,6 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _BASEcolor1only: 0
     - _BumpScale: 1
     - _CompareFunction: 0
     - _Cutoff: 0.5
@@ -72,26 +73,39 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Orientation: 0
     - _Parallax: 0.02
+    - _RIMbias: 0.5
+    - _RIMcleancut: 0
+    - _RIMcolor1only: 1
+    - _RIMintensity: 0.5
+    - _RIMpower: 1
     - _SrcBlend: 1
     - _StartPoint: -0.55
     - _StartPoint1: 0.662
     - _StartPoint2: 0.291
+    - _Startpoint: 0
     - _StencilOperation: 0
     - _StencilRef: 0
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
+    - _metal: 0
     - _node_5124: 1.27
     - _node_52: 0.71
     - _node_778: 0
     - _node_778_copy: 0.37
+    - _smooth: 0
     m_Colors:
+    - _BASEcolor1: {r: 1, g: 0, b: 0, a: 0}
+    - _BASEcolor2: {r: 0.03448248, g: 0, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.1839622, g: 1, b: 0.93624705, a: 0}
-    - _Color2: {r: 0.23380202, g: 0.5131718, b: 0.6981132, a: 0}
+    - _Color1: {r: 0.8235295, g: 1, b: 0.85098046, a: 0}
+    - _Color2: {r: 1, g: 0.95946467, b: 0.9198113, a: 0}
     - _Color3: {r: 1, g: 0, b: 0.8000002, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RIMcolor1: {r: 1, g: 1, b: 1, a: 0}
+    - _RIMcolor2: {r: 0.9912779, g: 1, b: 0.36764708, a: 0}
     - _basecolor: {r: 0.251211, g: 0.2024221, b: 0.3529412, a: 1}
     - _basecolor_copy: {r: 0.5511157, g: 0, b: 0.5588235, a: 1}
     - _brightnesstexture: {r: 1, g: 1, b: 1, a: 1}

@@ -88,7 +88,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StartPoint: -0.413
+    - _StartPoint: -0.35
     - _StartPoint1: -0.51
     - _StartPoint2: 0.069
     - _Startpoint: -0.01
@@ -96,7 +96,7 @@ Material:
     - _StencilRef: 0
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 1
+    - __dirty: 0
     - _brightnesscolorband: -1.68
     - _brightnesswobl: 0.0025
     - _edgebrightness: 1
@@ -120,8 +120,8 @@ Material:
     - _Basecolor1: {r: 0, g: 0, b: 0, a: 0}
     - _Basecolor2: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 1, g: 0.68235296, b: 0, a: 0}
-    - _Color2: {r: 0.6039216, g: 0.21568629, b: 0.5764706, a: 1}
+    - _Color1: {r: 1, g: 0.9235849, b: 0.759434, a: 0}
+    - _Color2: {r: 0.98899364, g: 0.8443396, b: 1, a: 1}
     - _Color3: {r: 1, g: 0.68235296, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Glowcolor1: {r: 0, g: 0, b: 0, a: 0}
