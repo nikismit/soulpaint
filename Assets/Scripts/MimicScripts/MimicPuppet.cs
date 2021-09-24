@@ -95,8 +95,15 @@ public class MimicPuppet : MonoBehaviour
 
                             break;
                         case MovementType.YesRotYesPos:
-                            bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
-                            bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+                            Vector3 moveDirection = masterAvatarscript.movementDirection;
+                            localRotation.SetFromToRotation(masterAvatarscript.transform.forward, transform.forward);
+                            moveDirection = localRotation * moveDirection * transform.lossyScale.x;
+
+                            transform.position += moveDirection + addedPosition;
+                            transform.eulerAngles = masterAvatarscript.rotation - masterRefRotation + addedRotation;
+                            addedPosition = Vector3.zero;
+                            //bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
+                       //     bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
                             break;
                         case MovementType.NoRotYesPos:
                             bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];

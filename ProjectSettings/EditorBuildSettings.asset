@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 71d21a0ec647fe24e8fdef92156e7bad
   - enabled: 1
+    path: Assets/Scenes/SceneDANCE_02.unity
+    guid: cd99c1e53ec86c841a410d3b2f391c53
+  - enabled: 0
     path: Assets/Scenes/SceneMimicSetupFix Nik 1.unity
     guid: 9a8b214b836fd6c4d81e13e70b342c75
   - enabled: 0

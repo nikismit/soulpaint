@@ -58,10 +58,9 @@ public class SceneManager2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.M) || (rightControllerAlias.buttonOnePressed))
             {
-                if (currentScene < subScene.Count)
-                { currentScene++; }
-                else
-                { currentScene = 0; }
+                currentScene++;
+                if (currentScene >=  subScene.Count)
+                {   currentScene = 0; }
                 ChangeChoreography();
                 buttonPressed = true;
             }
@@ -88,19 +87,28 @@ public class SceneManager2 : MonoBehaviour
         {
             switch (currentScene)
             { case 0:
-                    mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = false;
-                   mimicPuppetCreator.actualPuppets[i].transform.position = subScene1[i].position;
-                    mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene1[i].eulerAngles;
+                    if (i < subScene1.Length)
+                    {
+                        mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = false;
+                        mimicPuppetCreator.actualPuppets[i].transform.position = subScene1[i].position;
+                        mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene1[i].eulerAngles;
+                    }
                     break;
                 case 1:
-                    mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = false;
-                    mimicPuppetCreator.actualPuppets[i].transform.position = subScene2[i].position;
-                    mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene2[i].eulerAngles;
+                    if (i < subScene2.Length)
+                    {
+                        mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = false;
+                        mimicPuppetCreator.actualPuppets[i].transform.position = subScene2[i].position;
+                        mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene2[i].eulerAngles;
+                    }
                     break;
                 case 2:
-                    mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = true;
-                    mimicPuppetCreator.actualPuppets[i].transform.position = subScene3[i].position;
-                    mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene3[i].eulerAngles;
+                    if (i < subScene3.Length)
+                    {
+                        mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = false;
+                        mimicPuppetCreator.actualPuppets[i].transform.position = subScene3[i].position;
+                        mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene3[i].eulerAngles;
+                    }
                     break;
                 default:
                     break;
@@ -110,7 +118,7 @@ public class SceneManager2 : MonoBehaviour
         {
             go.GetComponent<Animator>().SetInteger("scale", 2);
           //  go.GetComponent<Animator>().Play("scaleUp", 0);
-           go.GetComponent<MimicPuppet>().notGrabbed = false;
+           go.GetComponent<MimicPuppet>().notGrabbed = true;
             buttonPressed = false;
         }
     }

@@ -42,7 +42,7 @@ public class MimicPuppetsCreator : MonoBehaviour
            
           //  go.AddComponent<ParticleScaler>();
         }
-       
+        player.GetComponent<MimicSender>().stopMoving = false;
     }
 
 }
