@@ -36,7 +36,10 @@ public class MimicPuppetsCreator : MonoBehaviour
             go.transform.position = tr.position;
             go.transform.eulerAngles = tr.eulerAngles;
             go.transform.localScale = tr.localScale;
+          Animator anim =  go.AddComponent<Animator>();
+            anim.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Prefabs/ScaleAnim", typeof(RuntimeAnimatorController));
             actualPuppets.Add(go);
+           
           //  go.AddComponent<ParticleScaler>();
         }
        
