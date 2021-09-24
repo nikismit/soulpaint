@@ -10,7 +10,7 @@ public class MimicPuppetsCreator : MonoBehaviour
     Transform[] transformSetup;
     [SerializeField] VRAvatarController vrsetup;
     [SerializeField] MimicPuppet.MovementType myMovSet;
-
+    public List<GameObject> actualPuppets = new List<GameObject>(); 
     GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -36,8 +36,8 @@ public class MimicPuppetsCreator : MonoBehaviour
             go.transform.position = tr.position;
             go.transform.eulerAngles = tr.eulerAngles;
             go.transform.localScale = tr.localScale;
-
-            go.AddComponent<ParticleScaler>();
+            actualPuppets.Add(go);
+          //  go.AddComponent<ParticleScaler>();
         }
        
     }

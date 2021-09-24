@@ -10,6 +10,11 @@ public class SceneManager2 : MonoBehaviour
     Transform underTheFloor;
     [SerializeField]
     VRAvatarController vrsetup;
+    List<GameObject> subScene = new List<GameObject>();
+    [SerializeField]
+    MimicPuppetsCreator mimicPuppetCreator;
+
+    Transform[] subScene1, subScene2, subScene3;
     // Start is called before the first frame update
     void Start()
     {if (GameManager.Instance != null)
@@ -18,6 +23,10 @@ public class SceneManager2 : MonoBehaviour
             GameManager.Instance.finalMimicPuppet.transform.position = underTheFloor.position;
             GameManager.Instance.finalMimicPuppet.transform.localScale = Vector3.one;
             StartCoroutine(WaitToDestroy());
+
+            subScene1 = subScene[0].GetComponentsInChildren<Transform>();
+            subScene2 = subScene[1].GetComponentsInChildren<Transform>();
+            subScene3 = subScene[2].GetComponentsInChildren<Transform>();
         }
      
 
@@ -33,7 +42,6 @@ public class SceneManager2 : MonoBehaviour
         //  GameObject puppetToDestroy = GameManager.Instance.finalPuppet;
         // Destroy(puppetToDestroy);
     }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
@@ -51,4 +59,19 @@ public class SceneManager2 : MonoBehaviour
 
         }
     }
+
+    private void ChangeChoreography(int sceneNo)
+    {
+        foreach (GameObject go in mimicPuppetCreator.actualPuppets)
+        {
+            go.GetComponent<Animator>().Play("scaleDown", 0);
+        }
+        Invoke("RepositionToScene", 2f);
+            }
+    private void RepositionToScene()
+    {
+
+
+    }
+
 }
