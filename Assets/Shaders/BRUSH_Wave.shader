@@ -46,12 +46,12 @@ Shader "BRUSH_Curve"
 }
 /*ASEBEGIN
 Version=18912
-0;24;1920;995;970.7587;354.7968;1;True;False
+616;1041;1920;989;970.7587;351.7968;1;True;False
 Node;AmplifyShaderEditor.Vector2Node;4;-565,-170.5;Inherit;False;Constant;_Vector0;Vector 0;1;0;Create;True;0;0;0;False;0;False;0,1;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.TextureCoordinatesNode;3;-647,-358.5;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleTimeNode;5;-608,-25.5;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.PannerNode;2;-357,-155.5;Inherit;False;3;0;FLOAT2;0,0;False;2;FLOAT2;0,0;False;1;FLOAT;1;False;1;FLOAT2;0
-Node;AmplifyShaderEditor.SamplerNode;1;-157,-158.5;Inherit;True;Property;_TextureSample0;Texture Sample 0;1;0;Create;True;0;0;0;False;0;False;-1;e9742c575b8f4644fb9379e7347ff62e;2c536aff47a0bf244917f8b2a55c45ee;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SamplerNode;1;-157,-158.5;Inherit;True;Property;_TextureSample0;Texture Sample 0;1;0;Create;True;0;0;0;False;0;False;-1;e9742c575b8f4644fb9379e7347ff62e;bdbe94d7623ec3940947b62544306f1c;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RangedFloatNode;11;237.8332,95.27593;Inherit;False;Property;_Float0;Float 0;3;0;Create;True;0;0;0;False;0;False;0.5;0.601;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.ColorNode;8;123.695,-489.6993;Inherit;False;Property;_color;color;2;0;Create;True;0;0;0;False;0;False;0.8773585,0.2607245,0.2607245,0;1,1,1,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.LerpOp;10;405.737,-63.54432;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
@@ -66,4 +66,4 @@ WireConnection;0;2;8;0
 WireConnection;0;9;11;0
 WireConnection;0;10;10;0
 ASEEND*/
-//CHKSM=A36684BF5773397A14E0F20D5DAA2EDBCBAA6415
+//CHKSM=FA1FAA0725C88DD9FE2961ED6F01743904606F0F
