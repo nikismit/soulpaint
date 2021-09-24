@@ -2683,6 +2683,7 @@ MonoBehaviour:
   startRotation: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
   movementDirection: {x: 0, y: 0, z: 0}
+  debugSetup: 1
   mimicPrefab: {fileID: 0}
 --- !u!114 &384117514138349544
 MonoBehaviour:
