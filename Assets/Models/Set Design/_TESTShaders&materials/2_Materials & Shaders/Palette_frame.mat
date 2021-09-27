@@ -8,12 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Palette_frame
-  m_Shader: {fileID: 4800000, guid: 7ffc4b7bd4c24a84b915037ff1060ab8, type: 3}
+  m_Shader: {fileID: 4800000, guid: fb1c282a560c3ce4db76629ebbf8b05b, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -75,16 +75,24 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Power1: 1.23
+    - _Power2: 0.12
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - __dirty: 0
     - _edgemultiplayer: 0.55
     - _node_4058: 0.609
     - _node_5124: 2.52
     - _node_7331: 0
     m_Colors:
+    - _Basecolor1: {r: 0.57547164, g: 0.57547164, b: 0.57547164, a: 0}
+    - _Basecolor2: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Glowcolor1: {r: 0.7688679, g: 1, b: 1, a: 0}
+    - _Glowcolor2: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _basecolor: {r: 0.251211, g: 0.2024221, b: 0.3529412, a: 1}
     - _basecolor_copy: {r: 0.5511157, g: 0, b: 0.5588235, a: 1}
     - _brightnesstexture: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
