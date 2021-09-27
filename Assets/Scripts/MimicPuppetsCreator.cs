@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.FinalIK;
+using System;
 
 public class MimicPuppetsCreator : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class MimicPuppetsCreator : MonoBehaviour
             puppetToCreate = GameManager.Instance.finalMimicPuppet;
 
             transformSetup = GetComponentsInChildren<Transform>();
+            
             Invoke("SetupPuppets", 3f); }
     }
 
@@ -29,17 +31,24 @@ public class MimicPuppetsCreator : MonoBehaviour
         player = vrsetup.transform.root.GetComponentInChildren<VRIK>().gameObject;
         foreach (Transform tr in transformSetup)
         {
-            GameObject go = Instantiate(puppetToCreate);
-        MimicPuppet mp =    go.AddComponent<MimicPuppet>();
-            mp.player = player;
-            mp.myMovType = myMovSet;
-            go.transform.position = tr.position;
-            go.transform.eulerAngles = tr.eulerAngles;
-            go.transform.localScale = tr.localScale;
-          Animator anim =  go.AddComponent<Animator>();
-            anim.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Prefabs/ScaleAnim", typeof(RuntimeAnimatorController));
-            actualPuppets.Add(go);
-           
+            if (tr.childCount == 0)
+            {
+              if (tr.localScale.x == 1)
+                {
+                    float x = GameManager.Instance.savedScale;
+                    tr.localScale = new Vector3(x, x, x);
+                }
+                GameObject go = Instantiate(puppetToCreate);
+                MimicPuppet mp = go.AddComponent<MimicPuppet>();
+                mp.player = player;
+                mp.myMovType = myMovSet;
+                go.transform.position = tr.position;
+                go.transform.eulerAngles = tr.eulerAngles;
+                go.transform.localScale = tr.localScale;
+                //     Animator anim =  go.AddComponent<Animator>();
+                //      anim.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Prefabs/ScaleAnim", typeof(RuntimeAnimatorController));
+                actualPuppets.Add(go);
+            }
           //  go.AddComponent<ParticleScaler>();
         }
         player.GetComponent<MimicSender>().stopMoving = false;
