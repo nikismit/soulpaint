@@ -27,7 +27,7 @@ public class MimicPuppet : MonoBehaviour
     public MovementType myMovType;
     //Rotations
     Vector3 masterRefRotation;
-    Vector3 addedRotation;
+    public Vector3 addedRotation;
     Vector3 rotationDelta;
 
     Quaternion localRotation;
@@ -72,17 +72,7 @@ public class MimicPuppet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (player == null)
-        //{
-        //    player = GameObject.FindGameObjectWithTag("Player");
-        //    masterAvatarscript = player.GetComponent<MimicSender>();
-        //    rotationDelta = transform.eulerAngles - player.transform.eulerAngles;
-        //    previousAddedPosition = transform.position;
-        //    print($"Rotation delta is {rotationDelta}");
-        //    masterRefPosition = masterAvatarscript.startPosition;
-        //    masterRefRotation = masterAvatarscript.startRotation;
-        //    previousPosition = masterAvatarscript.position;
-        //}
+       
         if (setup)
         {
             for (int i = 0; i < numOfBones; i++)
@@ -95,15 +85,7 @@ public class MimicPuppet : MonoBehaviour
 
                             break;
                         case MovementType.YesRotYesPos:
-                            Vector3 moveDirection = masterAvatarscript.movementDirection;
-                            localRotation.SetFromToRotation(masterAvatarscript.transform.forward, transform.forward);
-                            moveDirection = localRotation * moveDirection * transform.lossyScale.x;
-
-                            transform.position += moveDirection + addedPosition;
-                            transform.eulerAngles = masterAvatarscript.rotation - masterRefRotation + addedRotation;
-                            addedPosition = Vector3.zero;
-                            //bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
-                       //     bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+              
                             break;
                         case MovementType.NoRotYesPos:
                             bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
@@ -128,18 +110,19 @@ public class MimicPuppet : MonoBehaviour
 
             }
 
-            if (notGrabbed && !masterAvatarscript.stopMoving)
+            if (notGrabbed && !masterAvatarscript.stopMoving && myMovType  == MovementType.YesRotYesPos)
             {
-                Vector3 moveDirection = masterAvatarscript.movementDirection;
+                Vector3 moveDirection = masterAvatarscript.movementDirection; 
                 localRotation.SetFromToRotation(masterAvatarscript.transform.forward, transform.forward);
                 moveDirection = localRotation * moveDirection * transform.lossyScale.x;
 
                 transform.position += moveDirection + addedPosition;
+                //below statement could be better done with using Quaternions
                 transform.eulerAngles = masterAvatarscript.rotation - masterRefRotation + addedRotation;
                 addedPosition = Vector3.zero;
             }
             if (!notGrabbed || masterAvatarscript.stopMoving)
-
+                //check this code, most of it is reduntant 
             {
                 if (masterAvatarscript.stopMoving)
                 {
@@ -149,6 +132,7 @@ public class MimicPuppet : MonoBehaviour
                 }
                 else
                 {
+                    //this code is never reached
                     addedRotation = transform.eulerAngles;
                     addedPosition = (previousAddedPosition - transform.position);
                     previousAddedPosition = transform.position;

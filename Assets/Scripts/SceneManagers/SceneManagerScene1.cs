@@ -122,7 +122,9 @@ public class SceneManagerScene1 : MonoBehaviour
 
         VRIK vrik = finalPuppet.AddComponent<VRIK>();
         VRIKApplier vRIKApplier = finalPuppet.AddComponent<VRIKApplier>();
-        
+       // finalPuppet.AddComponent<HandGrabAnimation>();
+        //Animator anim = finalPuppet.AddComponent<Animator>();
+       // anim.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Prefabs/soulPaint", typeof(RuntimeAnimatorController));
         vRIKApplier._boneStructure = VRIKApplier.BoneStructure.spNew;
         vRIKApplier.applyVRIKComponents();
         ResetBones();
