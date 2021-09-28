@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: White
-  m_Shader: {fileID: 4800000, guid: 7ffc4b7bd4c24a84b915037ff1060ab8, type: 3}
+  m_Shader: {fileID: 4800000, guid: fb1c282a560c3ce4db76629ebbf8b05b, type: 3}
   m_ShaderKeywords: _EMISSION _ORIENTATION_X _RIMCOLOR1ONLY_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -70,6 +70,7 @@ Material:
     - _OcclusionStrength: 1
     - _Orientation: 0
     - _Parallax: 0.02
+    - _Power1: 2
     - _RIMbias: 0.5
     - _RIMcleancut: 0
     - _RIMcolor1only: 1
@@ -89,10 +90,13 @@ Material:
     m_Colors:
     - _BASEcolor1: {r: 1, g: 0, b: 0, a: 0}
     - _BASEcolor2: {r: 0.03448248, g: 0, b: 1, a: 0}
-    - _Color: {r: 0.5377358, g: 0.20545568, b: 0.20545568, a: 1}
+    - _Basecolor1: {r: 0.7830189, g: 0.76455146, b: 0.76455146, a: 0}
+    - _Color: {r: 0.7830188, g: 0.7645514, b: 0.7645514, a: 0}
     - _EmissionColor: {r: 0.6415094, g: 0.18458524, b: 0.18458524, a: 1}
+    - _Glowcolor1: {r: 1, g: 1, b: 1, a: 0}
     - _RIMcolor1: {r: 1, g: 1, b: 1, a: 0}
     - _RIMcolor2: {r: 0.9912779, g: 1, b: 0.36764708, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _brightnesstexture: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _node_3384: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _node_6561: {r: 1, g: 1, b: 1, a: 1}

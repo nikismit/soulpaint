@@ -4719,8 +4719,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 15d96ae2d3ede974fb4b560011e1ecc0, type: 2}
-  - {fileID: 2100000, guid: 15d96ae2d3ede974fb4b560011e1ecc0, type: 2}
+  - {fileID: 2100000, guid: 43b5e311a4e348c42bfd713a41fc7e8c, type: 2}
+  - {fileID: 2100000, guid: 43b5e311a4e348c42bfd713a41fc7e8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4778,7 +4778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabType: 0
   particleSystem: {fileID: 0}
-  isCustomShader: 1
+  isCustomShader: 0
   lightWrap: 0
   brushColor:
   - {r: 0.007843138, g: 0.105882354, b: 0.7490196, a: 1}
@@ -4786,5 +4786,5 @@ MonoBehaviour:
   - {r: 0.7490196, g: 0, b: 0.02745098, a: 1}
   - {r: 0.20392157, g: 0.019607844, b: 0.7490196, a: 1}
   - {r: 0.7490196, g: 0.105882354, b: 0, a: 1}
-  - {r: 0.7490196, g: 0.30980393, b: 0, a: 1}
+  - {r: 0.9339623, g: 0.46743873, b: 0, a: 1}
   - {r: 0.29411766, g: 0.7490196, b: 0.10980392, a: 1}
