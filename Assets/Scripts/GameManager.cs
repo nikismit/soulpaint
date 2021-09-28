@@ -7,7 +7,9 @@ public enum Gamestate
     WaitforStart,
     Meditation,
     Painting,
+   
     Embody,
+    SimonSays,
     Dance,
     PostDance,
 

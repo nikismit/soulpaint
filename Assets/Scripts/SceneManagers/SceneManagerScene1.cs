@@ -11,8 +11,9 @@ public class SceneManagerScene1 : MonoBehaviour
     float inititalFogDensity;
     [SerializeField] float finalDensity;
     [SerializeField] float fogStep =.001f;
-    [SerializeField] AudioSource tutorialAudioSource;
-    [SerializeField] AudioClip[] audioClips;
+    [SerializeField] AudioSource tutorialAudioSource, voiceOver;
+    AudioManager audioManager;
+ //   [SerializeField] AudioClip[] audioClips;
     [SerializeField] BodyScan bodyScan;
     [SerializeField] VRAvatarController avatarController;
     [SerializeField] GameObject palette, paintBucket,startCircle, timerObject;
@@ -33,11 +34,12 @@ public class SceneManagerScene1 : MonoBehaviour
     {
         RenderSettings.fogDensity = .75f;
         //   StartCoroutine(StartPaintingTime());
-        palette.SetActive(false);
+     palette.SetActive(false);
        timerObject.SetActive(false);
         scanMaterial.material.SetFloat("_Progress", 0);
         scanHeadMaterial.material.SetFloat("_Progress", 0);
-        GameManager.Instance.SetNewGamestate(Gamestate.Meditation);
+        audioManager = GetComponent<AudioManager>();
+      //  GameManager.Instance.SetNewGamestate(Gamestate.Meditation);
         Invoke("SetControllerReferences", 2f);
     }
 
@@ -54,7 +56,11 @@ public class SceneManagerScene1 : MonoBehaviour
     {
         GameManager.gamestateChanged -= OnGameStateChanged;
     }
-
+    public void ChangeState(int i)
+    {
+        Gamestate gamestate = (Gamestate)i;
+        GameManager.Instance.SetNewGamestate(gamestate);
+    }
     private void OnGameStateChanged(Gamestate newGameState)
     {
         switch (newGameState)
@@ -63,13 +69,15 @@ public class SceneManagerScene1 : MonoBehaviour
               
                 break;
             case Gamestate.Meditation:
-                startCircle.SetActive(false);
-                paintBucket.SetActive(false);
+                palette.SetActive(true);
+                //  startCircle.SetActive(false);
+                //   paintBucket.SetActive(false);
                 StartCoroutine(BodyScan());
                
                 break;
             case Gamestate.Painting:
-                palette.SetActive(true);
+            
+                Debug.Log("called times ");
                 timerObject.SetActive(true);
                      StartCoroutine(StartPaintingTime());
                 StartFogFade();
@@ -165,8 +173,12 @@ public class SceneManagerScene1 : MonoBehaviour
             timerObject.transform.Rotate(-Vector3.right * factor);
             yield return null;
         }
+        audioManager.PlayClip();
+        Invoke("StartEmbody", 6f);
+    }
+  private void StartEmbody()
+    {
         GameManager.Instance.SetNewGamestate(Gamestate.Embody);
- 
     }
 
     IEnumerator StartFogFade()
@@ -192,7 +204,7 @@ public class SceneManagerScene1 : MonoBehaviour
         }
         scanMaterial.material.SetFloat("_Progress", 1);
         scanHeadMaterial.material.SetFloat("_Progress", 1);
-        GameManager.Instance.SetNewGamestate(Gamestate.Painting);
+    //    GameManager.Instance.SetNewGamestate(Gamestate.Painting);
         yield return null; 
     }
 public void TriggerAudioFeedback(int i)
@@ -200,7 +212,7 @@ public void TriggerAudioFeedback(int i)
         if (!tutorialAudioSource.isPlaying)
         {
 
-            tutorialAudioSource.PlayOneShot(audioClips[i]);
+         //   tutorialAudioSource.PlayOneShot(audioClips[i]);
             avatarController.actualAvatarVRIK.GetComponent<Paint>().initialPaint = true;
        
         }
@@ -217,7 +229,7 @@ public void TriggerAudioFeedback(int i)
     IEnumerator WaitForAudio(int i)
     {
         yield return new WaitUntil(() => !tutorialAudioSource.isPlaying);
-        tutorialAudioSource.PlayOneShot(audioClips[i]);
+    //    tutorialAudioSource.PlayOneShot(audioClips[i]);
         if (i == 1)
         {
             avatarController.actualAvatarVRIK.GetComponent<Paint>().initialPaint = true;

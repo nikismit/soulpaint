@@ -21,10 +21,50 @@ public class MimicPuppetsCreator : MonoBehaviour
             puppetToCreate = GameManager.Instance.finalMimicPuppet;
 
             transformSetup = GetComponentsInChildren<Transform>();
-            
-            Invoke("SetupPuppets", 3f); }
+        }
+    }
+    private void OnEnable()
+    {
+        GameManager.gamestateChanged += OnGameStateChanged;
+    }
+    private void OnDisable()
+    {
+        GameManager.gamestateChanged -= OnGameStateChanged;
     }
 
+    private void OnGameStateChanged(Gamestate newGameState)
+    {
+        switch (newGameState)
+        {
+            case Gamestate.WaitforStart:
+
+                break;
+            case Gamestate.Meditation:
+      
+
+                break;
+            case Gamestate.Painting:
+            
+
+                break;
+            case Gamestate.Embody:
+             
+
+                break;
+            case Gamestate.Dance:
+
+                    Invoke("SetupPuppets", .5f);
+            
+            break;
+            case Gamestate.PostDance:
+                break;
+            default:
+                break;
+        }
+
+
+
+    }
 
     private void SetupPuppets()
     {
