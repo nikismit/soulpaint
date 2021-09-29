@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Palette_frame
-  m_Shader: {fileID: 4800000, guid: fb1c282a560c3ce4db76629ebbf8b05b, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 0
+  m_Name: SKYDOME Drawing
+  m_Shader: {fileID: 4800000, guid: fc67103c285a0f4488349d1bcfb3e901, type: 3}
+  m_ShaderKeywords: _EMISSION _ORIENTATION_X _RIMCOLOR1ONLY_ON
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -35,12 +35,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Diffuse:
-        m_Texture: {fileID: 2800000, guid: 8993b617f08498f43adcbd90697f1c5d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9270fc7595aa0c44fb54ee0bb73c3f0e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -51,10 +47,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Normals:
-        m_Texture: {fileID: 2800000, guid: c6dfb00dbee6bc044a8a3bb22e56e064, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,42 +55,66 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Bands: 8
+    - _BASEcolor1only: 0
     - _BumpScale: 1
+    - _CompareFunction: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _Distribution: 1
+    - _Distribution1: 0.448
+    - _Distribution2: 1
     - _DstBlend: 0
-    - _Gloss: 0.4511278
     - _Glossiness: 0.5
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Orientation: 0
     - _Parallax: 0.02
-    - _Power1: 1.42
-    - _Power2: 0.12
+    - _RIMbias: 0.5
+    - _RIMcleancut: 0
+    - _RIMcolor1only: 1
+    - _RIMintensity: 0.5
+    - _RIMpower: 1
     - _SrcBlend: 1
+    - _StartPoint: -0.82
+    - _StartPoint1: 0.662
+    - _StartPoint2: 0.291
+    - _Startpoint: 0
+    - _StencilOperation: 0
+    - _StencilRef: 0
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
-    - _edgemultiplayer: 0.55
-    - _node_4058: 0.609
-    - _node_5124: 2.52
-    - _node_7331: 0
+    - _metal: 0
+    - _node_5124: 1.27
+    - _node_52: 0.71
+    - _node_778: 0
+    - _node_778_copy: 0.37
+    - _smooth: 0
     m_Colors:
-    - _Basecolor1: {r: 0.57547164, g: 0.57547164, b: 0.57547164, a: 0}
-    - _Basecolor2: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Glowcolor1: {r: 0.7688679, g: 1, b: 1, a: 0}
-    - _Glowcolor2: {r: 0, g: 0, b: 0, a: 0}
-    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
+    - _BASEcolor1: {r: 1, g: 0, b: 0, a: 0}
+    - _BASEcolor2: {r: 0.03448248, g: 0, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.95149136, g: 0, b: 1, a: 0}
+    - _Color2: {r: 0.11305712, g: 0, b: 0.20754719, a: 0}
+    - _Color3: {r: 1, g: 0, b: 0.8000002, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RIMcolor1: {r: 1, g: 1, b: 1, a: 0}
+    - _RIMcolor2: {r: 0.9912779, g: 1, b: 0.36764708, a: 0}
     - _basecolor: {r: 0.251211, g: 0.2024221, b: 0.3529412, a: 1}
     - _basecolor_copy: {r: 0.5511157, g: 0, b: 0.5588235, a: 1}
-    - _brightnesstexture: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - _brightnesstexture: {r: 1, g: 1, b: 1, a: 1}
+    - _node_1468: {r: 1, g: 0.3607843, b: 0.99765944, a: 1}
     - _node_2418: {r: 0.4000865, g: 0.6798114, b: 0.7352941, a: 1}
-    - _node_2474: {r: 0.07586192, g: 1, b: 0, a: 1}
-    - _node_3384: {r: 1, g: 1, b: 1, a: 1}
-    - _node_6561: {r: 1, g: 0, b: 0.9483285, a: 1}
-    - _node_8211: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _node_3384: {r: 0.11724138, g: 0, b: 1, a: 1}
+    - _node_3394: {r: 0.6397059, g: 0.97018254, b: 1, a: 1}
+    - _node_3749: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _node_4275: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _node_6561: {r: 0.8897059, g: 0.032709755, b: 0.79514074, a: 1}
+    - _node_8211: {r: 1, g: 1, b: 1, a: 1}
     - _node_9448_copy: {r: 0, g: 1, b: 0.9586205, a: 1}

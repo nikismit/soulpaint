@@ -5952,6 +5952,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   underTheFloor: {fileID: 1287949405}
   vrsetup: {fileID: 1646375733}
+  subScene: []
+  mimicPuppetCreator: {fileID: 0}
+  mirror: {fileID: 0}
 --- !u!4 &2004472723
 Transform:
   m_ObjectHideFlags: 0
@@ -6516,6 +6519,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 241048607}
     m_Modifications:
+    - target: {fileID: 659862789271232084, guid: cddcedfd2b01bfd42a90d96a56379a73,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.752752
+      objectReference: {fileID: 0}
     - target: {fileID: 4214276050029500696, guid: cddcedfd2b01bfd42a90d96a56379a73,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -6619,7 +6627,7 @@ PrefabInstance:
     - target: {fileID: 5804450652851404241, guid: cddcedfd2b01bfd42a90d96a56379a73,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.4671693
+      value: 4.661963
       objectReference: {fileID: 0}
     - target: {fileID: 7556253468166281947, guid: cddcedfd2b01bfd42a90d96a56379a73,
         type: 3}
