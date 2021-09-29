@@ -4,7 +4,7 @@ using UnityEngine;
 using RootMotion.FinalIK;
 using UnityEngine.SceneManagement;
 using VRTK;
-
+using UnityEngine.Playables;
 
 public class SceneManagerScene1 : MonoBehaviour
 {
@@ -16,14 +16,14 @@ public class SceneManagerScene1 : MonoBehaviour
  //   [SerializeField] AudioClip[] audioClips;
     [SerializeField] BodyScan bodyScan;
     [SerializeField] VRAvatarController avatarController;
-    [SerializeField] GameObject palette, paintBucket,startCircle, timerObject;
+    [SerializeField] GameObject palette, timerObject, startSilhoeutte, Timeline, embodyGlow;
     [SerializeField] private float paintingTime = 180, scanStep =.02f;
     [SerializeField] GameObject finalPuppet, refPuppet;
     [SerializeField] SkinnedMeshRenderer scanMaterial, scanHeadMaterial;
     [SerializeField] Material NotDissolve;
     float scanVal;
     bool embodied;
-
+    PlayableDirector playableDirector;
     private VRTK_ControllerEvents rightControllerAlias = null;
     // [SerializeField] HandSelector handSelector;
     int clip;
@@ -39,6 +39,8 @@ public class SceneManagerScene1 : MonoBehaviour
         scanMaterial.material.SetFloat("_Progress", 0);
         scanHeadMaterial.material.SetFloat("_Progress", 0);
         audioManager = GetComponent<AudioManager>();
+        embodyGlow.SetActive(false);
+        playableDirector = Timeline.GetComponent<PlayableDirector>();
       //  GameManager.Instance.SetNewGamestate(Gamestate.Meditation);
         Invoke("SetControllerReferences", 2f);
     }
@@ -224,6 +226,21 @@ public void TriggerAudioFeedback(int i)
         }
 
     
+    }
+
+    public void SteppedIntoAvatar(int i)
+    {
+        switch (i)
+        {case 1:
+
+                GameManager.Instance.SetNewGamestate(Gamestate.WaitforStart);
+                Timeline.SetActive(true);
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
     }
 
     IEnumerator WaitForAudio(int i)
