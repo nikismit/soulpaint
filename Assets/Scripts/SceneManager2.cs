@@ -16,6 +16,8 @@ public class SceneManager2 : MonoBehaviour
     List<GameObject> subScene = new List<GameObject>();
     [SerializeField]
     MimicPuppetsCreator mimicPuppetCreator;
+    [SerializeField]
+    GameObject mirror;
     int currentScene;
     TransformIdentifier[] subScene1, subScene2, subScene3;
     List<Transform> holderSceneTransform = new List<Transform>();
@@ -35,11 +37,25 @@ public class SceneManager2 : MonoBehaviour
             subScene1 = subScene[0].GetComponentsInChildren<TransformIdentifier>();
             subScene2 = subScene[1].GetComponentsInChildren<TransformIdentifier>();
             subScene3 = subScene[2].GetComponentsInChildren<TransformIdentifier>();
+            Invoke("ChangeToSimonSays", 1f);
         }
 
         Invoke("SetControllerReferences", 2f);
+       
     }
+    private void ChangeToSimonSays()
+    {
+        GameManager.Instance.SetNewGamestate(Gamestate.SimonSays);
+        Invoke("ChangeToMimic", 20f);
 
+    }
+    private void ChangeToMimic()
+    {
+        mirror.SetActive(false);
+        GameManager.Instance.SetNewGamestate(Gamestate.Dance);
+      
+
+    }
     void SetControllerReferences()
     {
         rightControllerAlias = VRTK_DeviceFinder.GetControllerRightHand().GetComponent<VRTK_ControllerEvents>();
