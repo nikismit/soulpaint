@@ -239,17 +239,19 @@ public class Paint : MonoBehaviour
         switch (newGameState)
         {
             case Gamestate.WaitforStart:
-              
+                paintBrush.SetActive(false);
                 break;
             case Gamestate.Meditation:
-          paintBrush.SetActive(false);
+                paintingState = true;
+                paintBrush.SetActive(true);
+                paintingWithMaterial = true;
+
                 break;
             case Gamestate.Painting:
-                paintingState = true;
-              paintBrush.SetActive(true);
-                paintingWithMaterial = true;
+             
                 break;
-            case Gamestate.Embody:
+            case Gamestate.ReadyforEmbody:
+                paintBrush.SetActive(false);
                 paintingState = false;
                 break;
             case Gamestate.Dance:

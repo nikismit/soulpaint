@@ -4,6 +4,7 @@ using UnityEngine;
 using RootMotion.FinalIK;
 using UnityEngine.SceneManagement;
 using VRTK;
+using UnityEngine.XR;
 using UnityEngine.Playables;
 
 public class SceneManagerScene1 : MonoBehaviour
@@ -24,10 +25,13 @@ public class SceneManagerScene1 : MonoBehaviour
     float scanVal;
     bool embodied;
     PlayableDirector playableDirector;
-    private VRTK_ControllerEvents rightControllerAlias = null;
+    private VRTK_ControllerEvents rightControllerAlias = null, leftControllerAlias = null;
+    private VRTK_ControllerReference vrtkRefRight;
     // [SerializeField] HandSelector handSelector;
     int clip;
     float fadeDuration = 2;
+    [SerializeField]
+    bool haptic;
 
     // Start is called before the first frame update
     void Start()
@@ -41,14 +45,16 @@ public class SceneManagerScene1 : MonoBehaviour
         audioManager = GetComponent<AudioManager>();
         embodyGlow.SetActive(false);
         playableDirector = Timeline.GetComponent<PlayableDirector>();
-      //  GameManager.Instance.SetNewGamestate(Gamestate.Meditation);
+       // Timeline.SetActive(false);
+        //  GameManager.Instance.SetNewGamestate(Gamestate.Meditation);
         Invoke("SetControllerReferences", 2f);
     }
 
     void SetControllerReferences()
     {
         rightControllerAlias = VRTK_DeviceFinder.GetControllerRightHand().GetComponent<VRTK_ControllerEvents>();
-
+        leftControllerAlias = VRTK_DeviceFinder.GetControllerLeftHand().GetComponent<VRTK_ControllerEvents>();
+        vrtkRefRight = VRTK_DeviceFinder.GetControllerReferenceRightHand();
     }
     private void OnEnable()
     {
@@ -61,6 +67,7 @@ public class SceneManagerScene1 : MonoBehaviour
     public void ChangeState(int i)
     {
         Gamestate gamestate = (Gamestate)i;
+       
         GameManager.Instance.SetNewGamestate(gamestate);
     }
     private void OnGameStateChanged(Gamestate newGameState)
@@ -72,6 +79,7 @@ public class SceneManagerScene1 : MonoBehaviour
                 break;
             case Gamestate.Meditation:
                 palette.SetActive(true);
+                startSilhoeutte.SetActive(false);
                 //  startCircle.SetActive(false);
                 //   paintBucket.SetActive(false);
                 StartCoroutine(BodyScan());
@@ -85,10 +93,16 @@ public class SceneManagerScene1 : MonoBehaviour
                 StartFogFade();
 
                 break;
+            case Gamestate.ReadyforEmbody:
+                palette.SetActive(false);
+                embodyGlow.SetActive(true);
+                break;
             case Gamestate.Embody:
                 SetupAvatar();
                 
                 break;
+    
+
             case Gamestate.Dance:
                 break;
             case Gamestate.PostDance:
@@ -112,6 +126,9 @@ public class SceneManagerScene1 : MonoBehaviour
 
             }
         }
+        
+
+        
 
     }
     private void  SetupAvatar()
@@ -180,7 +197,7 @@ public class SceneManagerScene1 : MonoBehaviour
     }
   private void StartEmbody()
     {
-        GameManager.Instance.SetNewGamestate(Gamestate.Embody);
+        GameManager.Instance.SetNewGamestate(Gamestate.ReadyforEmbody);
     }
 
     IEnumerator StartFogFade()
@@ -233,10 +250,15 @@ public void TriggerAudioFeedback(int i)
         switch (i)
         {case 1:
 
+             //   OVRInput.SetControllerVibration(1f, 1f);
                 GameManager.Instance.SetNewGamestate(Gamestate.WaitforStart);
-                Timeline.SetActive(true);
+      
+                playableDirector.Play();
                 break;
             case 2:
+
+                //OVRInput.SetControllerVibration(1f, 1f);
+                GameManager.Instance.SetNewGamestate(Gamestate.Embody);
                 break;
             default:
                 break;

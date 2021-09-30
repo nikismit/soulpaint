@@ -27,7 +27,10 @@ public class SceneManager2 : MonoBehaviour
     Transform refScaleObj;
     // Start is called before the first frame update
     void Start()
-    { if (GameManager.Instance != null)
+
+    {
+        mirror.SetActive(false);
+        if (GameManager.Instance != null)
         {
             GameManager.Instance.finalPuppet.transform.position = underTheFloor.position;
             GameManager.Instance.finalMimicPuppet.transform.position = underTheFloor.position;
@@ -37,7 +40,7 @@ public class SceneManager2 : MonoBehaviour
             subScene1 = subScene[0].GetComponentsInChildren<TransformIdentifier>();
             subScene2 = subScene[1].GetComponentsInChildren<TransformIdentifier>();
             subScene3 = subScene[2].GetComponentsInChildren<TransformIdentifier>();
-            Invoke("ChangeToSimonSays", 1f);
+            Invoke("ChangeToSimonSays", 7f);
         }
 
         Invoke("SetControllerReferences", 2f);
@@ -46,12 +49,15 @@ public class SceneManager2 : MonoBehaviour
     private void ChangeToSimonSays()
     {
         GameManager.Instance.SetNewGamestate(Gamestate.SimonSays);
+        mirror.SetActive(true);
+        
         Invoke("ChangeToMimic", 20f);
 
     }
     private void ChangeToMimic()
     {
         mirror.SetActive(false);
+        GameManager.Instance.finalPuppet.SetActive(false);
         GameManager.Instance.SetNewGamestate(Gamestate.Dance);
       
 

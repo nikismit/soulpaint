@@ -12,7 +12,7 @@ public class ChangeSceneMenuTab : EditorWindow {
     {
         if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
         {
-            EditorSceneManager.OpenScene("Assets/Scenes/MainScene.unity");
+            EditorSceneManager.OpenScene("Assets/Scenes/MainScene_CopyLatest.unity");
         }
     }
     [MenuItem("Change Scene/Open DanceScene")]

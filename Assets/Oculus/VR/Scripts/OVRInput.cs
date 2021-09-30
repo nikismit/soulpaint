@@ -1519,6 +1519,7 @@ public static class OVRInput
 				if (ShouldResolveController(controller.controllerType, controllerMask))
 				{
 					controller.SetControllerVibration(frequency, amplitude);
+                  Debug.Log("controller for feedback" + controller);
 				}
 			}
 		}
