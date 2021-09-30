@@ -38,7 +38,9 @@ public class Paint : MonoBehaviour
     int counter;
     public GameObject canvas;
     public bool customBrushShaderIsOn;
-  
+    [SerializeField]
+    public int particleBudget;
+    int particleBudgetCounter;
     public int color;
     public GameObject prefabToSpawn;
     [SerializeField] Transform brushTipPoint;
@@ -155,12 +157,17 @@ public class Paint : MonoBehaviour
                             if (particleCounter % 20 == 0)
                             {
                                 //instantiates objects and material is the same as object spawned
-
+                               
                                 GameObject go = Instantiate(prefabToSpawn, brushTipPoint.transform.position, brushTipPoint.transform.rotation);
                                 //     go.transform.localScale = new Vector3 (right * .01f, right * .01f, right * .01f);
 
                                 go.transform.SetParent(canvas.transform);
                                 go.GetComponent<MaterialChanger>().ChangeMaterial(color);
+                                particleBudgetCounter++;
+                                if (particleBudgetCounter >= particleBudget)
+                                {
+                                    GameManager.Instance.ParticleBudgetReached();
+                                }
 
                             }
                             particleCounter++;

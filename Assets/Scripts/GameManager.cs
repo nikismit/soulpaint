@@ -55,4 +55,10 @@ public class GameManager : MonoBehaviour
             gamestateChanged(this.currentGameState);
         }
     }
+
+    public void ParticleBudgetReached()
+    {
+
+
+    }
 }
