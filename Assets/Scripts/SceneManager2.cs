@@ -60,7 +60,7 @@ public class SceneManager2 : MonoBehaviour
             pr.transform.localScale = new Vector3(-pr.transform.localScale.x, pr.transform.localScale.y, pr.transform.localScale.z);
         }        
         mirror.SetActive(true);
-        playableDir.Play();
+      //  playableDir.Play();
         //Invoke("ChangeToMimic", 20f);
 
     }
@@ -204,7 +204,9 @@ public class SceneManager2 : MonoBehaviour
     }
     public void Crescendo()
     {
-        StartCoroutine(ShrinkToOne(8f));
+        StartCoroutine(ShrinkToOne(40f));
+        Debug.Log("I called cooldown");
+
     }
 
     IEnumerator ScaleUp(float time)
@@ -229,22 +231,32 @@ public class SceneManager2 : MonoBehaviour
 
    IEnumerator ShrinkToOne(float time)
     {
-        refScaleObj = mimicPuppetCreator.actualPuppets[0].transform;
+      //  refScaleObj = mimicPuppetCreator.actualPuppets[0].transform;
 
 
         {
             float i = 0;
             float rate = 1 / time;
 
-            Vector3 fromScale = refScaleObj.localScale;
+        //    Vector3 fromScale = refScaleObj.localScale;
             Vector3 toScale = Vector3.zero;
+            List<Vector3> fromScales = new List<Vector3>();
+            List<Vector3> fromPos = new List<Vector3>();
+            Transform T = vrsetup.actualAvatarVRIK.references.chest;
+            for (int n = 0; n < mimicPuppetCreator.actualPuppets.Count; n++)
+            {
+                fromScales.Add(mimicPuppetCreator.actualPuppets[n].transform.localScale);
+                fromPos.Add(mimicPuppetCreator.actualPuppets[n].transform.position);
+            }
             while (i < 1)
             {
-                foreach (GameObject go in mimicPuppetCreator.actualPuppets)
+            
+                for (int j = 0; j < mimicPuppetCreator.actualPuppets.Count; j++)
                 {
-                    go.transform.localScale = Vector3.Lerp(fromScale, toScale, i);
-                    go.transform.position = Vector3.Lerp(go.transform.position, vrsetup.actualAvatarVRIK.transform.position, i);
+                    mimicPuppetCreator.actualPuppets[j].transform.localScale = Vector3.Lerp(fromScales[j], toScale, i);
+                    mimicPuppetCreator.actualPuppets[j].transform.position = Vector3.Lerp(fromPos[j], T.position, i);
                 }
+               
                 i += Time.deltaTime * rate;
 
                 yield return 0;

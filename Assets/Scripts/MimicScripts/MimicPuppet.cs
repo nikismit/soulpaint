@@ -10,7 +10,7 @@ public class MimicPuppet : MonoBehaviour
     private MimicSender masterAvatarscript;
     //int numOfBones = 42, numOfTransforms = 2;
     int numOfBones = 52, numOfTransforms = 2;
-
+    public Vector3 debugPos, debugRot;
     Transform[] bones;
     public bool notGrabbed;
     [SerializeField]
@@ -38,10 +38,11 @@ public class MimicPuppet : MonoBehaviour
     {
 
         addedRotation = transform.eulerAngles;
+
         bones = new Transform[numOfBones];
         setUpBonesArray(transform);
         notGrabbed = true;
-        Invoke("Setup", 1f);
+        Invoke("Setup", 4f);
       // player = GameObject.FindGameObjectWithTag("Player");
 
         //if (player != null)
@@ -94,6 +95,7 @@ public class MimicPuppet : MonoBehaviour
                         case MovementType.YesRotNoPos:
                        
                             bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+                            bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
                             break;
                         default:
                             break;
@@ -112,6 +114,7 @@ public class MimicPuppet : MonoBehaviour
 
             if (notGrabbed && !masterAvatarscript.stopMoving && myMovType  == MovementType.YesRotYesPos)
             {
+                
                 Vector3 moveDirection = masterAvatarscript.movementDirection; 
                 localRotation.SetFromToRotation(masterAvatarscript.transform.forward, transform.forward);
                 moveDirection = localRotation * moveDirection * transform.lossyScale.x;
@@ -240,7 +243,7 @@ public class MimicPuppet : MonoBehaviour
         else
         {
             bones[0] = FindVRIKComponent(gameObjectTransform, "ChildRig");
-            //  bones[0] = gameObjectTransform;       //transform of model itself
+             //bones[0] = gameObjectTransform;       //transform of model itself
             bones[1] = FindVRIKComponent(gameObjectTransform, "J_Lumbar");
             bones[2] = FindVRIKComponent(gameObjectTransform, "L_Femur");
             bones[3] = FindVRIKComponent(gameObjectTransform, "R_Femur");

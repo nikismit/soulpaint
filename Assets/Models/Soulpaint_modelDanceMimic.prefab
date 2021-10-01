@@ -2707,7 +2707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b677a2bb6b813418f12174173da64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopMoving: 1
+  stopMoving: 0
   bonePositionsMimic: []
   boneRotationsMimic: []
   rotation: {x: 0, y: 0, z: 0}
@@ -2745,6 +2745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafdfdfd79cac9b47bc016352710a841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headObj: {fileID: 0}
 --- !u!1 &6201724612910886805
 GameObject:
   m_ObjectHideFlags: 0
