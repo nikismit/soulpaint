@@ -81,7 +81,8 @@ public class VRIKApplier : MonoBehaviour
         else if (_boneStructure == BoneStructure.spNew)
         {
             myVRIK = this.GetComponent<VRIK>().references;
-            myVRIK.root = this.transform;
+            myVRIK.root = myVRIK.pelvis = findVRIKComponent(this.transform, "Root");
+            ;
             myVRIK.pelvis = findVRIKComponent(this.transform, "Base HumanPelvis");
             myVRIK.spine = findVRIKComponent(this.transform, "Base HumanSpine1");
             //			Debug.Log (findVRIKComponent (this.transform, "Spine01"));

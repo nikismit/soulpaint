@@ -22,6 +22,8 @@ public class SceneManagerScene1 : MonoBehaviour
     [SerializeField] GameObject finalPuppet, refPuppet;
     [SerializeField] SkinnedMeshRenderer scanMaterial, scanHeadMaterial;
     [SerializeField] Material NotDissolve;
+    [SerializeField] Transform spawnPointExtraPuppets;
+
     float scanVal;
     bool embodied;
     PlayableDirector playableDirector;
@@ -134,9 +136,10 @@ public class SceneManagerScene1 : MonoBehaviour
     }
     private void  SetupAvatar()
     {
+        EyeBlinder.Instance.FadeIn();
         scanHeadMaterial.material = NotDissolve;
         scanMaterial.material = NotDissolve;
-        EyeBlinder.Instance.FadeIn();
+     
         Collider[] colliders = finalPuppet.GetComponentsInChildren<Collider>();
         foreach (Collider cl in colliders)
         {
@@ -144,6 +147,8 @@ public class SceneManagerScene1 : MonoBehaviour
         }
     
         GameManager.Instance.finalMimicPuppet = Instantiate(finalPuppet);
+        GameManager.Instance.finalMimicPuppet.transform.position = spawnPointExtraPuppets.position;
+
         DontDestroyOnLoad(GameManager.Instance.finalMimicPuppet);
        // GameManager.Instance.finalMimicPuppet.AddComponent<MimicPuppet>();
 
@@ -157,11 +162,11 @@ public class SceneManagerScene1 : MonoBehaviour
         vRIKApplier.applyVRIKComponents();
         ResetBones();
         DontDestroyOnLoad(finalPuppet);
-   
- 
-        GameManager.Instance.finalPuppet = finalPuppet;
+
      
-    //    GameManager.Instance.finalPuppet.AddComponent<MimicSender>();
+        GameManager.Instance.finalPuppet = finalPuppet;
+        GameManager.Instance.finalPuppet.transform.position = spawnPointExtraPuppets.position;
+        //    GameManager.Instance.finalPuppet.AddComponent<MimicSender>();
         Invoke("ChangeScene", 2f);
 
     }

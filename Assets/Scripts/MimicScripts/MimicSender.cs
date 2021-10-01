@@ -148,7 +148,8 @@ public class MimicSender : MonoBehaviour
     {
         if (!debugSetup)
         {
-            bones[0] = gameObjectTransform;       //transform of model itself
+            bones[0] = FindVRIKComponent(gameObjectTransform, "Root");
+           // bones[0] = gameObjectTransform;       //transform of model itself
             bones[1] = FindVRIKComponent(gameObjectTransform, "Base HumanPelvis");
             bones[2] = FindVRIKComponent(gameObjectTransform, "Base HumanLLegThigh");
             bones[3] = FindVRIKComponent(gameObjectTransform, "Base HumanRLegThigh");
