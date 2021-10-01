@@ -78,7 +78,7 @@ public class SceneManagerScene1 : MonoBehaviour
               
                 break;
             case Gamestate.Meditation:
-                palette.SetActive(true);
+              
                 startSilhoeutte.SetActive(false);
                 //  startCircle.SetActive(false);
                 //   paintBucket.SetActive(false);
@@ -87,13 +87,14 @@ public class SceneManagerScene1 : MonoBehaviour
                 break;
             case Gamestate.Painting:
             
-                Debug.Log("called times ");
+              
                 timerObject.SetActive(true);
-                     StartCoroutine(StartPaintingTime());
+                StartCoroutine(StartPaintingTime());
                 StartFogFade();
 
                 break;
             case Gamestate.ReadyforEmbody:
+                audioManager.PlayClip();
                 palette.SetActive(false);
                 embodyGlow.SetActive(true);
                 break;
@@ -192,12 +193,14 @@ public class SceneManagerScene1 : MonoBehaviour
             timerObject.transform.Rotate(-Vector3.right * factor);
             yield return null;
         }
-        audioManager.PlayClip();
-        Invoke("StartEmbody", 6f);
+     
+        Invoke("StartEmbody", 1f);
     }
   private void StartEmbody()
     {
-        GameManager.Instance.SetNewGamestate(Gamestate.ReadyforEmbody);
+        if (GameManager.Instance.getCurrentGameState() != Gamestate.ReadyforEmbody)
+        { GameManager.Instance.SetNewGamestate(Gamestate.ReadyforEmbody); }
+
     }
 
     IEnumerator StartFogFade()

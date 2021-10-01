@@ -58,7 +58,9 @@ public class GameManager : MonoBehaviour
 
     public void ParticleBudgetReached()
     {
-
-
+        if (currentGameState != Gamestate.ReadyforEmbody)
+        {
+            SetNewGamestate(Gamestate.ReadyforEmbody);
+        }
     }
 }

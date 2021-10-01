@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using VRTK;
+using UnityEngine.Playables;
+using RootMotion.FinalIK;
 
 public class SceneManager2 : MonoBehaviour
 {
@@ -23,8 +25,11 @@ public class SceneManager2 : MonoBehaviour
     List<Transform> holderSceneTransform = new List<Transform>();
     private VRTK_ControllerEvents rightControllerAlias = null;
     bool buttonPressed;
-
+    [SerializeField]
+    PlayableDirector playableDir;
+    ParticleSystem[] particleSystems;
     Transform refScaleObj;
+    VRIK vrikObj;
     // Start is called before the first frame update
     void Start()
 
@@ -49,15 +54,20 @@ public class SceneManager2 : MonoBehaviour
     private void ChangeToSimonSays()
     {
         GameManager.Instance.SetNewGamestate(Gamestate.SimonSays);
+        particleSystems = GameManager.Instance.finalPuppet.GetComponentsInChildren<ParticleSystem>();
+        foreach (ParticleSystem pr in particleSystems)
+        {
+            pr.transform.localScale = new Vector3(-pr.transform.localScale.x, pr.transform.localScale.y, pr.transform.localScale.z);
+        }        
         mirror.SetActive(true);
-        
-        Invoke("ChangeToMimic", 20f);
+        playableDir.Play();
+        //Invoke("ChangeToMimic", 20f);
 
     }
-    private void ChangeToMimic()
+    public void ChangeToMimic()
     {
         mirror.SetActive(false);
-        GameManager.Instance.finalPuppet.SetActive(false);
+       GameManager.Instance.finalPuppet.SetActive(false);
         GameManager.Instance.SetNewGamestate(Gamestate.Dance);
       
 
@@ -71,10 +81,24 @@ public class SceneManager2 : MonoBehaviour
     IEnumerator WaitToDestroy()
     {
         yield return new WaitUntil(() => vrsetup.actualAvatarVRIK != null);
-        vrsetup.actualAvatarVRIK.gameObject.AddComponent<MimicSender>();
-        vrsetup.actualAvatarVRIK.GetComponent<HideParts>().isEmbodying = true;
-        vrsetup.actualAvatarVRIK.GetComponent<HideParts>().ShowOrHideParts(true);
-        vrsetup.actualAvatarVRIK.gameObject.tag = "Player";
+        vrikObj = vrsetup.actualAvatarVRIK;
+         vrikObj.gameObject.AddComponent<MimicSender>();
+        vrikObj.GetComponent<HideParts>().isEmbodying = true;
+
+        vrikObj.GetComponent<HideParts>().ShowOrHideParts(true);
+        float s = GameManager.Instance.savedScale;
+        vrikObj.transform.localScale = new Vector3(s, s, s);
+        vrikObj.solver.plantFeet = false;
+        vrikObj.solver.spine.minHeadHeight = .01f;
+        vrikObj.solver.spine.bodyPosStiffness = .55f;
+        vrikObj.solver.leftArm.shoulderRotationWeight = .01f;
+        vrikObj.solver.leftArm.shoulderTwistWeight = .01f;
+        vrikObj.solver.rightArm.shoulderRotationWeight = .01f;
+        vrikObj.solver.rightArm.shoulderTwistWeight = .01f;
+        vrikObj.solver.locomotion.footDistance = .15f;
+        vrikObj.gameObject.tag = "Player";
+
+        vrikObj.gameObject.AddComponent<PlantFeet>();
         //  GameObject puppetToDestroy = GameManager.Instance.finalPuppet;
         // Destroy(puppetToDestroy);
     }
@@ -87,17 +111,17 @@ public class SceneManager2 : MonoBehaviour
                 currentScene++;
                 if (currentScene >= subScene.Count)
                 { currentScene = 0; }
-                ChangeChoreography();
+                ChangeChoreography(currentScene);
                 buttonPressed = true;
             }
         }
 
     }
 
-    private void ChangeChoreography()
+    public void ChangeChoreography(int i)
     {
 
-
+        currentScene = i;
         StartCoroutine(ScaleDown(1f));
         //   go.GetComponent<Animator>().SetInteger("scale", 1);
 
@@ -178,7 +202,10 @@ public class SceneManager2 : MonoBehaviour
         StartCoroutine(ScaleUp(1f));
 
     }
-
+    public void Crescendo()
+    {
+        StartCoroutine(ShrinkToOne(8f));
+    }
 
     IEnumerator ScaleUp(float time)
     {
@@ -198,6 +225,32 @@ public class SceneManager2 : MonoBehaviour
             yield return 0;
         }
         StartPuppeteering();
+    }
+
+   IEnumerator ShrinkToOne(float time)
+    {
+        refScaleObj = mimicPuppetCreator.actualPuppets[0].transform;
+
+
+        {
+            float i = 0;
+            float rate = 1 / time;
+
+            Vector3 fromScale = refScaleObj.localScale;
+            Vector3 toScale = Vector3.zero;
+            while (i < 1)
+            {
+                foreach (GameObject go in mimicPuppetCreator.actualPuppets)
+                {
+                    go.transform.localScale = Vector3.Lerp(fromScale, toScale, i);
+                    go.transform.position = Vector3.Lerp(go.transform.position, vrsetup.actualAvatarVRIK.transform.position, i);
+                }
+                i += Time.deltaTime * rate;
+
+                yield return 0;
+            }
+        }
+
     }
     private void StartPuppeteering()
     {

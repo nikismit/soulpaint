@@ -39,7 +39,8 @@ public class Paint : MonoBehaviour
     public GameObject canvas;
     public bool customBrushShaderIsOn;
     [SerializeField]
-    public int particleBudget;
+    public int particleBudget = 30;
+    bool particlebudgetCalled;
     int particleBudgetCounter;
     public int color;
     public GameObject prefabToSpawn;
@@ -60,6 +61,7 @@ public class Paint : MonoBehaviour
 
     void Start()
     {
+        paintBrush.SetActive(false);
         Invoke("SetControllerReferences", 1f);
         materialToPaint = Instantiate(materialToPaint);
         materialForObj = Instantiate(materialForObj);
@@ -77,6 +79,7 @@ public class Paint : MonoBehaviour
     void SetControllerReferences()
         {
             rightControllerAlias = VRTK_DeviceFinder.GetControllerRightHand().GetComponent<VRTK_ControllerEvents>();
+        paintBrush.GetComponent<VRTK_TransformFollow>().gameObjectToFollow = rightControllerAlias.GetComponentInChildren<brushIdentifier>().gameObject;
             //    leftControllerAlias = VRTK_DeviceFinder.GetControllerLeftHand().GetComponent<VRTK_ControllerEvents>();
         }
         // Update is called once per frame
@@ -164,9 +167,10 @@ public class Paint : MonoBehaviour
                                 go.transform.SetParent(canvas.transform);
                                 go.GetComponent<MaterialChanger>().ChangeMaterial(color);
                                 particleBudgetCounter++;
-                                if (particleBudgetCounter >= particleBudget)
+                                if (particleBudgetCounter >= particleBudget && !particlebudgetCalled)
                                 {
                                     GameManager.Instance.ParticleBudgetReached();
+                                    particlebudgetCalled = true;
                                 }
 
                             }
