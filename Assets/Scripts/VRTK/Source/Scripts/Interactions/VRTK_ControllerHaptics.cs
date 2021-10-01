@@ -40,6 +40,7 @@ namespace VRTK
         /// <param name="pulseInterval">The interval to wait between each haptic pulse.</param>
         public static void TriggerHapticPulse(VRTK_ControllerReference controllerReference, float strength, float duration, float pulseInterval)
         {
+            Debug.Log("Do i ever trigger haptic");
             SetupInstance();
             if (instance != null)
             {

@@ -145,21 +145,35 @@ public class VRAvatarController : MonoBehaviour
     {
         containerObject = new GameObject("VRContainer");
         containerObject.transform.position = position;
-        if (rotationPoint != null)
+        if (isDanceScene)
         {
-            containerObject.transform.rotation = rotationPoint.rotation;
+            if (rotationPoint != null)
+            {
+                containerObject.transform.rotation = rotationPoint.rotation;
+            }
+            else
+            { containerObject.transform.rotation = rotation; }
         }
         else
-        { containerObject.transform.rotation = rotation; }
+        {
+            containerObject.transform.rotation = rotation;
+            transform.SetParent(containerObject.transform, true);
 
-        transform.SetParent(containerObject.transform, true);
+        }
+
 
         //Current client owns this player
         //create camera rig and attach player model to it
-
-        VRRigObject = Instantiate(VRRigPrefab, transform.position, transform.rotation);
+        if (isDanceScene)
+        {
+            VRRigObject = Instantiate(VRRigPrefab, transform.position, transform.rotation);
+        }
+        else
+        {
+            VRRigObject = Instantiate(VRRigPrefab, rotationPoint.position, rotationPoint.rotation);
+        }
         VRRigObject.transform.SetParent(containerObject.transform, false);
-        VRRigObject.transform.localPosition = Vector3.zero;
+      VRRigObject.transform.localPosition = Vector3.zero;
 
         sdkManager = VRRigObject.GetComponentInChildren<VRTK_SDKManager>();
         multiVR = VRRigObject.GetComponentInChildren<MultiVRSetup>();

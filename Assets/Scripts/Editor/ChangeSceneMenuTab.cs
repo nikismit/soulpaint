@@ -12,10 +12,17 @@ public class ChangeSceneMenuTab : EditorWindow {
     {
         if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
         {
-            EditorSceneManager.OpenScene("Assets/Scenes/MainScene.unity");
+            EditorSceneManager.OpenScene("Assets/Scenes/MainScene_CopyLatest.unity");
         }
     }
-
+    [MenuItem("Change Scene/Open DanceScene")]
+    static void OpenDanceScene()
+    {
+        if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
+        {
+            EditorSceneManager.OpenScene("Assets/Scenes/SceneDANCE_02.unity");
+        }
+    }
     [MenuItem("Change Scene/hatsumi")]
     static void OpenRoom()
     {

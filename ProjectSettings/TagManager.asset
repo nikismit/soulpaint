@@ -17,6 +17,7 @@ TagManager:
   - Hands
   - Breathable
   - PaintBrush
+  - StepInto
   layers:
   - Default
   - TransparentFX

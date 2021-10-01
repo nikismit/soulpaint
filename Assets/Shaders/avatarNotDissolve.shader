@@ -4,6 +4,7 @@ Shader "avatarNotDissolve"
 {
 	Properties
 	{
+		_SpecColor("Specular Color",Color)=(1,1,1,1)
 		_Power1("Power 1", Range( -3 , 6)) = 2
 		_Gloss("Gloss", Range( 0 , 10)) = 0
 		[HDR]_Color0("Color 0", Color) = (0,0,0,0)
@@ -12,9 +13,9 @@ Shader "avatarNotDissolve"
 
 	SubShader
 	{
-		Tags{ "RenderType" = "Transparent"  "Queue" = "Geometry+0" "IsEmissive" = "true"  }
+		Tags{ "RenderType" = "Transparent"  "Queue" = "Overlay+0" "IgnoreProjector" = "True" "IsEmissive" = "true"  }
 		Cull Back
-		Blend One One
+		Blend SrcAlpha OneMinusSrcAlpha
 		
 		CGINCLUDE
 		#include "UnityPBSLighting.cginc"
@@ -30,7 +31,7 @@ Shader "avatarNotDissolve"
 		uniform float _Power1;
 		uniform float _Gloss;
 
-		void surf( Input i , inout SurfaceOutputStandard o )
+		void surf( Input i , inout SurfaceOutput o )
 		{
 			float3 ase_worldPos = i.worldPos;
 			float3 ase_worldViewDir = normalize( UnityWorldSpaceViewDir( ase_worldPos ) );
@@ -38,12 +39,12 @@ Shader "avatarNotDissolve"
 			float fresnelNdotV5 = dot( ase_worldNormal, ase_worldViewDir );
 			float fresnelNode5 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV5, _Power1 ) );
 			o.Emission = ( _Color0 * fresnelNode5 ).rgb;
-			o.Alpha = _Gloss;
+			o.Alpha = ( fresnelNode5 * _Gloss );
 		}
 
 		ENDCG
 		CGPROGRAM
-		#pragma surface surf Standard keepalpha fullforwardshadows exclude_path:deferred 
+		#pragma surface surf BlinnPhong keepalpha fullforwardshadows exclude_path:deferred 
 
 		ENDCG
 		Pass
@@ -101,8 +102,8 @@ Shader "avatarNotDissolve"
 				half3 worldViewDir = normalize( UnityWorldSpaceViewDir( worldPos ) );
 				surfIN.worldPos = worldPos;
 				surfIN.worldNormal = IN.worldNormal;
-				SurfaceOutputStandard o;
-				UNITY_INITIALIZE_OUTPUT( SurfaceOutputStandard, o )
+				SurfaceOutput o;
+				UNITY_INITIALIZE_OUTPUT( SurfaceOutput, o )
 				surf( surfIN, o );
 				#if defined( CAN_SKIP_VPOS )
 				float2 vpos = IN.pos;
@@ -119,19 +120,22 @@ Shader "avatarNotDissolve"
 }
 /*ASEBEGIN
 Version=18912
-2185;176.6;1535;804;1050.074;594.3987;1.577535;True;False
+2253;675.6;1535;529;1739.143;457.9524;1.877535;True;False
 Node;AmplifyShaderEditor.RangedFloatNode;1;-1128.921,98.07971;Float;False;Property;_Power1;Power 1;1;0;Create;True;0;0;0;False;0;False;2;1.29;-3;6;0;1;FLOAT;0
 Node;AmplifyShaderEditor.FresnelNode;5;-804.4989,0.1607056;Inherit;True;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.ColorNode;15;352.9525,-561.4092;Inherit;False;Property;_Color0;Color 0;3;1;[HDR];Create;True;0;0;0;False;0;False;0,0,0,0;0.1109187,0.6821501,1.059274,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.RangedFloatNode;12;-430.3788,63.4024;Float;False;Property;_Gloss;Gloss;2;0;Create;True;0;0;0;False;0;False;0;4.98;0;10;0;1;FLOAT;0
+Node;AmplifyShaderEditor.ColorNode;15;352.9525,-561.4092;Inherit;False;Property;_Color0;Color 0;4;1;[HDR];Create;True;0;0;0;False;0;False;0,0,0,0;0.1109187,0.6821501,1.059274,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.RangedFloatNode;12;-430.3788,63.4024;Float;True;Property;_Gloss;Gloss;3;0;Create;True;0;0;0;False;0;False;0;2.06;0;10;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;16;506.2196,-96.92767;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;17;700.9894,-280.4694;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;958.0191,-137.197;Float;False;True;-1;2;ASEMaterialInspector;0;0;Standard;avatarNotDissolve;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Custom;0.5;True;True;0;True;Transparent;;Geometry;ForwardOnly;18;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;4;1;False;-1;1;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;0;3;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;18;318.6349,273.3475;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;958.0191,-137.197;Float;False;True;-1;2;ASEMaterialInspector;0;0;BlinnPhong;avatarNotDissolve;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Custom;0.5;True;True;0;False;Transparent;;Overlay;ForwardOnly;18;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;2;5;False;-1;10;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;2;-1;-1;-1;0;False;0;0;False;-1;0;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;15;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;5;3;1;0
 WireConnection;16;0;15;0
 WireConnection;17;0;15;0
 WireConnection;17;1;5;0
+WireConnection;18;0;5;0
+WireConnection;18;1;12;0
 WireConnection;0;2;17;0
-WireConnection;0;9;12;0
+WireConnection;0;9;18;0
 ASEEND*/
-//CHKSM=6A3E624860DFFA17D2284CD47AB3BF273D490D64
+//CHKSM=41C136BCFAA08CEE1328B0E4B9DD448D9249BE19

@@ -7,7 +7,7 @@ public enum Gamestate
     WaitforStart,
     Meditation,
     Painting,
-   
+   ReadyforEmbody,
     Embody,
     SimonSays,
     Dance,
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetNewGamestate(Gamestate.WaitforStart);
+       // SetNewGamestate(Gamestate.WaitforStart);
     }
 
     //    private void StartAudio()
@@ -53,6 +53,14 @@ public class GameManager : MonoBehaviour
         if (gamestateChanged != null)
         {
             gamestateChanged(this.currentGameState);
+        }
+    }
+
+    public void ParticleBudgetReached()
+    {
+        if (currentGameState != Gamestate.ReadyforEmbody)
+        {
+            SetNewGamestate(Gamestate.ReadyforEmbody);
         }
     }
 }
