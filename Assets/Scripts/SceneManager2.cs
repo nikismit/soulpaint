@@ -30,6 +30,7 @@ public class SceneManager2 : MonoBehaviour
     ParticleSystem[] particleSystems;
     Transform refScaleObj;
     VRIK vrikObj;
+    MimicPuppet.MovementType setMovType;
     // Start is called before the first frame update
     void Start()
 
@@ -50,6 +51,61 @@ public class SceneManager2 : MonoBehaviour
 
         Invoke("SetControllerReferences", 2f);
        
+    }
+
+    private void OnEnable()
+    {
+        GameManager.gamestateChanged += OnGameStateChanged;
+    }
+    private void OnDisable()
+    {
+        GameManager.gamestateChanged -= OnGameStateChanged;
+    }
+  
+    private void OnGameStateChanged(Gamestate newGameState)
+    {
+        switch (newGameState)
+        {
+            case Gamestate.WaitforStart:
+
+                break;
+            case Gamestate.Meditation:
+
+            
+
+                break;
+            case Gamestate.Painting:
+
+
+
+                break;
+            case Gamestate.ReadyforEmbody:
+
+                break;
+            case Gamestate.Embody:
+         
+
+                break;
+
+
+            case Gamestate.Dance:
+                break;
+            case Gamestate.PostDance:
+                break;
+            case Gamestate.End:
+                Destroy(GameManager.Instance.finalMimicPuppet);
+                Destroy(GameManager.Instance.finalPuppet);
+                Destroy(GameManager.Instance);
+                EyeBlinder.Instance.FadeIn();
+                SceneManager.LoadScene(0);
+                break;
+
+            default:
+                break;
+        }
+
+
+
     }
     private void ChangeToSimonSays()
     {
@@ -160,13 +216,15 @@ public class SceneManager2 : MonoBehaviour
     {
         vrsetup.actualAvatarVRIK.GetComponent<MimicSender>().stopMoving = true;
         holderSceneTransform.Clear();
+        setMovType = subScene[currentScene].GetComponent<MovementType>().myMovementType;
         for (int i = 0; i < mimicPuppetCreator.actualPuppets.Count; i++)
         {
             switch (currentScene)
             { case 0:
-
+                    
                     if (i < subScene1.Length)
                     {
+                        mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().myMovType = setMovType;
                         mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = false;
                         mimicPuppetCreator.actualPuppets[i].transform.position = subScene1[i].transform.position;
                         mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene1[i].transform.eulerAngles;
@@ -177,6 +235,7 @@ public class SceneManager2 : MonoBehaviour
                 case 1:
                     if (i < subScene2.Length)
                     {
+                        mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().myMovType = setMovType;
                         mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = false;
                         mimicPuppetCreator.actualPuppets[i].transform.position = subScene2[i].transform.position;
                         mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene2[i].transform.eulerAngles;
@@ -187,6 +246,7 @@ public class SceneManager2 : MonoBehaviour
                 case 2:
                     if (i < subScene3.Length)
                     {
+                        mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().myMovType = setMovType;
                         mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = false;
                         mimicPuppetCreator.actualPuppets[i].transform.position = subScene3[i].transform.position;
                         mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene3[i].transform.eulerAngles;
@@ -208,7 +268,12 @@ public class SceneManager2 : MonoBehaviour
         Debug.Log("I called cooldown");
 
     }
+    public void ChangeState(int i)
+    {
+        Gamestate gamestate = (Gamestate)i;
 
+        GameManager.Instance.SetNewGamestate(gamestate);
+    }
     IEnumerator ScaleUp(float time)
     {
 

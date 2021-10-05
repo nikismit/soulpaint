@@ -44,7 +44,7 @@ public class VRAvatarController : MonoBehaviour
 
     [Header("Events")]
     public UnityEvent avatarChanged;
-
+    public Vector3[] debugVertices; 
     public int indexActualAvatar { get; private set; }
     public VRIK actualAvatarVRIK { get; private set; }
     public VRTK_SDKManager sdkManager { get; private set; }
@@ -65,7 +65,8 @@ public class VRAvatarController : MonoBehaviour
     private bool local;
     private float localScale = 1;
     private int offsetIndex;
-
+    [SerializeField]
+    bool firstTime;
     [SerializeField]
     Transform rotationPoint;
     [SerializeField]
@@ -144,7 +145,8 @@ public class VRAvatarController : MonoBehaviour
     private void VRSetup(Vector3 position, Quaternion rotation)
     {
         containerObject = new GameObject("VRContainer");
-        containerObject.transform.position = position;
+ 
+    containerObject.transform.position = position;
         if (isDanceScene)
         {
             if (rotationPoint != null)
@@ -156,7 +158,9 @@ public class VRAvatarController : MonoBehaviour
         }
         else
         {
-            containerObject.transform.rotation = rotation;
+       //  containerObject.transform.position = rotationPoint.position;
+   //   containerObject.transform.forward = rotationPoint.forward;
+         containerObject.transform.rotation = rotation;
             transform.SetParent(containerObject.transform, true);
 
         }
@@ -170,7 +174,7 @@ public class VRAvatarController : MonoBehaviour
         }
         else
         {
-            VRRigObject = Instantiate(VRRigPrefab, rotationPoint.position, rotationPoint.rotation);
+            VRRigObject = Instantiate(VRRigPrefab);
         }
         VRRigObject.transform.SetParent(containerObject.transform, false);
       VRRigObject.transform.localPosition = Vector3.zero;
@@ -215,7 +219,7 @@ public class VRAvatarController : MonoBehaviour
             }
         }
 
-        CapturePlayAreaTransform();
+      //  CapturePlayAreaTransform();
     }
 
     /// <summary>
@@ -406,6 +410,16 @@ public class VRAvatarController : MonoBehaviour
     /// </summary>
     private void CapturePlayAreaTransform()
     {
+        if (!firstTime)
+        { debugVertices = PlayArea.instance.SDK.boundariesSDK.GetPlayAreaVertices();
+            firstTime = true;
+            float valX = debugVertices[0].x + debugVertices[1].x;
+           
+
+
+        }
+        //  Transform target = sdkManager.loadedSetup.actualBoundaries.transform;
+  
         Transform target = multiVR.playAreaAlias.transform;
         lastPosition = target.position;
         lastRotation = target.rotation;
@@ -446,5 +460,20 @@ public class VRAvatarController : MonoBehaviour
     public void SetLocalScale(float scale)
     {
         localScale = scale;
+    }
+    public void CalibrateSpace(Transform fixedMarker, Transform handMarker, Transform fixMarkL, Transform handMarkerL)
+    {
+        Vector3 handMarkerPos = handMarker.position;
+       // container.transform.position = Vector3.zero;
+       // container.transform.rotation = Quaternion.identity;
+         Vector3 posOffset = fixedMarker.position - handMarkerPos; //calculate the difference in positions
+        
+        container.transform.position += new Vector3 (posOffset.x, 0f, posOffset.z); //offset the position of the cameraRig to realign the controllers
+        Vector3 side1 = fixMarkL.position - handMarkerPos;
+        Vector3 side2 = handMarkerL.position - handMarkerPos;
+       float f = Vector3.Angle(side1, side2);
+       // Vector3 rotOffset = fixedMarker.eulerAngles - handMarker.eulerAngles; //calculate the difference in rotations
+      
+     container.transform.RotateAround(handMarkerPos, Vector3.up, f); //using the hand as a pivot, rotate around Y
     }
 }

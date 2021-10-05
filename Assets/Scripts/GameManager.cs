@@ -12,6 +12,7 @@ public enum Gamestate
     SimonSays,
     Dance,
     PostDance,
+    End,
 
 }
 public class GameManager : MonoBehaviour

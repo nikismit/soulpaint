@@ -155,7 +155,7 @@ public class PlayArea : MonoBehaviour
     /// </summary>
     protected virtual void _awakeOculus()
     {
-        
+      
     }
 
     /// <summary>

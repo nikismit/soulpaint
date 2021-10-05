@@ -42,7 +42,7 @@ public class MimicPuppet : MonoBehaviour
         bones = new Transform[numOfBones];
         setUpBonesArray(transform);
         notGrabbed = true;
-        Invoke("Setup", 4f);
+        Invoke("Setup", .5f);
       // player = GameObject.FindGameObjectWithTag("Player");
 
         //if (player != null)

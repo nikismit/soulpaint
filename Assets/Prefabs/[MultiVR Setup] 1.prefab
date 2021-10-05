@@ -565,13 +565,13 @@ MonoBehaviour:
   virtualGreenScreenApplyDepthCulling: 0
   virtualGreenScreenDepthTolerance: 0.2
   mrcActivationMode: 0
-  _trackingOriginType: 1
+  _trackingOriginType: 2
   usePositionTracking: 1
   useRotationTracking: 1
   useIPDInPositionTracking: 1
   resetTrackerOnLoad: 0
-  AllowRecenter: 1
-  _reorientHMDOnControllerRecenter: 1
+  AllowRecenter: 0
+  _reorientHMDOnControllerRecenter: 0
 --- !u!114 &114782601082302302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4589,7 +4589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6417bf0cbe152144f8652cd3204e2b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playArea: {fileID: 0}
+  playArea: {fileID: 114219640618566960}
 --- !u!1 &1992312797073421705
 GameObject:
   m_ObjectHideFlags: 0
