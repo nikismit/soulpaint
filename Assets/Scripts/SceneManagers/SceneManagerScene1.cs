@@ -85,6 +85,7 @@ public class SceneManagerScene1 : MonoBehaviour
                 //  startCircle.SetActive(false);
                 //   paintBucket.SetActive(false);
                 StartCoroutine(BodyScan());
+                finalPuppet.GetComponent<ReachToDestination>().goToDestination = true;
                
                 break;
             case Gamestate.Painting:
@@ -119,16 +120,16 @@ public class SceneManagerScene1 : MonoBehaviour
     }
     private void Update()
     {
-        if (rightControllerAlias != null && !embodied)
-        {
-            if (Input.GetKeyDown(KeyCode.N) || (rightControllerAlias.buttonOnePressed))
-            {
+      // if (rightControllerAlias != null && !embodied)
+        //{
+          //  if (Input.GetKeyDown(KeyCode.N) || (rightControllerAlias.buttonOnePressed))
+            //{
 
-                GameManager.Instance.SetNewGamestate(Gamestate.Embody);
-                embodied = true;
+               // GameManager.Instance.SetNewGamestate(Gamestate.Embody);
+              //  embodied = true;
 
-            }
-        }
+            //}
+        //}
         
 
         
@@ -231,6 +232,7 @@ public class SceneManagerScene1 : MonoBehaviour
         }
         scanMaterial.material.SetFloat("_Progress", 1);
         scanHeadMaterial.material.SetFloat("_Progress", 1);
+
     //    GameManager.Instance.SetNewGamestate(Gamestate.Painting);
         yield return null; 
     }

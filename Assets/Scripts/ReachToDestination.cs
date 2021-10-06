@@ -21,7 +21,7 @@ public class ReachToDestination : MonoBehaviour
         }
         if (Vector3.Distance(transform.position, destination.position) < .001f && !toNotDestroy) 
         {
-            Destroy(this.gameObject);
+            Destroy(this);
         
         }
     }

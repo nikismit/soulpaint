@@ -303,14 +303,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080682874387828082}
-  m_LocalRotation: {x: 0.076631926, y: 0.99705946, z: -0.00000015142302, w: -0.0000004460412}
+  m_LocalRotation: {x: -0.27882347, y: 0.9603424, z: -0.000000078316006, w: 0.00000026974124}
   m_LocalPosition: {x: -0.000000026822116, y: 0.037481092, z: -6.252776e-15}
   m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
   m_Children:
   - {fileID: 3170422837387445393}
   m_Father: {fileID: 7965277020854693904}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: -32.38}
 --- !u!1 &1086525045191189969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,10 +2630,12 @@ MonoBehaviour:
     rightFoot: {fileID: 2557005998624336288}
     rightToes: {fileID: 0}
   solver:
+    executedInEditor: 0
     IKPosition: {x: 0, y: 0, z: 0}
     IKPositionWeight: 1
     root: {fileID: 0}
     LOD: 0
+    scale: 1
     plantFeet: 1
     spine:
       bones: []
@@ -2774,6 +2776,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+      maxBodyYOffset: 0.05
       heelHeight:
         serializedVersion: 2
         m_Curve:

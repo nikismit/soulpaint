@@ -31,6 +31,8 @@ public class SceneManager2 : MonoBehaviour
     Transform refScaleObj;
     VRIK vrikObj;
     MimicPuppet.MovementType setMovType;
+    [SerializeField]
+    AudioSource feedbackAudio;
     // Start is called before the first frame update
     void Start()
 
@@ -164,16 +166,24 @@ public class SceneManager2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.M) || (rightControllerAlias.buttonOnePressed))
             {
-                currentScene++;
-                if (currentScene >= subScene.Count)
-                { currentScene = 0; }
-                ChangeChoreography(currentScene);
-                buttonPressed = true;
+                //currentScene++;
+                //if (currentScene >= subScene.Count)
+                //{ currentScene = 0; }
+                //ChangeChoreography(currentScene);
+                //buttonPressed = true;
+                if (GameManager.Instance.getCurrentGameState() == Gamestate.PostDance)
+                {
+                    feedbackAudio.Play();
+                    Invoke("EndGame", 2f);
+                }
             }
         }
 
     }
-
+    private void EndGame()
+    {
+        GameManager.Instance.SetNewGamestate(Gamestate.End);
+    }
     public void ChangeChoreography(int i)
     {
 

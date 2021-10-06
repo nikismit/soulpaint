@@ -12,18 +12,23 @@ public class Calibration : MonoBehaviour
     public Transform fixedMarker, fixedMarkerL; //the fixed controller
     private VRTK_ControllerEvents rightControllerAlias = null, leftControllerAlias = null;
     public Transform lookat;
-
+    [SerializeField]
+    GameObject calMode;
+    bool calModeBool = true;
+    float time;
+    bool counting;
     void Start()
     {
+        calMode.SetActive(false);
         Invoke("SetControllerReferences", 1f);
 
     }
 
- void SetControllerReferences()
+    void SetControllerReferences()
     {
-      
-            rightControllerAlias = VRTK_DeviceFinder.GetControllerRightHand().GetComponent<VRTK_ControllerEvents>();
-            leftControllerAlias = VRTK_DeviceFinder.GetControllerLeftHand().GetComponent<VRTK_ControllerEvents>();
+
+        rightControllerAlias = VRTK_DeviceFinder.GetControllerRightHand().GetComponent<VRTK_ControllerEvents>();
+        leftControllerAlias = VRTK_DeviceFinder.GetControllerLeftHand().GetComponent<VRTK_ControllerEvents>();
 
 
     }
@@ -32,12 +37,39 @@ public class Calibration : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Two) && rightControllerAlias != null) //detect is button 'B' has been pressed
+        if (leftControllerAlias != null && rightControllerAlias!= null) //detect is button 'Y' has been pressed
         {
-            handMarker = rightControllerAlias.transform;
-            handMarkerL = leftControllerAlias.transform;
-            vrsetup.CalibrateSpace(fixedMarker, handMarker, fixedMarkerL, handMarkerL);
-          
+       
+            if (leftControllerAlias.buttonTwoPressed && calModeBool)
+         {
+                Debug.Log("why dont i reach here");
+                handMarker = rightControllerAlias.transform;
+                handMarkerL = leftControllerAlias.transform;
+                vrsetup.CalibrateSpace(fixedMarker, handMarker, fixedMarkerL, handMarkerL);
+                time = 0;
         }
+
+            if (leftControllerAlias.buttonOnePressed && rightControllerAlias.buttonOnePressed)
+            {
+                time += Time.deltaTime;
+                if (time > 3f)
+                {
+                    calModeBool = !calModeBool;
+                    calMode.SetActive(calModeBool);
+                    time = 0;
+
+                    counting = true;
+                }
+
+            }
+            if (!leftControllerAlias.buttonOnePressed || !rightControllerAlias.buttonOnePressed)
+            {
+                time = 0;
+                counting = false;
+            }
+        }
+
+
+     
     }
 }

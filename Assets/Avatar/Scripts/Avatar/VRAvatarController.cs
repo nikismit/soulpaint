@@ -410,14 +410,14 @@ public class VRAvatarController : MonoBehaviour
     /// </summary>
     private void CapturePlayAreaTransform()
     {
-        if (!firstTime)
-        { debugVertices = PlayArea.instance.SDK.boundariesSDK.GetPlayAreaVertices();
-            firstTime = true;
-            float valX = debugVertices[0].x + debugVertices[1].x;
+        //if (!firstTime)
+        //{ debugVertices = PlayArea.instance.SDK.boundariesSDK.GetPlayAreaVertices();
+        //    firstTime = true;
+        //    float valX = debugVertices[0].x + debugVertices[1].x;
            
 
 
-        }
+        //}
         //  Transform target = sdkManager.loadedSetup.actualBoundaries.transform;
   
         Transform target = multiVR.playAreaAlias.transform;
@@ -473,7 +473,7 @@ public class VRAvatarController : MonoBehaviour
         Vector3 side2 = handMarkerL.position - handMarkerPos;
        float f = Vector3.Angle(side1, side2);
        // Vector3 rotOffset = fixedMarker.eulerAngles - handMarker.eulerAngles; //calculate the difference in rotations
-      
+      Debug.Log("I get here");
      container.transform.RotateAround(handMarkerPos, Vector3.up, f); //using the hand as a pivot, rotate around Y
     }
 }
