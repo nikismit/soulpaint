@@ -81,6 +81,7 @@ public class VRAvatarController : MonoBehaviour
         if (isDanceScene && GameManager.Instance != null)
         {
             avatars[0] = GameManager.Instance.finalPuppet.GetComponent<VRIK>();
+            
         }
 
       //  PlayersData.Instance.PlayerData.Scale = 1;
@@ -289,6 +290,7 @@ public class VRAvatarController : MonoBehaviour
         {
             PlayersData.Instance.PlayerData.Avatar = indexActualAvatar;
             actualAvatarVRIK = Instantiate(AvatarManager.Instance.getAvatarWithoutHead(index), Vector3.zero, Quaternion.identity);
+            actualAvatarVRIK.enabled = true;
             scale = PlayersData.Instance.PlayerData.Scale;
           
         }
@@ -296,6 +298,7 @@ public class VRAvatarController : MonoBehaviour
         {
             //Instantiate actual avatar
             actualAvatarVRIK = Instantiate(avatars[index], Vector3.zero, Quaternion.identity);
+            actualAvatarVRIK.enabled = true;
         }
 
         SetOffsets();

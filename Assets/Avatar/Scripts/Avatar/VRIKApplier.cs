@@ -84,7 +84,7 @@ public class VRIKApplier : MonoBehaviour
             myVRIK.root = myVRIK.pelvis = findVRIKComponent(this.transform, "Root");
             ;
             myVRIK.pelvis = findVRIKComponent(this.transform, "Base HumanPelvis");
-            myVRIK.spine = findVRIKComponent(this.transform, "Base HumanSpine1");
+            myVRIK.spine = findVRIKComponent(this.transform, "Base HumanSpine3");
             //			Debug.Log (findVRIKComponent (this.transform, "Spine01"));
             myVRIK.chest = findVRIKComponent(this.transform, "Base HumanSpine4");
             //			Debug.Log (findVRIKComponent (this.transform, "Spine04"));

@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene_CopyLatest.unity
     guid: bf313833dfe49904cbab9df7dcda69de
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneDANCE_02.unity
     guid: cd99c1e53ec86c841a410d3b2f391c53
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneDANCE_06.unity
     guid: 580b7ca78b668c048a4d45d882aca249
   - enabled: 0

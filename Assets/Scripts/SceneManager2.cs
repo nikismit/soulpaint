@@ -256,7 +256,7 @@ public class SceneManager2 : MonoBehaviour
                 case 2:
                     if (i < subScene3.Length)
                     {
-                        mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().myMovType = setMovType;
+                        mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().myMovType = subScene3[i].GetComponent<MovementType>().myMovementType;
                         mimicPuppetCreator.actualPuppets[i].GetComponent<MimicPuppet>().notGrabbed = false;
                         mimicPuppetCreator.actualPuppets[i].transform.position = subScene3[i].transform.position;
                         mimicPuppetCreator.actualPuppets[i].transform.eulerAngles = subScene3[i].transform.eulerAngles;

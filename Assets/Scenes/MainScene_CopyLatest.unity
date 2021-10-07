@@ -7093,6 +7093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1562180175}
   - component: {fileID: 1562180174}
+  - component: {fileID: 1562180176}
   m_Layer: 0
   m_Name: CALIBRATION MODE
   m_TagString: Untagged
@@ -7129,6 +7130,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1562180176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562180173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5040c2eaa9ff147b80ded004191c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectToFollow: {fileID: 0}
+  gameObjectToChange: {fileID: 0}
+  followsPosition: 1
+  smoothsPosition: 0
+  maxAllowedPerFrameDistanceDifference: 0.003
+  followsRotation: 1
+  smoothsRotation: 0
+  maxAllowedPerFrameAngleDifference: 1.5
+  followsScale: 1
+  smoothsScale: 0
+  maxAllowedPerFrameSizeDifference: 0.003
+  _moment: 3
 --- !u!1 &1563822927
 GameObject:
   m_ObjectHideFlags: 0
@@ -35341,13 +35366,13 @@ MonoBehaviour:
   isCustomShader: 0
   lightWrap: 0
   brushColor:
-  - {r: 0.2509804, g: 5.019608, b: 36.14118, a: 1}
+  - {r: 0.007843138, g: 0.105882354, b: 0.7490196, a: 1}
   - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 6.4, g: 0, b: 0.21960784, a: 1}
-  - {r: 0.65882355, g: 0.0627451, b: 2.447059, a: 1}
-  - {r: 1, g: 0.40392154, b: 0.015686275, a: 1}
-  - {r: 7.592157, g: 3.1058824, b: 0, a: 1}
-  - {r: 13.552941, g: 34.635296, b: 5.019608, a: 1}
+  - {r: 0.78431374, g: 0, b: 0.03137255, a: 1}
+  - {r: 0.66834456, g: 0.080188684, b: 1, a: 1}
+  - {r: 1, g: 0.31372547, b: 0.0069954097, a: 1}
+  - {r: 1, g: 1, b: 0.057805434, a: 1}
+  - {r: 0.29765183, g: 0.9150943, b: 0.047481313, a: 1}
 --- !u!199 &8853911855958449854
 ParticleSystemRenderer:
   serializedVersion: 6

@@ -83,10 +83,10 @@ public class MimicPuppet : MonoBehaviour
                     switch (myMovType)
                     {
                         case MovementType.NoRotNoPos:
-
+                            bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
                             break;
                         case MovementType.YesRotYesPos:
-              
+                       
                             break;
                         case MovementType.NoRotYesPos:
                             bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
@@ -191,7 +191,7 @@ public class MimicPuppet : MonoBehaviour
             bones[1] = FindVRIKComponent(gameObjectTransform, "Base HumanPelvis");
             bones[2] = FindVRIKComponent(gameObjectTransform, "Base HumanLLegThigh");
             bones[3] = FindVRIKComponent(gameObjectTransform, "Base HumanRLegThigh");
-            bones[4] = FindVRIKComponent(gameObjectTransform, "Base HumanSpine1");
+            bones[4] = FindVRIKComponent(gameObjectTransform, "Base HumanSpine3");
             bones[5] = FindVRIKComponent(gameObjectTransform, "Base HumanSpine4");
             bones[6] = FindVRIKComponent(gameObjectTransform, "Base HumanLLegCalf");
             bones[7] = FindVRIKComponent(gameObjectTransform, "Base HumanRLegCalf");

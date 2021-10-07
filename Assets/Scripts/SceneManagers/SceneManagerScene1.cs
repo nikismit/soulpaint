@@ -120,19 +120,19 @@ public class SceneManagerScene1 : MonoBehaviour
     }
     private void Update()
     {
-      // if (rightControllerAlias != null && !embodied)
-        //{
-          //  if (Input.GetKeyDown(KeyCode.N) || (rightControllerAlias.buttonOnePressed))
-            //{
+        if (rightControllerAlias != null && !embodied)
+        {
+            if (Input.GetKeyDown(KeyCode.N) || (rightControllerAlias.buttonOnePressed))
+            {
 
-               // GameManager.Instance.SetNewGamestate(Gamestate.Embody);
-              //  embodied = true;
+                GameManager.Instance.SetNewGamestate(Gamestate.Embody);
+                embodied = true;
 
-            //}
-        //}
-        
+            }
+        }
 
-        
+
+
 
     }
     private void  SetupAvatar()
@@ -155,6 +155,7 @@ public class SceneManagerScene1 : MonoBehaviour
 
 
         VRIK vrik = finalPuppet.AddComponent<VRIK>();
+        vrik.enabled = false;
         VRIKApplier vRIKApplier = finalPuppet.AddComponent<VRIKApplier>();
        // finalPuppet.AddComponent<HandGrabAnimation>();
         //Animator anim = finalPuppet.AddComponent<Animator>();
