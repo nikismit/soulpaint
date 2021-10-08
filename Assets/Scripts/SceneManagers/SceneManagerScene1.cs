@@ -42,8 +42,9 @@ public class SceneManagerScene1 : MonoBehaviour
         //   StartCoroutine(StartPaintingTime());
      palette.SetActive(false);
        timerObject.SetActive(false);
-        scanMaterial.material.SetFloat("_Progress", 0);
-        scanHeadMaterial.material.SetFloat("_Progress", 0);
+        finalPuppet.SetActive(false);
+      //  scanMaterial.material.SetFloat("_Progress", 0);
+    //    scanHeadMaterial.material.SetFloat("_Progress", 0);
         audioManager = GetComponent<AudioManager>();
         embodyGlow.SetActive(false);
         playableDirector = Timeline.GetComponent<PlayableDirector>();
@@ -84,7 +85,8 @@ public class SceneManagerScene1 : MonoBehaviour
                 startSilhoeutte.SetActive(false);
                 //  startCircle.SetActive(false);
                 //   paintBucket.SetActive(false);
-                StartCoroutine(BodyScan());
+                finalPuppet.SetActive(true);
+                //   StartCoroutine(BodyScan());
                 finalPuppet.GetComponent<ReachToDestination>().goToDestination = true;
                
                 break;
