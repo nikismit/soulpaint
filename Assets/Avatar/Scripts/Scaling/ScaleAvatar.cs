@@ -40,7 +40,7 @@ public class ScaleAvatar : MonoBehaviour
     public float scaleVar;
 
 
-    private float teenScaleModifier = /*0.7749066f*/ 0.76f;
+    private float teenScaleModifier = /*0.7749066f*/ 0.7792331f;
     public float AVATAR_EYE_HEIGHT;
     private bool scaled;
 
@@ -59,17 +59,45 @@ public class ScaleAvatar : MonoBehaviour
     [SerializeField]
     bool danceScene;
 
-    private void Start()
+    private void OnEnable()
+    {
+        GameManager.gamestateChanged += OnGameStateChanged;
+    }
+    private void OnDisable()
+    {
+        GameManager.gamestateChanged -= OnGameStateChanged;
+    }
+
+    private void OnGameStateChanged(Gamestate newGameState)
+    {
+        switch (newGameState)
+        {
+            case Gamestate.WaitforStart:
+
+                break;
+            case Gamestate.Meditation:
+                if (scaleOnStart)
+                {
+                    Invoke("SetupQuiet", .5f);
+                    //StartCoroutine(WaitForScale());
+                }
+
+
+                break;
+
+
+            default:
+                break;
+        }
+    }
+        private void Start()
     {
         //Sets default scale variable
 
         
       
   
-        if (scaleOnStart)
-        {
-            StartCoroutine(WaitForScale());
-        }
+      
     }
 
     void Update()
@@ -96,7 +124,7 @@ public class ScaleAvatar : MonoBehaviour
 
     private IEnumerator WaitForScale()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         SetupQuiet();
        // print("Scaling initiated");
     }

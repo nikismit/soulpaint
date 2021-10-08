@@ -1,0 +1,1328 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4896347924923970947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4896347924923970944}
+  m_Layer: 0
+  m_Name: PHASE3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4896347924923970944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4896347924923970947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7722168, y: 0.53344727, z: -1.3007812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8357599410078031145}
+  - {fileID: 8357599410221085290}
+  - {fileID: 8357599411911918223}
+  - {fileID: 8357599411777639476}
+  - {fileID: 8357599410810382707}
+  - {fileID: 8357599410468467648}
+  - {fileID: 8357599410904755899}
+  - {fileID: 8357599411492405361}
+  - {fileID: 8357599411573184588}
+  - {fileID: 8357599411316622171}
+  - {fileID: 8357599410303688080}
+  - {fileID: 8357599409938766924}
+  - {fileID: 8357599411259400691}
+  - {fileID: 8357599409988651970}
+  - {fileID: 8357599411751996485}
+  - {fileID: 8357599410869833049}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8698694771093931818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599410303688080}
+  - component: {fileID: 8664759535765226851}
+  - component: {fileID: 3670721209212495163}
+  - component: {fileID: 207938456209748873}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599410303688080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771093931818}
+  m_LocalRotation: {x: -0.12677698, y: -0.22551028, z: 0.65693796, w: 0.7081704}
+  m_LocalPosition: {x: -2.48, y: 0.33, z: 5.9}
+  m_LocalScale: {x: 2.400012, y: 2.400012, z: 2.400012}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 6.7040005, y: -29.296001, z: 83.94701}
+--- !u!114 &8664759535765226851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771093931818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &3670721209212495163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771093931818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &207938456209748873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771093931818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694771344779472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599410221085290}
+  - component: {fileID: 8664759535981865625}
+  - component: {fileID: 5928403248884417490}
+  - component: {fileID: 6805361480275413071}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599410221085290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771344779472}
+  m_LocalRotation: {x: 0.6229993, y: -0.61346215, z: -0.35644972, w: 0.3293626}
+  m_LocalPosition: {x: 3.33, y: 2.62, z: 2.69}
+  m_LocalScale: {x: 1.18, y: 1.18, z: 1.18}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -1.544, y: -121.94601, z: -91.741005}
+--- !u!114 &8664759535981865625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771344779472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &5928403248884417490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771344779472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6805361480275413071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771344779472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694771453413267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599410078031145}
+  - component: {fileID: 8664759535605007834}
+  - component: {fileID: 6860692008654002265}
+  - component: {fileID: 8815780260077710196}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599410078031145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771453413267}
+  m_LocalRotation: {x: -0.1790818, y: -0.0018981452, z: 0.37608498, w: 0.9091129}
+  m_LocalPosition: {x: 0.79, y: -2.46, z: -4.78}
+  m_LocalScale: {x: 2.7584858, y: 2.7584858, z: 2.7584858}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -18.916, y: -8.397, z: 46.350002}
+--- !u!114 &8664759535605007834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771453413267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &6860692008654002265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771453413267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8815780260077710196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771453413267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694771584209272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599409988651970}
+  - component: {fileID: 8664759535677608753}
+  - component: {fileID: 5447261708691090159}
+  - component: {fileID: 4405136886793272149}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599409988651970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771584209272}
+  m_LocalRotation: {x: -0.5353434, y: 0.23026642, z: -0.8092989, w: 0.07362256}
+  m_LocalPosition: {x: -3.3774343, y: 0.98, z: -0.79941416}
+  m_LocalScale: {x: 1.18, y: 1.18, z: 1.18}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 17.091002, y: -289.608, z: 202.495}
+--- !u!114 &8664759535677608753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771584209272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &5447261708691090159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771584209272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4405136886793272149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771584209272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694771601458934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599409938766924}
+  - component: {fileID: 8664759535727494335}
+  - component: {fileID: 2592587515726712973}
+  - component: {fileID: 8493458637913605998}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599409938766924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771601458934}
+  m_LocalRotation: {x: -0.14951316, y: 0.8642635, z: 0.39519066, w: 0.27298158}
+  m_LocalPosition: {x: -5.1, y: -4.2800007, z: 0.45}
+  m_LocalScale: {x: 2.6963468, y: 2.6963468, z: 2.6963468}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: -49.883003, y: 146.709, z: -3.798}
+--- !u!114 &8664759535727494335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771601458934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &2592587515726712973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771601458934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8493458637913605998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771601458934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694771643340771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599410869833049}
+  - component: {fileID: 8664759536289338794}
+  - component: {fileID: 4975815555433379454}
+  - component: {fileID: 4305832849298957015}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET NoRotNoPos (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599410869833049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771643340771}
+  m_LocalRotation: {x: -0.5859116, y: 0.25257754, z: -0.32793888, w: -0.6966838}
+  m_LocalPosition: {x: 3.24, y: 7.19, z: -2.25}
+  m_LocalScale: {x: 6.5058236, y: 6.5058236, z: 6.5058236}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 79.128006, y: -350.124, z: 58.58}
+--- !u!114 &8664759536289338794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771643340771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 0
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &4975815555433379454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771643340771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4305832849298957015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771643340771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 0
+--- !u!1 &8698694771669840841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599410810382707}
+  - component: {fileID: 8664759536327897472}
+  - component: {fileID: 791357908547323259}
+  - component: {fileID: 5361597011677349156}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599410810382707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771669840841}
+  m_LocalRotation: {x: 0.09793479, y: 0.95336354, z: -0.03207997, w: 0.2836858}
+  m_LocalPosition: {x: 0.87, y: -0.84, z: -1.54}
+  m_LocalScale: {x: 1.2980055, y: 1.2980055, z: 1.2980055}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 6.7040005, y: 147.431, z: 9.77}
+--- !u!114 &8664759536327897472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771669840841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &791357908547323259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771669840841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5361597011677349156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771669840841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694771743241217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599410904755899}
+  - component: {fileID: 8664759536388716104}
+  - component: {fileID: 3434517591041359902}
+  - component: {fileID: 4012293946422149602}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599410904755899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771743241217}
+  m_LocalRotation: {x: 0.6462407, y: 0.089389145, z: 0.74054223, w: -0.16118279}
+  m_LocalPosition: {x: 4.16, y: 3.09, z: 1.53}
+  m_LocalScale: {x: 2.6963468, y: 2.6963468, z: 2.6963468}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -19.921001, y: 80.896, z: 187.52899}
+--- !u!114 &8664759536388716104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771743241217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &3434517591041359902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771743241217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4012293946422149602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694771743241217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694772045179258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599410468467648}
+  - component: {fileID: 8664759536153914163}
+  - component: {fileID: 7368320026832371302}
+  - component: {fileID: 746048060987901748}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599410468467648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772045179258}
+  m_LocalRotation: {x: 0.39075947, y: 0.29755262, z: 0.16073835, w: -0.8561149}
+  m_LocalPosition: {x: 3.39, y: -7, z: 0.69}
+  m_LocalScale: {x: 4.67924, y: 4.67924, z: 4.67924}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -49.883003, y: 323.436, z: -3.798}
+--- !u!114 &8664759536153914163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772045179258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &7368320026832371302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772045179258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &746048060987901748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772045179258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694772318092105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599411259400691}
+  - component: {fileID: 8664759534809266432}
+  - component: {fileID: 4494847092796227287}
+  - component: {fileID: 1500433384804106014}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599411259400691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772318092105}
+  m_LocalRotation: {x: 0.15620753, y: -0.56143934, z: 0.44999188, w: -0.67667747}
+  m_LocalPosition: {x: -3.3774343, y: 0.98, z: -0.79941416}
+  m_LocalScale: {x: 1.18, y: 1.18, z: 1.18}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 17.091002, y: -289.608, z: -55.149002}
+--- !u!114 &8664759534809266432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772318092105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &4494847092796227287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772318092105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1500433384804106014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772318092105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694772362762721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599411316622171}
+  - component: {fileID: 8664759534899157928}
+  - component: {fileID: 8480511607617050959}
+  - component: {fileID: 3443142236888908294}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599411316622171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772362762721}
+  m_LocalRotation: {x: -0.42267528, y: -0.40119913, z: -0.38672656, w: -0.71472204}
+  m_LocalPosition: {x: -3.3774343, y: 0.98, z: -0.79941416}
+  m_LocalScale: {x: 1.18, y: 1.18, z: 1.18}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 17.091002, y: -289.608, z: 68.934006}
+--- !u!114 &8664759534899157928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772362762721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &8480511607617050959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772362762721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3443142236888908294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772362762721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694772706400309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599411911918223}
+  - component: {fileID: 8664759535226542716}
+  - component: {fileID: 2938306738125082424}
+  - component: {fileID: 8856595507377403922}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599411911918223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772706400309}
+  m_LocalRotation: {x: -0.83394647, y: -0.26267242, z: 0.45803794, w: 0.16043001}
+  m_LocalPosition: {x: 1.8039998, y: 4.082, z: 5.213}
+  m_LocalScale: {x: 1.18, y: 1.18, z: 1.18}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -1.544, y: -121.94601, z: 144.177}
+--- !u!114 &8664759535226542716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772706400309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &2938306738125082424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772706400309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8856595507377403922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772706400309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694772840550030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599411777639476}
+  - component: {fileID: 8664759535360560327}
+  - component: {fileID: 7707692687789502134}
+  - component: {fileID: 4804973698516265268}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599411777639476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772840550030}
+  m_LocalRotation: {x: -0.43215463, y: -0.17238435, z: 0.88035715, w: -0.09218073}
+  m_LocalPosition: {x: 0.7214445, y: 3.016509, z: -1.2683802}
+  m_LocalScale: {x: 1.2980055, y: 1.2980055, z: 1.2980055}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 22.532001, y: -52.127003, z: 180.82599}
+--- !u!114 &8664759535360560327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772840550030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &7707692687789502134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772840550030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4804973698516265268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772840550030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694772875695871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599411751996485}
+  - component: {fileID: 8664759535390463158}
+  - component: {fileID: 8141347446990540496}
+  - component: {fileID: 4394233158217408776}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599411751996485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772875695871}
+  m_LocalRotation: {x: -0.7929166, y: 0.16390088, z: -0.42279202, w: -0.40702185}
+  m_LocalPosition: {x: -4.73, y: 5.2733, z: 1.01}
+  m_LocalScale: {x: 3.0943277, y: 3.0943277, z: 3.0943277}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 51.634003, y: -239.913, z: 172.199}
+--- !u!114 &8664759535390463158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772875695871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &8141347446990540496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772875695871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4394233158217408776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694772875695871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694773159271115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599411492405361}
+  - component: {fileID: 8664759535108987010}
+  - component: {fileID: 3941338224372839621}
+  - component: {fileID: 5405587358938569571}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET YesRotYesPos (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599411492405361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694773159271115}
+  m_LocalRotation: {x: 0.20913334, y: 0.8489564, z: -0.101060316, w: -0.47468212}
+  m_LocalPosition: {x: 1.8769999, y: 0.91899985, z: 4.933}
+  m_LocalScale: {x: 1.18, y: 1.18, z: 1.18}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -1.544, y: -121.94601, z: 386.821}
+--- !u!114 &8664759535108987010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694773159271115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 3
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &3941338224372839621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694773159271115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5405587358938569571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694773159271115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 3
+--- !u!1 &8698694773221163766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357599411573184588}
+  - component: {fileID: 8664759535179137215}
+  - component: {fileID: 4791168743113119735}
+  - component: {fileID: 6398997356497042075}
+  m_Layer: 0
+  m_Name: SoulpaintAvatarNEWPUPPET OnlyRot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357599411573184588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694773221163766}
+  m_LocalRotation: {x: -0.38104585, y: -0.90879637, z: -0.16826816, w: 0.024065943}
+  m_LocalPosition: {x: -2.9, y: -2.45, z: 6.34}
+  m_LocalScale: {x: 4.1462803, y: 4.1462803, z: 4.1462803}
+  m_Children: []
+  m_Father: {fileID: 4896347924923970944}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: -18.916, y: -185.124, z: 46.350002}
+--- !u!114 &8664759535179137215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694773221163766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211d5de4388488942852485e130a66be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  debugPos: {x: 0, y: 0, z: 0}
+  debugRot: {x: 0, y: 0, z: 0}
+  notGrabbed: 0
+  debugSetup: 1
+  oldAv: 0
+  addedPosition: {x: 0, y: 0, z: 0}
+  previousAddedPosition: {x: 0, y: 0, z: 0}
+  myMovType: 2
+  addedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &4791168743113119735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694773221163766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e7e14570d7da94ca84f950de01b72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6398997356497042075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698694773221163766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1c110620c889f43be4f7fd80e17cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMovementType: 0
