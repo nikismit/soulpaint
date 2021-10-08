@@ -82,7 +82,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _ChromaticAberration: 0.1
-    - _Cutoff: 0.82
+    - _Cutoff: 0.01
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Float1: 13.93
@@ -95,7 +95,7 @@ Material:
     - _OcclusionStrength: 1
     - _Opacity: 0.8
     - _Parallax: 0.02
-    - _Power1: 1.0959184
+    - _Power1: 6
     - _Progress: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -115,4 +115,4 @@ Material:
     - _Color0: {r: 0.38679245, g: 0.38679245, b: 0.38679245, a: 0.5882353}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Glowcolor1: {r: 0, g: 0, b: 0, a: 0}
-    - _SpecColor: {r: 0.46226418, g: 0.45136172, b: 0.45136172, a: 1}
+    - _SpecColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
