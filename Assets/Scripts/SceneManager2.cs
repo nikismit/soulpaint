@@ -317,7 +317,7 @@ public class SceneManager2 : MonoBehaviour
             Vector3 toScale = Vector3.zero;
             List<Vector3> fromScales = new List<Vector3>();
             List<Vector3> fromPos = new List<Vector3>();
-            Transform T = vrsetup.actualAvatarVRIK.references.chest;
+            Transform T = vrsetup.actualAvatarVRIK.references.spine;
             for (int n = 0; n < mimicPuppetCreator.actualPuppets.Count; n++)
             {
                 fromScales.Add(mimicPuppetCreator.actualPuppets[n].transform.localScale);
