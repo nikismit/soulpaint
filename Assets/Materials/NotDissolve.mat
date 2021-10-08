@@ -86,6 +86,6 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0.110918716, g: 0.68215007, b: 1.0592737, a: 1}
+    - _Color0: {r: 0, g: 0.20998082, b: 0.33333334, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
