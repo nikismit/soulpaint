@@ -14,7 +14,7 @@ public class MimicPuppet : MonoBehaviour
     Transform[] bones;
     public bool notGrabbed;
     [SerializeField]
-    bool debugSetup;
+    bool debugSetup, oldAv;
     
     //Positions
     Vector3 masterRefPosition;
@@ -184,7 +184,7 @@ public class MimicPuppet : MonoBehaviour
 
     void setUpBonesArray(Transform gameObjectTransform)
     {
-        if (!debugSetup)
+        if (!oldAv)
         {
               bones[0] = FindVRIKComponent(gameObjectTransform, "Root");
          //   bones[0] = gameObjectTransform;       //transform of model itself
