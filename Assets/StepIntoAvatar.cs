@@ -7,7 +7,7 @@ public class StepIntoAvatar : MonoBehaviour
     [SerializeField]
     Gamestate stateToTriggerIn;
     [SerializeField]
-    bool isPaintingScene;
+    bool isPaintingScene, isStartButton, readyToCall;
     [SerializeField]
     SceneManagerScene1 sceneManager1;
     [SerializeField]
@@ -15,9 +15,10 @@ public class StepIntoAvatar : MonoBehaviour
     [SerializeField]
    int StateToSend;
     bool called;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "MainCamera" && GameManager.Instance.getCurrentGameState() == stateToTriggerIn)
+        if (other.tag == "MainCamera" && GameManager.Instance.getCurrentGameState() == stateToTriggerIn && readyToCall)
         {
             if (isPaintingScene  && !called)
             {
@@ -35,5 +36,22 @@ public class StepIntoAvatar : MonoBehaviour
             }
 
         }
+    }
+
+    private void Start()
+    {
+        if (isStartButton)
+        {
+            Invoke("ReadyToCall", 2f);
+        }
+        else
+        {
+            readyToCall = true;
+        }
+    }
+
+    private void ReadyToCall()
+    {
+        readyToCall = true;
     }
 }
