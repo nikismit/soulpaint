@@ -83,14 +83,14 @@ public class MimicPuppet : MonoBehaviour
                     switch (myMovType)
                     {
                         case MovementType.NoRotNoPos:
-                            bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
+                         
                             break;
                         case MovementType.YesRotYesPos:
                        
                             break;
                         case MovementType.NoRotYesPos:
-                            bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
-                         
+                            //  bones[i].localPosition = masterAvatarscript.bonePositionsMimic[i];
+                            bones[i].localEulerAngles = masterAvatarscript.boneRotationsMimic[i];
                             break;
                         case MovementType.YesRotNoPos:
                        

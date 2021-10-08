@@ -269,13 +269,17 @@ public void TriggerAudioFeedback(int i)
             case 2:
 
                 //OVRInput.SetControllerVibration(1f, 1f);
-                GameManager.Instance.SetNewGamestate(Gamestate.Embody);
+                Invoke("WaitForEmbody", 3f);
                 break;
             default:
                 break;
         }
     }
 
+    private void WaitForEmbody()
+    {
+        GameManager.Instance.SetNewGamestate(Gamestate.Embody);
+    }
     IEnumerator WaitForAudio(int i)
     {
         yield return new WaitUntil(() => !tutorialAudioSource.isPlaying);
