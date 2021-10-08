@@ -65,7 +65,7 @@ Material:
     - _CompareFunction: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Distribution: 0.248
+    - _Distribution: 1
     - _Distribution1: -0.075
     - _Distribution2: 0.244
     - _DstBlend: 0
@@ -88,7 +88,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StartPoint: -0.35
+    - _StartPoint: -0.824
     - _StartPoint1: -0.51
     - _StartPoint2: 0.069
     - _Startpoint: -0.01
@@ -120,8 +120,8 @@ Material:
     - _Basecolor1: {r: 0, g: 0, b: 0, a: 0}
     - _Basecolor2: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.62352943, g: 0.07058824, b: 0.627451, a: 0}
-    - _Color2: {r: 0.121568635, g: 0, b: 0.21176472, a: 1}
+    - _Color1: {r: 0, g: 0.18802354, b: 0.44339618, a: 0}
+    - _Color2: {r: 0.03713232, g: 0, b: 0.10377356, a: 1}
     - _Color3: {r: 1, g: 0.68235296, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Glowcolor1: {r: 0, g: 0, b: 0, a: 0}

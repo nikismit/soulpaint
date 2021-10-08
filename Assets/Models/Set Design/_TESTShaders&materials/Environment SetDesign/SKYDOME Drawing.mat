@@ -65,7 +65,7 @@ Material:
     - _CompareFunction: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Distribution: 1
+    - _Distribution: 0.654
     - _Distribution1: 0.448
     - _Distribution2: 1
     - _DstBlend: 0
@@ -81,7 +81,7 @@ Material:
     - _RIMintensity: 0.5
     - _RIMpower: 1
     - _SrcBlend: 1
-    - _StartPoint: -0.82
+    - _StartPoint: -0.799
     - _StartPoint1: 0.662
     - _StartPoint2: 0.291
     - _Startpoint: 0
@@ -100,8 +100,8 @@ Material:
     - _BASEcolor1: {r: 1, g: 0, b: 0, a: 0}
     - _BASEcolor2: {r: 0.03448248, g: 0, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.95149136, g: 0, b: 1, a: 0}
-    - _Color2: {r: 0.11305712, g: 0, b: 0.20754719, a: 0}
+    - _Color1: {r: 0, g: 0.089854024, b: 0.3773585, a: 0}
+    - _Color2: {r: 0, g: 0.053548634, b: 0.20784314, a: 1}
     - _Color3: {r: 1, g: 0, b: 0.8000002, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _RIMcolor1: {r: 1, g: 1, b: 1, a: 0}
