@@ -1495,6 +1495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateToTriggerIn: 4
   isPaintingScene: 1
+  isStartButton: 0
+  readyToCall: 0
   sceneManager1: {fileID: 1852395402}
   sceneManager2: {fileID: 0}
   StateToSend: 2
@@ -15769,7 +15771,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7286807087334329577
 Transform:

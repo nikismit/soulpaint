@@ -202,15 +202,22 @@ public class SceneManager2 : MonoBehaviour
         {
             float i = 0;
             float rate = 1 / time;
-
-            Vector3 fromScale = refScaleObj.localScale;
+            List<Vector3> fromScalesList = new List<Vector3>();
+            for (int n = 0; n < mimicPuppetCreator.actualPuppets.Count; n++)
+            {
+                fromScalesList.Add(mimicPuppetCreator.actualPuppets[n].transform.localScale);
+             
+            }
+            //Vector3 fromScale = refScaleObj.localScale;
             Vector3 toScale = Vector3.zero;
             while (i < 1)
             {
-                foreach (GameObject go in mimicPuppetCreator.actualPuppets)
+
+                for (int j = 0; j < mimicPuppetCreator.actualPuppets.Count; j++)
                 {
-                    go.transform.localScale = Vector3.Lerp(fromScale, toScale, i);
+                    mimicPuppetCreator.actualPuppets[j].transform.localScale = Vector3.Lerp(fromScalesList[j], toScale, i);
                 }
+               
                 i += Time.deltaTime * rate;
 
                 yield return 0;
