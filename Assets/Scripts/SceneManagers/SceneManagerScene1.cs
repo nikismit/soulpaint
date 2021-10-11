@@ -85,10 +85,7 @@ public class SceneManagerScene1 : MonoBehaviour
                 startSilhoeutte.SetActive(false);
                 //  startCircle.SetActive(false);
                 //   paintBucket.SetActive(false);
-                finalPuppet.SetActive(true);
-                //   StartCoroutine(BodyScan());
-                finalPuppet.GetComponent<ReachToDestination>().goToDestination = true;
-               
+                Invoke("ShowAvatar", 2f);
                 break;
             case Gamestate.Painting:
             
@@ -118,6 +115,13 @@ public class SceneManagerScene1 : MonoBehaviour
         }
 
 
+
+    }
+    private void ShowAvatar()
+    {
+        finalPuppet.SetActive(true);
+        //   StartCoroutine(BodyScan());
+        finalPuppet.GetComponent<ReachToDestination>().goToDestination = true;
 
     }
     private void Update()

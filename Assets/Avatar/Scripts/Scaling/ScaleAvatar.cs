@@ -241,14 +241,16 @@ public class ScaleAvatar : MonoBehaviour
         int time = timesToScale;
         for (int x = 0; x < time; x++)
         {
+            GameObject camObj = Camera.main.gameObject;
+            Debug.Log(camObj.name);
             //scales.Add(Calculate(avatarController.gameObject));
-            scales.Add(Calculate(Camera.main.gameObject));
+            scales.Add(Calculate(camObj));
             if (!quietScale)
             {
 
                 heightCalcDone.Invoke();
             }
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.01f);
         }
         ApplyScale(CalculateMedian());
     }
@@ -268,7 +270,8 @@ public class ScaleAvatar : MonoBehaviour
         {
             height = hit.distance;
         }
-
+        Debug.Log("hit obj is" + hit.transform.name);
+        Debug.Log(" the ray cast val height is" + height);
         return height;
     }
 
@@ -276,6 +279,7 @@ public class ScaleAvatar : MonoBehaviour
     private float CalculatePlayerEyeHeight()
     {
         GameObject cameraObject = Camera.main.gameObject;
+        
         Ray ray = new Ray(cameraObject.transform.position, Vector3.down);
         RaycastHit hit;
         float height = 1;
@@ -283,6 +287,7 @@ public class ScaleAvatar : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 5, layerToHit))
         {
             height = hit.distance;
+         
         }
         return height;
     }
