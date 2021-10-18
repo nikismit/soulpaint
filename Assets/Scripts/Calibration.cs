@@ -40,7 +40,7 @@ public class Calibration : MonoBehaviour
         if (leftControllerAlias != null && rightControllerAlias!= null) //detect is button 'Y' has been pressed
         {
        
-            if (leftControllerAlias.buttonTwoPressed && calModeBool)
+            if (rightControllerAlias.buttonTwoPressed && calModeBool)
          {
                 Debug.Log("why dont i reach here");
                 handMarker = rightControllerAlias.transform;

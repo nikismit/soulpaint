@@ -161,7 +161,7 @@ public class VRAvatarController : MonoBehaviour
         {
        //  containerObject.transform.position = rotationPoint.position;
    //   containerObject.transform.forward = rotationPoint.forward;
-         containerObject.transform.rotation = rotation;
+         containerObject.transform.rotation = rotationPoint.rotation;
             transform.SetParent(containerObject.transform, true);
 
         }
@@ -175,7 +175,7 @@ public class VRAvatarController : MonoBehaviour
         }
         else
         {
-            VRRigObject = Instantiate(VRRigPrefab);
+            VRRigObject = Instantiate(VRRigPrefab, transform.position, transform.rotation);
         }
         VRRigObject.transform.SetParent(containerObject.transform, false);
       VRRigObject.transform.localPosition = Vector3.zero;
@@ -315,9 +315,8 @@ public class VRAvatarController : MonoBehaviour
         actualAvatarVRIK.solver.rightArm.target = multiVR.rightHandAlias.transform.GetChild(offsetIndex);
 
         this.transform.SetParent(actualAvatarVRIK.solver.spine.headTarget, false);
-
-      
-    }
+  
+        }
 
     private void ApplyAvatar(GameObject avatarObject, int index)
     {

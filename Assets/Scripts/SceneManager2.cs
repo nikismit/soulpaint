@@ -44,17 +44,22 @@ public class SceneManager2 : MonoBehaviour
             GameManager.Instance.finalMimicPuppet.transform.position = underTheFloor.position;
             GameManager.Instance.finalMimicPuppet.transform.localScale = Vector3.one;
             StartCoroutine(WaitToDestroy());
-
+            
             subScene1 = subScene[0].GetComponentsInChildren<TransformIdentifier>();
             subScene2 = subScene[1].GetComponentsInChildren<TransformIdentifier>();
             subScene3 = subScene[2].GetComponentsInChildren<TransformIdentifier>();
+            Invoke("SetHeight", 3f);
             Invoke("ChangeToSimonSays", 7f);
         }
 
         Invoke("SetControllerReferences", 2f);
        
     }
-
+    private void SetHeight()
+    {
+        
+    vrikObj.solver.spine.headTarget.position = vrikObj.solver.spine.headTarget.position + new Vector3(0, -0.12f, 0);
+    }
     private void OnEnable()
     {
         GameManager.gamestateChanged += OnGameStateChanged;
@@ -153,10 +158,12 @@ public class SceneManager2 : MonoBehaviour
         vrikObj.solver.leftArm.shoulderTwistWeight = .01f;
         vrikObj.solver.rightArm.shoulderRotationWeight = .01f;
         vrikObj.solver.rightArm.shoulderTwistWeight = .01f;
-        vrikObj.solver.locomotion.footDistance = .15f;
+        vrikObj.solver.locomotion.footDistance = .25f;
         vrikObj.gameObject.tag = "Player";
-
+  
         vrikObj.gameObject.AddComponent<PlantFeet>();
+            
+       // 
         //  GameObject puppetToDestroy = GameManager.Instance.finalPuppet;
         // Destroy(puppetToDestroy);
     }
@@ -343,6 +350,11 @@ public class SceneManager2 : MonoBehaviour
 
                 yield return 0;
             }
+            for (int k = 0; k < mimicPuppetCreator.actualPuppets.Count; k++)
+             {
+             Destroy(mimicPuppetCreator.actualPuppets[k]);
+            }
+
         }
 
     }

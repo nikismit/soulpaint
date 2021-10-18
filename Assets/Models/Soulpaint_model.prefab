@@ -2923,7 +2923,7 @@ MonoBehaviour:
   width: 0.025
   canvas: {fileID: 0}
   customBrushShaderIsOn: 0
-  particleBudget: 60
+  particleBudget: 50
   color: 0
   prefabToSpawn: {fileID: 0}
   brushTipPoint: {fileID: 18941620609242209}

@@ -565,7 +565,7 @@ MonoBehaviour:
   virtualGreenScreenApplyDepthCulling: 0
   virtualGreenScreenDepthTolerance: 0.2
   mrcActivationMode: 0
-  _trackingOriginType: 2
+  _trackingOriginType: 1
   usePositionTracking: 1
   useRotationTracking: 1
   useIPDInPositionTracking: 1
@@ -3725,7 +3725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752e78409779ff14cb545939e6666dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _referenceBoundary: 1
+  _referenceBoundary: 2
   _headAlias: {fileID: 114819500403084304}
   _playAreaAlias: {fileID: 114232964213440832}
   _leftHandAlias: {fileID: 114922568532307802}
