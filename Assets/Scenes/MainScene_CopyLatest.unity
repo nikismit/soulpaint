@@ -9384,8 +9384,8 @@ MonoBehaviour:
   firstSceneClipsDutch:
   - {fileID: 8300000, guid: 3c65fb4df44739c4fbe7da007c5381d3, type: 3}
   firstSceneClipsEnglish:
-  - {fileID: 8300000, guid: 3c65fb4df44739c4fbe7da007c5381d3, type: 3}
-  isDutch: 1
+  - {fileID: 8300000, guid: c387a03ba3e56214fbbd96fc4bec0232, type: 3}
+  isDutch: 0
 --- !u!114 &1852395405
 MonoBehaviour:
   m_ObjectHideFlags: 0
