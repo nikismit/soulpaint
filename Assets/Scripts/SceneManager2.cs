@@ -58,7 +58,7 @@ public class SceneManager2 : MonoBehaviour
     private void SetHeight()
     {
         
-    vrikObj.solver.spine.headTarget.position = vrikObj.solver.spine.headTarget.position + new Vector3(0, -0.12f, 0);
+    vrikObj.solver.spine.headTarget.localPosition = vrikObj.solver.spine.headTarget.localPosition + new Vector3(0, -0.12f, 0);
     }
     private void OnEnable()
     {
